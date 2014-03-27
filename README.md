@@ -16,7 +16,7 @@
 | StudentenNummer	| DocentAchternaam	| 					|  					|  					| DocentID 			|
 | StudentVoornaam   | 					|					|  					| 					| LokaalID 			|
 | StudentAchternaam |             		|					| 					| 					| KlasID 			|
-| StudentEmail		|             		|					| 					| 					| Dag	 		    |
-| StudentGsm		|             		|					| 					| 					| Van			 	|
-| 			    	|             		|					| 					| 					| Tot			 	|
+| StudentEmail		|             		|					| 					| 					| Dag ???	 		|
+| StudentGsm		|             		|					| 					| 					| BeginUur			|
+| 			    	|             		|					| 					| 					| EindUur			|
 | 			    	|             		|					| 					| 					| Actief			|
