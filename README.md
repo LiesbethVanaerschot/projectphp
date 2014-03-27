@@ -11,12 +11,12 @@
 
 | **tblStudent**  	| **tblDocent**   	| **tblVak**		| **tblLokaal**		| **tblKlas**		| **tblRooster**	| 
 | ----------------- | ----------------- | ----------------- | ----------------- | ----------------- | ----------------- |
-| StudentID     	| Voornaam			| VakID				| LokaalID			| KlasID			| RoosterID			|
-| KlasID        	| Achternaam    	| VakNaam			| LokaalNaam		| KlasNaam			| VakID				|
-| Studentennummer	| Aanwezigheid		| 					|  					|  					| DocentID 			|
-| Voornaam      	|  					|					|  					| 					| LokaalID 			|
-| Achternaam    	|             		|					| 					| 					| KlasID 			|
-| 			    	|             		|					| 					| 					| Dag	 		    |
-| 			    	|             		|					| 					| 					| Van			 	|
+| StudentID     	| DocentID			| VakID				| LokaalID			| KlasID			| RoosterID			|
+| KlasID        	| DocentVoornaam    | VakNaam			| LokaalNaam		| KlasNaam			| VakID				|
+| StudentenNummer	| DocentAchternaam	| 					|  					|  					| DocentID 			|
+| StudentVoornaam   | 					|					|  					| 					| LokaalID 			|
+| StudentAchternaam |             		|					| 					| 					| KlasID 			|
+| StudentEmail		|             		|					| 					| 					| Dag	 		    |
+| StudentGsm		|             		|					| 					| 					| Van			 	|
 | 			    	|             		|					| 					| 					| Tot			 	|
 | 			    	|             		|					| 					| 					| Actief			|
