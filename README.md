@@ -4,12 +4,14 @@
 
 ###DEADLINE = 12 MEI###
 
+####More Schedule####
+
 * Registratie
 * Login (eigen db voorlopig)
 
 * Database tabellen:
 
-| **tblStudent**  	| **tblDocent**   	| **tblVak**		| **tblLokaal**		| **tblKlas**		| **tblRooster**	| 
+| **tblStudent**  	| **tblDocent**   	| **tblVak**		| **tblLokaal**		| **tblKlas**		| **tblRooster**	|
 | ----------------- | ----------------- | ----------------- | ----------------- | ----------------- | ----------------- |
 | StudentID     	| DocentID			| VakID				| LokaalID			| KlasID			| RoosterID			|
 | KlasID        	| DocentVoornaam    | VakNaam			| LokaalNaam		| KlasNaam			| VakID				|
