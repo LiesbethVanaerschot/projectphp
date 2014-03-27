@@ -1,12 +1,12 @@
-<?php 
+<?php
 
 ?><!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Test</title>
+	<title>Index</title>
 </head>
 <body>
-	
+
 </body>
 </html>
