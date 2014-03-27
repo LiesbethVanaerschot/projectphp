@@ -9,10 +9,14 @@
 
 * Database tabellen:
 
-| **tblStudent**  	| **tblDocent**   	| **tblVak**		| **tblLokaal**		| tblKlas			|
-| ----------------- | ----------------- | ----------------- | ----------------- | ----------------- |
-| StudentID     	| Voornaam			| VakID				| LokaalID			| KlasID			|
-| KlasID        	| Achternaam    	| VakNaam			| LokaalNaam		| KlasNaam			|
-| Studentennummer	| Aanwezigheid		| 					|  					|  					|
-| Voornaam      	|  					|					|  					| 					|
-| Achternaam    	|             		|					| 					| 					|
+| **tblStudent**  	| **tblDocent**   	| **tblVak**		| **tblLokaal**		| **tblKlas**		| **tblRooster**	| 
+| ----------------- | ----------------- | ----------------- | ----------------- | ----------------- | ----------------- |
+| StudentID     	| Voornaam			| VakID				| LokaalID			| KlasID			| RoosterID			|
+| KlasID        	| Achternaam    	| VakNaam			| LokaalNaam		| KlasNaam			| VakID				|
+| Studentennummer	| Aanwezigheid		| 					|  					|  					| DocentID 			|
+| Voornaam      	|  					|					|  					| 					| LokaalID 			|
+| Achternaam    	|             		|					| 					| 					| KlasID 			|
+| 			    	|             		|					| 					| 					| Dag	 		    |
+| 			    	|             		|					| 					| 					| Van			 	|
+| 			    	|             		|					| 					| 					| Tot			 	|
+| 			    	|             		|					| 					| 					| Actief			|
