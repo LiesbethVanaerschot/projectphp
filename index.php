@@ -1,11 +1,9 @@
 <?php
-	// 1. Zien of post niet leeg is
-	// 2. Zien of user in de databank zit
-	// 3. ...
-
+	// feedback en session een default waarde geven
 	$feedbackEr = "";
-	$feedback = "";
+	$_SESSION['loggedin'] = false;
 
+	// Zien of post niet leeg is en user uit databank halen
 	if(!empty($_POST))
 	{
 		try
@@ -13,7 +11,7 @@
 			include_once("classes/User.class.php");
 
 			$u = new User();
-			$u->Userid = $_POST['userid'];
+			$u->Email = $_POST['email'];
 			$u->Password = $_POST['password'];
 			$u->Find();
 
@@ -44,29 +42,57 @@
 			</div> <!--  End header -->
 		</header>
 
-		<section id="login">
+		<section id="login" <?php if($_SESSION['loggedin'] == true){echo 'class="hidden"';} ?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
 			<div class="wrapper">
 				<h1 class="gray">LOGIN</h1>
+				<h2>Importeer de tblusers</h2>
+				<h2>email=r0417768@kuleuven.be && pw=test123</h2>
 				<form action="" method="post">
 					<p class="cf">
-						<label for="name">Userid</label>
-						<input type="text" name="userid" id="userid" placeholder="r-nummer@kuleuven.be">
+						<label for="name">E-mail</label>
+						<input type="text" name="email" id="email" placeholder="r-nummer@kuleuven.be">
 					</p>
 					<p class="cf">
 						<label for="password">Paswoord</label>
 						<input type="password" name="password" id="password" placeholder="paswoord" >
 					</p>
 					<p class="cf">
-						<input type="button" name="btnLogin" value="LOG IN">
+						<input type="submit" name="btnLogin" value="LOG IN">
 					</p>
 				</form>
 
 				<div id="feedback">
 					<p class="nok"><?php echo $feedbackEr; ?></p>
-					<p class="ok"><?php echo $feedback; ?></p>
 				</div>
 			</div>
 		</section><!-- End login -->
+
+		<section id="loggedin" <?php if($_SESSION['loggedin'] != true){ echo 'class="hidden"';} else { echo 'class="block"';} ?>>
+			<div class="wrapper">
+				<h1>Kies uw klas!</h1>
+
+				<table> <!-- hier alle klassen geven met php eventueel? zodat we niet altijd moete copy pasten -->
+					<tr>
+						<td><a href="#">1IMDa</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">1IMDb</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">1IMDc</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">2IMDa</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">2IMDb</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">3IMDa</a></td>
+					</tr>
+				</table>
+			</div>
+		</section><!-- End loggedin -->
 	</div> <!-- End container -->
 </body>
 </html>

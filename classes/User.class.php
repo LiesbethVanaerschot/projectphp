@@ -3,16 +3,27 @@
 
 	class User {
 
-		private $m_sUserid;
+		private $m_sEmail;
 		private $m_sPassword;
 
-		// moeten setters? we saven toch ni...
+		public function __set($p_sProperty, $p_vValue)
+		{
+			switch ($p_sProperty) {
+				case 'Email':
+					$this->m_sEmail = $p_vValue;
+					break;
+
+				case 'Password':
+					$this->m_sPassword = $p_vValue;
+					break;
+			}
+		}
 
 		public function __get($p_sProperty)
 		{
 			switch ($p_sProperty) {
-				case 'Userid':
-					return $this->m_sUserid;
+				case 'Email':
+					return $this->m_sEmail;
 					break;
 
 				case 'Password':
@@ -25,22 +36,20 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "select * from tblUsers where userid ='" . $this->m_sUserid . "' AND password = '" . $this->m_sPassword . "';";
+			$sql = "select * from tblusers where email ='" . $this->m_sEmail . "' AND password = '" . $this->m_sPassword . "';";
 			$check = $db->conn->query($sql);
 
 			if(mysqli_num_rows($check) == 1)
 			{
+				//sessie starten en sessie loggedin op true zetten
 				session_start();
 				$_SESSION['loggedin'] = true;
-
-				//echo "Login geslaagd";
-				//header('Location: ???.php'); --> hier naar andere pagina gaan
 			}
 			else
 			{
+				//nieuwe error opvangen
 				throw new Exception("Username or password are not correct");
 				$_SESSION['loggedin'] = false;
-				//echo "Login niet geslaagd";
 			}
 		}
 
