@@ -47,7 +47,7 @@
 		<section id="login">
 			<div class="wrapper">
 				<h1 class="gray">LOGIN</h1>
-				<form action="#" method="post">
+				<form action="" method="post">
 					<p class="cf">
 						<label for="name">Userid</label>
 						<input type="text" name="userid" id="userid" placeholder="r-nummer@kuleuven.be">
