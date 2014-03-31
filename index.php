@@ -31,18 +31,28 @@
 </head>
 <body>
 	<div id="container">
-		<nav>
-			<img src="images/imd.png" alt="logo">
+		<nav <?php 	if($_SESSION['loggedin'] == false){
+						echo 'class="hidden"';
+				  	}
+				  	else
+				  	{
+				  		echo 'class="block"';
+				  	}
+			  ?>> <!-- nav verschijnt als je inlogt -->
+			<a href="logout.php">LOG OUT</a>
 		</nav> <!-- End nav -->
 
 		<header>
 			<div class="wrapper">
 				<h1>MORE SCHEDULE</h1>
 				<p>Kleine introductie?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ea, dignissimos, dolore commodi deserunt veniam vitae necessitatibus nemo aliquam similique adipisci tempore in nobis illo suscipit molestiae laudantium. Officiis, rerum, quas sequi impedit laboriosam ad numquam totam facere perferendis expedita nemo quo ratione ullam adipisci obcaecati repellat nulla sunt eaque?</p>
-			</div> <!--  End header -->
-		</header>
+			</div>
+		</header> <!--  End header -->
 
-		<section id="login" <?php if($_SESSION['loggedin'] == true){echo 'class="hidden"';} ?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
+		<section id="login" <?php if($_SESSION['loggedin'] == true){
+										echo 'class="hidden"';
+								  }
+							?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
 			<div class="wrapper">
 				<h1 class="gray">LOGIN</h1>
 				<h2>Importeer de tblusers</h2>
@@ -67,7 +77,13 @@
 			</div>
 		</section><!-- End login -->
 
-		<section id="loggedin" <?php if($_SESSION['loggedin'] != true){ echo 'class="hidden"';} else { echo 'class="block"';} ?>>
+		<section id="loggedin" <?php if($_SESSION['loggedin'] == false){
+											echo 'class="hidden"';
+									 }
+									 else{
+									 		echo 'class="block"';
+									 }
+							   ?>>
 			<div class="wrapper">
 				<h1>Kies uw klas!</h1>
 
