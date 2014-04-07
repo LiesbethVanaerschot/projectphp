@@ -1,0 +1,438 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1881" measuredH="1170" mockupW="1808" mockupH="1160">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="73" y="44" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>http%3A//www.moreschedule.be/</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::SubTitle" x="73" y="10" w="-1" h="-1" measuredW="246" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>MoreSchedule%20superuser%20login</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="196" y="136" w="-1" h="-1" measuredW="204" measuredH="35" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>MoreSchedule</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="202" y="218" w="192" h="-1" measuredW="47" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>naam</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::SubTitle" x="234" y="186" w="-1" h="-1" measuredW="128" measuredH="17" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>administratieve%20login</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="202" y="260" w="192" h="-1" measuredW="114" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>account%20nummer</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="202" y="302" w="192" h="-1" measuredW="70" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>paswoord</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="267" y="351" w="-1" h="-1" measuredW="63" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <text>LOGIN</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="491" y="168" w="229" h="126" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::CallOut" x="537" y="176" w="-1" h="-1" measuredW="36" measuredH="37" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="662" y="44" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>www.moreschedule.be/admuser</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::CallOut" x="463" y="472" w="-1" h="-1" measuredW="41" measuredH="39" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Paragraph" x="520" y="472" w="200" h="54" measuredW="200" measuredH="80" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Normaal%20eerst%20richting%20kiezen%0AMaar%20nu%20direct%20naar%20IMD%20en%20keuze%20tss%20jaar%20en%20klas</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Title" x="705" y="132" w="-1" h="-1" measuredW="115" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>MoreSchedule</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Label" x="936" y="132" w="-1" h="-1" measuredW="126" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welkom%20%3Cusername%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::HRule" x="677" y="157" w="420" h="-1" measuredW="100" measuredH="10" zOrder="15" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Accordion" x="741" y="218" w="304" h="165" measuredW="234" measuredH="240" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>1e%20jaar%20Interactive%20Multimedia%20Design%0A2e%20jaar%20Interactive%20Multimedia%20Design%0A-%202IMDA%0A-%202IMDB%0A-%202IMDC%0A3e%20jaar%20Interactive%20Multimedia%20Design</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::SubTitle" x="799" y="171" w="-1" h="-1" measuredW="188" measuredH="17" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Interactief%20Multimedia%20Design</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="741" y="197" w="-1" h="-1" measuredW="83" measuredH="21" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Kies%20een%20klas%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1248" y="44" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>http%3A//www.moreschedule.be/admuser</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Arrow" x="1084" y="268" w="192" h="10" measuredW="150" measuredH="100" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::CallOut" x="1163" y="224" w="-1" h="-1" measuredW="36" measuredH="39" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Title" x="1291" y="132" w="-1" h="-1" measuredW="115" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>MoreSchedule</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Label" x="1522" y="132" w="-1" h="-1" measuredW="126" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welkom%20%3Cusername%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::HRule" x="1263" y="157" w="420" h="-1" measuredW="100" measuredH="10" zOrder="24" locked="false" isInGroup="-1"/>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::SubTitle" x="1385" y="171" w="-1" h="-1" measuredW="188" measuredH="17" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Interactief%20Multimedia%20Design</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="1323" y="197" w="-1" h="-1" measuredW="89" measuredH="21" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vakken%202IMDB%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Canvas" x="741" y="272" w="304" h="30" measuredW="100" measuredH="70" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <color>10667209</color>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Canvas" x="741" y="298" w="304" h="30" measuredW="100" measuredH="70" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <color>4555150</color>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Canvas" x="741" y="325" w="304" h="30" measuredW="100" measuredH="70" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <color>1265500</color>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::VCurly" x="549" y="229" w="-1" h="-1" measuredW="180" measuredH="140" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>right</direction>
+        <text>Accordion%20menu%0Amet%20de%20jaren%20van%20de%20%0Agekozen%20richting%0Amet%20daar%20in%20de%20klassen.</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::List" x="1323" y="218" w="300" h="199" measuredW="100" measuredH="237" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Usability%0ADesign%20Atelier%202%0APHP1%0AProject%202%0AEngels%202%0ARich%20Media%20Applications%0AContent%20Managment%20Systemen%202%0AWebtechnologie%202%0AVisualiseren%202%0AMotion%20Design%0ADigital%20Publishing</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::CallOut" x="1045" y="472" w="-1" h="-1" measuredW="36" measuredH="37" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Paragraph" x="1097" y="469" w="200" h="45" measuredW="200" measuredH="80" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Klik%20op%20de%20klas%20%0Akrijgt%20overzicht%20van%20alle%20vakken.%0Aover%20vakken%20hoveren%20krijg%20je%20icon%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Canvas" x="1324" y="239" w="299" h="24" measuredW="100" measuredH="70" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <color>13369344</color>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Icon" x="1597" y="243" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>GearIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1248" y="571" w="450" h="599" measuredW="450" measuredH="400" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>http%3A//www.moreschedule.be/admuser</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Arrow" x="1600" y="260" w="10" h="490" measuredW="150" measuredH="100" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::CallOut" x="1613" y="472" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Title" x="1291" y="662" w="-1" h="-1" measuredW="115" measuredH="21" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>MoreSchedule</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="1522" y="662" w="-1" h="-1" measuredW="126" measuredH="21" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welkom%20%3Cusername%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::HRule" x="1263" y="687" w="420" h="-1" measuredW="100" measuredH="10" zOrder="41" locked="false" isInGroup="-1"/>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::SubTitle" x="1385" y="701" w="-1" h="-1" measuredW="188" measuredH="17" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Interactief%20Multimedia%20Design</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Label" x="1323" y="744" w="-1" h="-1" measuredW="222" measuredH="21" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2IMDB%20-%20DESIGN%20ATELIER%202%20-%20details</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::CheckBox" x="1448" y="805" w="-1" h="-1" measuredW="79" measuredH="22" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>Aanwezig</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::CheckBox" x="1529" y="805" w="-1" h="-1" measuredW="69" measuredH="22" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Afwezig</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Label" x="1323" y="806" w="-1" h="-1" measuredW="96" measuredH="21" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>David%20Heerinckx</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::CheckBox" x="1448" y="827" w="-1" h="-1" measuredW="79" measuredH="22" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>Aanwezig</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::CheckBox" x="1529" y="827" w="-1" h="-1" measuredW="69" measuredH="22" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Afwezig</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::Label" x="1323" y="828" w="-1" h="-1" measuredW="95" measuredH="21" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Kathleen%20Rutten</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::CheckBox" x="1448" y="849" w="-1" h="-1" measuredW="79" measuredH="22" zOrder="51" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>Aanwezig</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::CheckBox" x="1529" y="849" w="-1" h="-1" measuredW="69" measuredH="22" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Afwezig</text>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Label" x="1323" y="850" w="-1" h="-1" measuredW="106" measuredH="21" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Robby%20Vanelderen</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::SubTitle" x="1323" y="788" w="-1" h="-1" measuredW="82" measuredH="19" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Docent%28en%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::SubTitle" x="1323" y="886" w="-1" h="-1" measuredW="49" measuredH="19" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Lokaal</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::SubTitle" x="1323" y="939" w="-1" h="-1" measuredW="54" measuredH="19" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Tijdstip</text>
+      </controlProperties>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::Label" x="1323" y="901" w="-1" h="-1" measuredW="89" measuredH="21" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Creativity%20Gym</text>
+      </controlProperties>
+    </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::DateChooser" x="1323" y="958" w="-1" h="-1" measuredW="113" measuredH="25" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>05/11/2013</text>
+      </controlProperties>
+    </control>
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::SubTitle" x="1323" y="1002" w="-1" h="-1" measuredW="81" measuredH="19" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Opmerking</text>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::TextArea" x="1323" y="1021" w="305" h="51" measuredW="200" measuredH="140" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Geen%20les%20wegens%20afwezigheid%20docenten.</text>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::Canvas" x="1297" y="765" w="351" h="366" measuredW="100" measuredH="70" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>4555150</color>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::Button" x="1320" y="1098" w="-1" h="-1" measuredW="167" measuredH="27" zOrder="61" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16767334</color>
+        <text>VERZENDEN/OPSLAAN</text>
+      </controlProperties>
+    </control>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::Paragraph" x="1663" y="457" w="218" h="96" measuredW="200" measuredH="80" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>icon%20brengt%20naar%20details%0Awaar%20er%20aangeduid%20kan%20worden%20wie%20%0Aer%20afwezig%20is%20op%20welke%20dag%20%0Aof%20op%20welke%20dag%20er%20een%20lokaalsverandering%20is%20dit%20schrijf%20ja%20dan%20bij%20opmerkingen.</text>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="662" y="571" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="63" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>http%3A//www.moreschedule.be/admuser</text>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::Arrow" x="1037" y="893" w="286" h="205" measuredW="150" measuredH="100" zOrder="69" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Title" x="705" y="662" w="-1" h="-1" measuredW="115" measuredH="21" zOrder="64" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>MoreSchedule</text>
+      </controlProperties>
+    </control>
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::Label" x="936" y="662" w="-1" h="-1" measuredW="126" measuredH="21" zOrder="65" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welkom%20%3Cusername%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::HRule" x="677" y="687" w="420" h="-1" measuredW="100" measuredH="10" zOrder="66" locked="false" isInGroup="-1"/>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::SubTitle" x="799" y="701" w="-1" h="-1" measuredW="188" measuredH="17" zOrder="67" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Interactief%20Multimedia%20Design</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::Canvas" x="712" y="728" w="351" h="194" measuredW="100" measuredH="70" zOrder="68" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16770457</color>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Paragraph" x="741" y="743" w="291" h="66" measuredW="200" measuredH="80" zOrder="70" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>De%20opmerking%20%22Geen%20les%20wegens%20afwezigheid%20docenten%22%20is%20met%20succes%20verzonden%20naar%20alle%20leerlingen%20van%202IMDB%20ingeschreven%20voor%20het%20vak%20DESIGN%20ATELIER%202.</text>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Button" x="789" y="857" w="-1" h="-1" measuredW="55" measuredH="27" zOrder="71" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>7775663</color>
+        <text>QUIT</text>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::Button" x="896" y="857" w="-1" h="-1" measuredW="91" measuredH="27" zOrder="72" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>7775663</color>
+        <text>CONTINUE</text>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::SubTitle" x="859" y="862" w="-1" h="-1" measuredW="27" measuredH="21" zOrder="73" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>OR</text>
+      </controlProperties>
+    </control>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::CallOut" x="1163" y="891" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="74" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>4</text>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::HCurly" x="787" y="886" w="200" h="97" measuredW="200" measuredH="80" zOrder="75" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <size>16</size>
+        <text>%20%0AQUIT%20is%20afmelding%0Aof%0Averder%20werken%20%3D%20CONTINUE</text>
+      </controlProperties>
+    </control>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::iPhone" x="252" y="558" w="239" h="540" measuredW="282" measuredH="573" zOrder="76" locked="false" isInGroup="-1">
+      <controlProperties>
+        <model>IPhone5</model>
+      </controlProperties>
+    </control>
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::CallOut" x="741" y="1032" w="-1" h="-1" measuredW="36" measuredH="37" zOrder="77" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>4</text>
+      </controlProperties>
+    </control>
+    <control controlID="88" controlTypeID="com.balsamiq.mockups::Paragraph" x="789" y="1027" w="385" h="51" measuredW="200" measuredH="80" zOrder="78" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>opmerking%20wordt%20opgeslagen%20in%20tabel%0Amet%20collomen%3A%20opmerking%2C%20datum%2C%20vak%20en%20afwezig%20%28ja%20of%20NULL%29.%0Astudent%20krijgt%20melding%20bij%20+1%20in%20deze%20tabel%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Arrow" x="504" y="774" w="146" h="47" measuredW="150" measuredH="100" zOrder="79" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::TextArea" x="272" y="815" w="199" h="40" measuredW="200" measuredH="140" zOrder="80" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13576743</color>
+        <size>12</size>
+        <text>MoreSchedule%20-%20nieuwe%20melding%0A05/11/2014%20DESIGN%20ATELIER%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::SubTitle" x="274" y="560" w="-1" h="-1" measuredW="194" measuredH="19" zOrder="81" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>SMART%20PHONE%20STUDENT</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
