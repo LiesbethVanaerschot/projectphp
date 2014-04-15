@@ -43,10 +43,7 @@
 		</nav> <!-- End nav -->
 
 		<header>
-			<div class="wrapper">
-				<h1>MORE SCHEDULE</h1>
-				<p>Kleine introductie?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ea, dignissimos, dolore commodi deserunt veniam vitae necessitatibus nemo aliquam similique adipisci tempore in nobis illo suscipit molestiae laudantium. Officiis, rerum, quas sequi impedit laboriosam ad numquam totam facere perferendis expedita nemo quo ratione ullam adipisci obcaecati repellat nulla sunt eaque?</p>
-			</div>
+			<h1>MoreSchedule</h1>
 		</header> <!--  End header -->
 
 		<section id="login" <?php if($_SESSION['loggedin'] == true){
@@ -54,7 +51,7 @@
 								  }
 							?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
 			<div class="wrapper">
-				<h1 class="gray">LOGIN</h1>
+				<h1 class="gray">Login</h1>
 				<h2>Importeer de tblusers</h2>
 				<h2>email=r0417768@kuleuven.be && pw=test123</h2>
 				<form action="" method="post">
