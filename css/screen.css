@@ -16,8 +16,15 @@
 }
 /*End clearfix*/
 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 html {
 	font-size: 62.5%;
+	background-color: #007d8a;
 }
 
 body {
@@ -28,11 +35,14 @@ body {
 }
 
 h1 {
-	text-align: left;
-	font-size: 5rem;
+	text-align: center;
+	font-size: 4rem;
 	font-family: 'Lato', sans-serif;
 	color: #f7f7f7;
-	margin-bottom: 20px;
+}
+h2{
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
 nav {
@@ -74,11 +84,12 @@ label {
 	float: left;
 	width: 100px;
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 input {
 	float: left;
-	width: 150px;
+	width: 100%;
 	margin: 0;
 	margin-bottom: 10px;
 	padding: 10px;
@@ -87,8 +98,6 @@ input {
 }
 
 input[type="submit"] {
-	margin-left: 100px;
-	width: 170px;
 	font-weight: bold;
 	color:#f7f7f7;
 	background-color: #007d8a;
@@ -127,6 +136,7 @@ input[type="submit"]:hover{
 }
 
 table {
+	margin-top: 25px;
 	width: 100%;
 }
 
@@ -157,7 +167,19 @@ tr:nth-child(even):hover{
 }
 
 
-@media (min-width:960px ) {
+@media (min-width: 768px){
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	form {
+		width: 420px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 960px) {
 
 	.wrapper {
 		width: 960px;
