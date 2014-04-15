@@ -84,6 +84,12 @@
 			<div class="wrapper">
 				<h1>Kies uw klas!</h1>
 
+				<div class="klas1">
+					<p>1IMDa</p>
+					<p>1IMDb</p>
+					<p>1IMDc</p>
+				</div>
+
 				<table> <!-- hier alle klassen geven met php eventueel? zodat we niet altijd moete copy pasten -->
 					<tr>
 						<td><a href="#">1IMDa</a></td>
@@ -107,5 +113,9 @@
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- ./JS -->
 </body>
 </html>
