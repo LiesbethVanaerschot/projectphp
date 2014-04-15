@@ -10,12 +10,20 @@
 		{
 			switch ($p_sProperty) {
 				case 'Email':
-					$this->m_sEmail = $p_vValue;
-					break;
+					if(empty($p_vValue)){
+						throw new Exception ('Vul uw studentennummer in!');
+					} else {
+						$this->m_sEmail = $p_vValue;
+						break;
+					}
 
 				case 'Password':
-					$this->m_sPassword = $p_vValue;
-					break;
+					if(empty($p_vValue)){
+						throw new Exception ('Vul uw paswoord in!');
+					} else {
+						$this->m_sPassword = $p_vValue;
+						break;
+					}
 			}
 		}
 
@@ -48,7 +56,7 @@
 			else
 			{
 				//nieuwe error opvangen
-				throw new Exception("Username or password are not correct");
+				throw new Exception("Studentennummer of paswoord is niet correct!");
 				$_SESSION['loggedin'] = false;
 			}
 		}
