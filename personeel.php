@@ -27,7 +27,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Student - More Schedule</title>
+	<title>Personeel - More Schedule</title>
 	<link href="css/reset.css" rel="stylesheet" />
 	<link href="css/screen.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
