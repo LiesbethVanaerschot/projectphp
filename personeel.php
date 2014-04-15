@@ -3,10 +3,6 @@
 	$feedbackEr = "";
 	$_SESSION['loggedin'] = false;
 
-	if ($_SESSION['loggedin'] == false){
-		header('Location: index.php');
-	}
-
 	// Zien of post niet leeg is en user uit databank halen
 	if(!empty($_POST))
 	{
