@@ -53,11 +53,11 @@
 			<div class="wrapper">
 				<h1 class="gray">Login</h1>
 				<h2>Importeer de tblusers</h2>
-				<h2>email=r0417768@kuleuven.be && pw=test123</h2>
+				<h2>email=r0417768 of r0382075 && pw=test123</h2>
 				<form action="" method="post">
 					<p class="cf">
-						<label for="name">E-mail</label>
-						<input type="text" name="email" id="email" placeholder="r-nummer@kuleuven.be">
+						<label for="name">Studentennummer</label>
+						<input type="text" name="email" id="email" placeholder="r0382075">
 					</p>
 					<p class="cf">
 						<label for="password">Paswoord</label>

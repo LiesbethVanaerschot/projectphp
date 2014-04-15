@@ -4,8 +4,8 @@
 	{
 		private $m_sHost = "localhost";
 		private $m_sUser = "root";
-		private $m_sPassword = "";
-		private $m_sDatabase = "php1";
+		private $m_sPassword = "root";
+		private $m_sDatabase = "project";
 		public $conn;
 
 		public function __construct()
