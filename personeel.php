@@ -10,10 +10,10 @@
 		{
 			include_once("classes/Admin.class.php");
 
-			$u = new Admin();
-			$u->Email = $_POST['personeelEmail'];
-			$u->Password = $_POST['password'];
-			$u->Find();
+			$a = new Admin();
+			$a->ANummer = $_POST['personeelsNummer'];
+			$a->APaswoord = $_POST['paswoord'];
+			$a->Find();
 
 		} catch (Exception $e) {
 			$feedbackEr = $e->getMessage();
@@ -55,11 +55,11 @@
 				<form action="" method="post">
 					<p class="cf">
 						<label for="name">Persooneelsnummer</label>
-						<input type="text" name="personeelEmail" id="personeelEmail" placeholder="u1234878">
+						<input type="text" name="personeelsNummer" id="personeelsNummer" placeholder="u0123456">
 					</p>
 					<p class="cf">
 						<label for="password">Paswoord</label>
-						<input type="password" name="password" id="password" placeholder="paswoord" >
+						<input type="password" name="paswoord" id="paswoord" placeholder="wachtwoord" >
 					</p>
 					<p class="cf">
 						<input type="submit" name="btnLogin" value="LOG IN">
@@ -83,7 +83,7 @@
 							   ?>>
 			<div class="wrapper">
 				<!-- php stuff here for personeel -->
-				<div class="weekdag">Welkom <?php echo $_POST['email']; ?></div>
+				<div class="weekdag">Welkom <?php echo $_POST['personeelsNummer']; ?></div>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
