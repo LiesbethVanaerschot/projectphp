@@ -66,9 +66,34 @@
 		public function userName()
 		{
 			$db = new Db();
-			$sql = "select * from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
+			$sql = "select studentID, studentVoornaam from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
 			$check = $db->conn->query($sql);
 			return $check;
 		}
+
+		/*public function getID()
+		{
+			$db = new Db();
+			$sql = "select studentID from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
+			$id = $db->conn->query($sql);
+			print_r($id);
+			return $id;
+		}*/
+
+		public function getUurrooster()
+		{
+			$db = new Db();
+			$sql = "select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag, lesLokaal 
+					from tbldocent 
+					INNER JOIN tblles 
+					on(tbldocent.lesID = tblles.lesID) 
+					INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID) 
+					where studentID = 1;";/*" . mysqli_insert_id($id) ."*/
+			$rooster = $db->conn->query($sql);
+			return $rooster;
+		}
+
+
 	}
 ?>
+/*http://stackoverflow.com/questions/13779338/use-results-from-one-sql-query-in-another-where-statement-subquery*/
