@@ -3,25 +3,25 @@
 
 	class User {
 
-		private $m_sEmail;
-		private $m_sPassword;
+		private $m_sstudentRnummer;
+		private $m_sstudentPaswoord;
 
 		public function __set($p_sProperty, $p_vValue)
 		{
 			switch ($p_sProperty) {
-				case 'Email':
+				case 'studentRnummer':
 					if(empty($p_vValue)){
 						throw new Exception ('Vul uw studentennummer in!');
 					} else {
-						$this->m_sEmail = $p_vValue;
+						$this->m_sstudentRnummer = $p_vValue;
 						break;
 					}
 
-				case 'Password':
+				case 'studentPaswoord':
 					if(empty($p_vValue)){
 						throw new Exception ('Vul uw paswoord in!');
 					} else {
-						$this->m_sPassword = $p_vValue;
+						$this->m_sstudentPaswoord = $p_vValue;
 						break;
 					}
 			}
@@ -30,12 +30,12 @@
 		public function __get($p_sProperty)
 		{
 			switch ($p_sProperty) {
-				case 'Email':
-					return $this->m_sEmail;
+				case 'studentRnummer':
+					return $this->m_sstudentRnummer;
 					break;
 
-				case 'Password':
-					return $this->m_sPassword;
+				case 'studentPaswoord':
+					return $this->m_sstudentPaswoord;
 					break;
 			}
 		}
@@ -44,7 +44,7 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "select * from tblusers where email ='" . $this->m_sEmail . "' AND password = '" . $this->m_sPassword . "';";
+			$sql = "select * from tblstudent where studentRnummer ='" . $this->m_sstudentRnummer . "' AND studentPaswoord = '" . $this->m_sstudentPaswoord . "';";
 			$check = $db->conn->query($sql);
 
 			if(mysqli_num_rows($check) == 1)
@@ -60,6 +60,14 @@
 				$_SESSION['loggedin'] = false;
 			}
 		}
+
+		// public function userName()
+		// {
+		// 	$db = new Db();
+		// 	$sql = "select studentVoornaam from tblStudent where studentRnummer ='" . $this->m_sstudentRnummer . "';";
+		// 	$check = $db->conn->query($sql);
+		// 	return $check;
+		// }
 
 	}
 ?>

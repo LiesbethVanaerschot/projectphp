@@ -11,8 +11,8 @@
 			include_once("classes/User.class.php");
 
 			$u = new User();
-			$u->Email = $_POST['email'];
-			$u->Password = $_POST['password'];
+			$u->studentRnummer = $_POST['studentRnummer'];
+			$u->studentPaswoord = $_POST['studentPaswoord'];
 			$u->Find();
 
 		} catch (Exception $e) {
@@ -55,11 +55,11 @@
 				<form action="" method="post">
 					<p class="cf">
 						<label for="name">Studentennummer</label>
-						<input type="text" name="email" id="email" placeholder="r0382075">
+						<input type="text" name="studentRnummer" id="studentRnummer" placeholder="r0382075">
 					</p>
 					<p class="cf">
 						<label for="password">Paswoord</label>
-						<input type="password" name="password" id="password" placeholder="paswoord" >
+						<input type="password" name="studentPaswoord" id="studenPaswoord" placeholder="paswoord" >
 					</p>
 					<p class="cf">
 						<input type="submit" name="btnLogin" value="LOG IN">
@@ -83,7 +83,19 @@
 							   ?>>
 			<div class="wrapper">
 				<!-- php stuff here -->
-				<div class="weekdag">Welkom <?php echo $_POST['email']; ?></div>
+				<div class="weekdag">Welkom
+				<?php
+					if($_SESSION['loggedin'] == true){
+						$db = new Db();
+						$sql = "select studentVoornaam from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
+						$check = $db->conn->query($sql);
+
+						while ($row = $check->fetch_assoc()){
+							echo '<strong>' . $row['studentVoornaam'] . '</strong>';
+						}
+					}
+				?>
+				</div>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->

@@ -76,7 +76,6 @@ header {
 
 form {
 	margin-top: 25px;
-	margin-bottom: 25px;
 	max-width: 100%;
 	color:#f7f7f7;
 	font-weight: bold;
@@ -178,7 +177,6 @@ input[type="submit"]:hover{
 		width: 420px;
 		margin: 0 auto;
 		margin-top: 25px;
-		margin-bottom: 25px;
 	}
 
 	.nok {
