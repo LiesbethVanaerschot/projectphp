@@ -39,7 +39,12 @@
 				  		echo 'class="block"';
 				  	}
 			  ?>> <!-- nav verschijnt als je inlogt -->
-			<a href="logout.php">LOG OUT</a>
+			<div class="wrapper of">
+				<ul>
+					<li class="welkom">Welkom Admin</li>
+					<li class="logout"><a href="logout.php">LOG OUT</a></li>
+				</ul>
+			</div>
 		</nav> <!-- End nav -->
 
 		<header>
@@ -83,7 +88,7 @@
 							   ?>>
 			<div class="wrapper">
 				<!-- php stuff here for personeel -->
-				<div class="weekdag">Welkom <?php echo $_POST['personeelsNummer']; ?></div>
+
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->

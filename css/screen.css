@@ -52,20 +52,20 @@ nav {
 	padding: 15px;
 }
 
-nav a {
-	padding: 5px;
+nav li.logout a{
 	text-decoration: none;
 	color: #f7f7f7;
+	padding: 5px;
 	border-radius: 5px;
 }
 
-nav a:hover {
+nav li.logout a:hover {
 	background-color: #f7f7f7;
 	color: #000;
 }
 
 .wrapper {
-	padding: 0 15px 15px;
+	padding: 0 15px;
 }
 
 header {
@@ -167,6 +167,33 @@ input[type="submit"]:hover{
 	background-color: #fff;
 	color: #007d8a;
 }
+
+/*WELKOM*/
+nav .welkom {
+	color: #fff;
+	margin-right: 25px;
+	float: left;
+	padding: 5px;
+}
+
+nav .logout {
+	float: right;
+	padding: 5px;
+}
+
+.of {
+	overflow: hidden;
+}
+
+/*nav ul {
+	display: inline-block;
+}
+
+nav ul li {
+	display: inline-block;
+}*/
+
+
 
 @media (min-width: 768px){
 
