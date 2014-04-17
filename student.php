@@ -56,7 +56,7 @@
 				<form action="" method="post">
 					<p class="cf">
 						<label for="name">Studentennummer</label>
-						<input type="text" name="studentRnummer" id="studentRnummer" placeholder="r0382075">
+						<input type="text" name="studentRnummer" id="studentRnummer" placeholder="r0123456">
 					</p>
 					<p class="cf">
 						<label for="password">Paswoord</label>
