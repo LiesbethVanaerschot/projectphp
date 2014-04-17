@@ -61,13 +61,13 @@
 			}
 		}
 
-		// public function userName()
-		// {
-		// 	$db = new Db();
-		// 	$sql = "select studentVoornaam from tblStudent where studentRnummer ='" . $this->m_sstudentRnummer . "';";
-		// 	$check = $db->conn->query($sql);
-		// 	return $check;
-		// }
+		public function userName()
+		{
+			$db = new Db();
+			$sql = "select * from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
+			$check = $db->conn->query($sql);
+			return $check;
+		}
 
 	}
 ?>

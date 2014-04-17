@@ -3,13 +3,14 @@
 	$feedbackEr = "";
 	$_SESSION['loggedin'] = false;
 
+	//includen
+	include("classes/User.class.php");
+
 	// Zien of post niet leeg is en user uit databank halen
 	if(!empty($_POST))
 	{
 		try
 		{
-			include_once("classes/User.class.php");
-
 			$u = new User();
 			$u->studentRnummer = $_POST['studentRnummer'];
 			$u->studentPaswoord = $_POST['studentPaswoord'];
@@ -86,13 +87,13 @@
 				<div class="weekdag">Welkom
 				<?php
 					if($_SESSION['loggedin'] == true){
-						$db = new Db();
-						$sql = "select studentVoornaam from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
-						$check = $db->conn->query($sql);
 
-						while ($row = $check->fetch_assoc()){
+						$user = $u->userName();
+
+						while ($row = $user->fetch_assoc()){
 							echo '<strong>' . $row['studentVoornaam'] . '</strong>';
 						}
+
 					}
 				?>
 				</div>
