@@ -44,7 +44,9 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "select * from tblstudent where studentRnummer ='" . $this->m_sstudentRnummer . "' AND studentPaswoord = '" . $this->m_sstudentPaswoord . "';";
+			$sql = "select * from tblstudent 
+					where studentRnummer ='".$db->conn->real_escape_string($this->m_sstudentRnummer)."' 
+					AND studentPaswoord = '".$db->conn->real_escape_string($this->m_sstudentPaswoord)."';";
 			$check = $db->conn->query($sql);
 
 			if(mysqli_num_rows($check) == 1)
@@ -68,6 +70,5 @@
 			$check = $db->conn->query($sql);
 			return $check;
 		}
-
 	}
 ?>

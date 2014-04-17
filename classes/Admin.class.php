@@ -44,8 +44,9 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "select * from tblAdmin where adminUnummer = '".$this->m_sANummer."' 
-					AND adminPaswoord = '".$this->m_sAPaswoord."';";
+			$sql = "select * from tblAdmin 
+					where adminUnummer = '".$db->conn->real_escape_string($this->m_sANummer)."' 
+					AND adminPaswoord = '".$db->conn->real_escape_string($this->m_sAPaswoord)."';";
 			$check = $db->conn->query($sql);
 
 			if(mysqli_num_rows($check) == 1)
