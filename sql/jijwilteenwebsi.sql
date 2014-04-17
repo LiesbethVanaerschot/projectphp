@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 10.246.16.19:3306
--- Genereertijd: 15 apr 2014 om 17:07
+-- Genereertijd: 17 apr 2014 om 11:21
 -- Serverversie: 5.1.72-2
 -- PHP-versie: 5.3.3-7+squeeze15
 
@@ -31,7 +31,14 @@ CREATE TABLE IF NOT EXISTS `tblAdmin` (
   `adminUnummer` varchar(11) NOT NULL,
   `adminPaswoord` varchar(11) NOT NULL,
   PRIMARY KEY (`adminID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `tblAdmin`
+--
+
+INSERT INTO `tblAdmin` (`adminID`, `adminUnummer`, `adminPaswoord`) VALUES
+(1, 'u0123456', 'test123');
 
 -- --------------------------------------------------------
 
@@ -135,6 +142,7 @@ CREATE TABLE IF NOT EXISTS `tblStudent` (
   `studentID` int(255) NOT NULL AUTO_INCREMENT,
   `studentRnummer` varchar(8) NOT NULL,
   `studentPaswoord` varchar(255) NOT NULL,
+  `studentMail` varchar(255) NOT NULL,
   PRIMARY KEY (`studentID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
@@ -142,11 +150,11 @@ CREATE TABLE IF NOT EXISTS `tblStudent` (
 -- Gegevens worden uitgevoerd voor tabel `tblStudent`
 --
 
-INSERT INTO `tblStudent` (`studentID`, `studentRnummer`, `studentPaswoord`) VALUES
-(1, 'r0330949', 'test1'),
-(2, 'r0376986', 'test2'),
-(3, 'r0382075', 'test3'),
-(4, 'r0417768', 'test4');
+INSERT INTO `tblStudent` (`studentID`, `studentRnummer`, `studentPaswoord`, `studentMail`) VALUES
+(1, 'r0330949', 'test1', 'r0330949@student.thomasmore.be'),
+(2, 'r0376986', 'test2', 'r0376986@student.thomasmore.be'),
+(3, 'r0382075', 'test3', 'r0382075@student.thomasmore.be'),
+(4, 'r0417768', 'test4', 'r0417768@student.thomasmore.be');
 
 -- --------------------------------------------------------
 
@@ -159,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `tblStudentLes` (
   `studentID` int(11) NOT NULL,
   `lesID` int(11) NOT NULL,
   PRIMARY KEY (`studentlesID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `tblStudentLes`
@@ -189,7 +197,15 @@ INSERT INTO `tblStudentLes` (`studentlesID`, `studentID`, `lesID`) VALUES
 (21, 3, 9),
 (22, 3, 11),
 (23, 3, 13),
-(24, 3, 15);
+(24, 3, 15),
+(25, 4, 2),
+(26, 4, 3),
+(27, 4, 4),
+(28, 4, 5),
+(29, 4, 8),
+(30, 4, 12),
+(31, 4, 13),
+(32, 4, 15);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
