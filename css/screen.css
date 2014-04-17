@@ -52,16 +52,14 @@ nav {
 	padding: 15px;
 }
 
-nav li.logout a{
+nav li a {
 	text-decoration: none;
 	color: #f7f7f7;
-	padding: 5px;
-	border-radius: 5px;
+	padding: 2px;
 }
 
-nav li.logout a:hover {
-	background-color: #f7f7f7;
-	color: #000;
+nav li a:hover{
+	text-decoration: underline;
 }
 
 .wrapper {
@@ -138,6 +136,18 @@ input[type="submit"]:hover{
 	margin-bottom: 15px;
 }
 
+nav .welkom {
+	color: #fff;
+	margin-right: 25px;
+	float: left;
+	padding: 5px;
+}
+
+nav .logout {
+	float: right;
+	padding: 5px;
+}
+
 .nok {
 	padding: 15px;
 	border: 1px solid;
@@ -165,34 +175,12 @@ input[type="submit"]:hover{
 
 .redirect a:hover {
 	background-color: #fff;
-	color: #007d8a;
-}
-
-/*WELKOM*/
-nav .welkom {
-	color: #fff;
-	margin-right: 25px;
-	float: left;
-	padding: 5px;
-}
-
-nav .logout {
-	float: right;
-	padding: 5px;
+	color: #000;
 }
 
 .of {
 	overflow: hidden;
 }
-
-/*nav ul {
-	display: inline-block;
-}
-
-nav ul li {
-	display: inline-block;
-}*/
-
 
 
 @media (min-width: 768px){
