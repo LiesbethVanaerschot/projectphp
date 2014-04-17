@@ -91,11 +91,18 @@
 						$user = $u->userName();
 
 						while ($row = $user->fetch_assoc()){
+							$id = $row['studentID'];
 							echo '<strong>' . $row['studentVoornaam'] . '</strong>';
+							echo $id;
 						}
+
+						$user = $u->getUurrooster();
 
 					}
 				?>
+				</div>
+				<div class="rooster">
+					
 				</div>
 			</div>
 		</section><!-- End loggedin -->
@@ -105,3 +112,6 @@
 	<!-- ./JS -->
 </body>
 </html>
+
+<!-- select * from tblstudentles INNER JOIN tblles on(tblstudentles.lesID = tblles.lesID)-->
+<!-- select * from tblstudentles INNER JOIN tblles on(tblstudentles.lesID = tblles.lesID) where studentID = 1-->
