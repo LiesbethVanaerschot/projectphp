@@ -1148,7 +1148,7 @@ DatePicker.prototype.nodes = function( isOpen ) {
 
                     return [
                         _.group({
-                            min: DAYS_IN_WEEK * rowCounter - viewsetObject.day + shiftDateBy + 1, // Add 1 for weekday 0index
+                            min: DAYS_IN_WEEK * rowCounter - viewsetObject.day + shiftDateBy + 2, // Add 1 for weekday 0index
                             max: function() {
                                 return this.min + DAYS_IN_WEEK - 1
                             },
@@ -1258,8 +1258,8 @@ DatePicker.defaults = (function( prefix ) {
         // Months and weekdays
         monthsFull: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
         monthsShort: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
-        weekdaysFull: [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
-        weekdaysShort: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+        weekdaysFull: [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ],
+        weekdaysShort: [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ],
 
         // Today and clear
         today: 'Today',
