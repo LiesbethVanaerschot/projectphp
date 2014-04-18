@@ -40,7 +40,25 @@
 				  		echo 'class="block"';
 				  	}
 			  ?>> <!-- nav verschijnt als je inlogt -->
-			<a href="logout.php">LOG OUT</a>
+			<div class="wrapper cf">
+				<ul>
+					<li class="welkom">Welkom
+					<?php
+						if($_SESSION['loggedin'] == true){
+
+							$user = $u->userName();
+
+							while ($row = $user->fetch_assoc()){
+								// $id = $row['studentID'];
+								echo '<strong>' . $row['studentVoornaam'] . '</strong>';
+								// echo $id;
+							}
+						}
+					?>
+					</li>
+					<li class="logout"><a href="logout.php">LOG OUT</a></li>
+				</ul>
+			</div>
 		</nav> <!-- End nav -->
 
 		<header>
@@ -84,22 +102,6 @@
 							   ?>>
 			<div class="wrapper">
 				<!-- php stuff here -->
-				<div class="weekdag">Welkom
-				<?php
-					if($_SESSION['loggedin'] == true){
-
-						$user = $u->userName();
-
-						while ($row = $user->fetch_assoc()){
-							$id = $row['studentID'];
-							echo '<strong>' . $row['studentVoornaam'] . '</strong>';
-							echo $id;
-						}
-
-					}
-				?>
-				</div>
-
 				<table class="lessenrooster">
                     <thead>
                       <tr>
@@ -112,12 +114,11 @@
                       </tr>
                     </thead>
                     <tbody>
-                      
+
                       <?php
 						if($_SESSION['loggedin'] == true){
 						$les = $u->getUurrooster();
 
-						
 						while ($data = $les->fetch_assoc()){
 							echo "<tr>";
                              echo "<td>" . $data['lesDag'] . "</td>";
@@ -128,10 +129,8 @@
                              echo "<td>" . $data['docentNaam'] . "</td>";
                           echo "</tr>";
 						}
-
 					}
 					?>
-                        
                     </tbody>
                   </table>
 			</div>

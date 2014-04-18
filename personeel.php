@@ -39,7 +39,7 @@
 				  		echo 'class="block"';
 				  	}
 			  ?>> <!-- nav verschijnt als je inlogt -->
-			<div class="wrapper of">
+			<div class="wrapper cf">
 				<ul>
 					<li class="welkom">Welkom Admin</li>
 					<li class="logout"><a href="logout.php">LOG OUT</a></li>

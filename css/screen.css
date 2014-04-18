@@ -46,8 +46,8 @@ h2 {
 	margin: 15px auto;
 }
 
+/*NAVIGATON-----------------------------*/
 nav {
-	text-align: right;
 	background-color: #000;
 	padding: 15px;
 }
@@ -55,12 +55,24 @@ nav {
 nav li a {
 	text-decoration: none;
 	color: #f7f7f7;
-	padding: 2px;
+	padding: 5px;
 }
 
 nav li a:hover{
-	text-decoration: underline;
+	background-color: #fff;
+	border-radius: 10px;
+	color: #000;
 }
+
+nav .welkom {
+	color: #fff;
+	float: left;
+}
+
+nav .logout {
+	float: right;
+}
+/* END NAVIGATON-----------------------------*/
 
 .wrapper {
 	padding: 0 15px;
@@ -126,7 +138,6 @@ input[type="submit"]:hover{
 #loggedin {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	text-align: center;
 	background-color: #007d8a;
 }
 
@@ -134,18 +145,6 @@ input[type="submit"]:hover{
 	background-color: #fff;
 	padding: 25px;
 	margin-bottom: 15px;
-}
-
-nav .welkom {
-	color: #fff;
-	margin-right: 25px;
-	float: left;
-	padding: 5px;
-}
-
-nav .logout {
-	float: right;
-	padding: 5px;
 }
 
 .nok {
@@ -157,7 +156,7 @@ nav .logout {
 	text-align: center;
 }
 
-/*INDEX.PHP*/
+/*INDEX.PHP------------------------------*/
 .redirect a {
 	display: block;
 	text-align: center;
@@ -175,14 +174,12 @@ nav .logout {
 
 .redirect a:hover {
 	background-color: #fff;
-	color: #000;
+	color: #007d8a;
 }
-
-.of {
-	overflow: hidden;
-}
+/*END INDEX.PHP------------------------------*/
 
 
+/*MEDIAQUERIES-------------------------------*/
 @media (min-width: 768px){
 
 	h1 {
@@ -208,4 +205,5 @@ nav .logout {
 		margin: 0 auto;
 	}
 }
+/*END MEDIAQUERIES-------------------------------*/
 

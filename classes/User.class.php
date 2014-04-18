@@ -44,8 +44,8 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "select * from tblstudent 
-					where studentRnummer ='".$db->conn->real_escape_string($this->m_sstudentRnummer)."' 
+			$sql = "select * from tblstudent
+					where studentRnummer ='".$db->conn->real_escape_string($this->m_sstudentRnummer)."'
 					AND studentPaswoord = '".$db->conn->real_escape_string($this->m_sstudentPaswoord)."';";
 			$check = $db->conn->query($sql);
 
@@ -83,11 +83,11 @@
 		public function getUurrooster()
 		{
 			$db = new Db();
-			$sql = "select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag, lesLokaal 
-					from tbldocent 
-					INNER JOIN tblles 
-					on(tbldocent.lesID = tblles.lesID) 
-					INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID) 
+			$sql = "select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag, lesLokaal
+					from tbldocent
+					INNER JOIN tblles
+					on(tbldocent.lesID = tblles.lesID)
+					INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID)
 					where studentID = 1;";/*" . mysqli_insert_id($id) ."*/
 			$rooster = $db->conn->query($sql);
 			return $rooster;
@@ -96,4 +96,4 @@
 
 	}
 ?>
-/*http://stackoverflow.com/questions/13779338/use-results-from-one-sql-query-in-another-where-statement-subquery*/
+<!-- /*http://stackoverflow.com/questions/13779338/use-results-from-one-sql-query-in-another-where-statement-subquery*/ -->
