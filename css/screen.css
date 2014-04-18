@@ -210,6 +210,26 @@ input[type="submit"]:hover{
 	background-color: #f7f7f7;
 }
 
+.redirectAdmin a {
+	float:right;
+	text-align: center;
+	width: 250px;
+	margin-top: 75px;
+	background-color: #007d8a;
+	padding: 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	border: 1px solid #f7f7f7;
+	color: #f7f7f7;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+.redirectAdmin a:hover {
+	background-color: #fff;
+	color: #007d8a;
+}
+
 /*END WEEKDAG--------------------------------*/
 
 /*MEDIAQUERIES-------------------------------*/

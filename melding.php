@@ -1,6 +1,6 @@
 <?php
 	//als sessie = true en dag is gegeven
-	if (isset($_GET['dag'])){
+	/*if (isset($_GET['dag'])){*/
 		// session een default waarde geven
 		$_SESSION['loggedin'] = true;
 
@@ -20,9 +20,9 @@
 				$feedbackEr = $e->getMessage();
 			}
 		}
-	} else {
+	/*} else {
 		header('Location: personeel.php');
-	}
+	}*/
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -66,21 +66,7 @@
 							   ?>>
 			<div class="wrapper">
 				<!-- php stuff here for personeel -->
-				<div class="weekdagen">
-					<h2>U selecteerde: </h2>
-					<div class="dag selected">
-						<?php $dag = $_GET['dag']; echo $dag;?>
-					</div>
-				</div>
 
-				<div class="datum">
-					<h2>Selecteer een datum:</h2>
-					<input type="text" class="datepicker" placeholder="Selecteer een datum...">
-				</div>
-				
-				<div class="redirectAdmin">
-					<a href="melding.php">Volgende</a>
-				</div>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
