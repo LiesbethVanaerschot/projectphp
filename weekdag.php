@@ -30,6 +30,9 @@
 	<title>Personeel - More Schedule</title>
 	<link href="css/reset.css" rel="stylesheet" />
 	<link href="css/screen.css" rel="stylesheet" />
+	<link href="css/classic.css" rel="stylesheet" />
+	<link href="css/classic.date.css" rel="stylesheet"/>
+
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 </head>
@@ -69,11 +72,26 @@
 						<?php $dag = $_GET['dag']; echo $dag;?>
 					</div>
 				</div>
+
+				<div class="datum">
+					<h2>Selecteer een datum:</h2>
+					<input type="text" class="datepicker" placeholder="Selecteer een datum...">
+				</div>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<script src="js/legacy.js"></script>
+	<script src="js/picker.js"></script>
+	<script src="js/picker.date.js"></script>
+	<script>
+		$(".datepicker").pickadate({
+		    formatSubmit: 'yyyy/mm/dd',
+		    hiddenName: true
+		})
+	</script>
 	<!-- ./JS -->
 </body>
 </html>
