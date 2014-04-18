@@ -6,6 +6,7 @@
  */
 .picker__box {
   padding: 0 1em;
+  background: #f7f7f7;
 }
 /**
  * The header containing the month and year stuff.
@@ -13,7 +14,8 @@
 .picker__header {
   text-align: center;
   position: relative;
-  margin-top: .75em;
+  padding-top: .75em;
+  background: #f7f7f7;
 }
 /**
  * The month and year labels.
@@ -27,12 +29,14 @@
 }
 .picker__year {
   color: #999999;
-  font-size: .8em;
-  font-style: italic;
+  font-size: .9em;
+  /*font-style: italic;*/
 }
-/**
- * The month and year selectors.
- */
+/*
+  *
+  * The month and year selectors.
+  *
+
 .picker__select--month,
 .picker__select--year {
   border: 1px solid #b7b7b7;
@@ -53,17 +57,19 @@
 .picker__select--year {
   width: 22.5%;
 }
+
 .picker__select--month:focus,
 .picker__select--year:focus {
   border-color: #0089ec;
-}
+}*/
+
 /**
  * The month navigation buttons.
  */
 .picker__nav--prev,
 .picker__nav--next {
   position: absolute;
-  padding: .5em 1.25em;
+  padding: 1em 1.25em;
   width: 1em;
   height: 1em;
   top: -0.25em;
@@ -75,7 +81,7 @@
   }
 }
 .picker__nav--prev {
-  left: -1em;
+  left: -1.75em;
   padding-right: 1.25em;
 }
 @media (min-width: 24.5em) {
@@ -111,7 +117,7 @@
 .picker__nav--next:hover {
   cursor: pointer;
   color: #000000;
-  background: #b1dcfb;
+  /*background: #b1dcfb;*/
 }
 .picker__nav--disabled,
 .picker__nav--disabled:hover,
@@ -151,7 +157,7 @@
   width: 14.285714286%;
   font-size: .75em;
   padding-bottom: .25em;
-  color: #999999;
+  color: #f24f11;
   font-weight: 500;
   /* Increase the spacing a tad */
 }
@@ -160,16 +166,18 @@
     padding-bottom: .5em;
   }
 }
+
 /**
  * The days on the calendar
  */
+
 .picker__day {
   padding: .3125em 0;
   font-weight: 200;
   border: 1px solid transparent;
 }
 .picker__day--today {
-  color: #0089ec;
+  color: #f24f11;
   position: relative;
 }
 .picker__day--today:before {
@@ -179,33 +187,40 @@
   right: 2px;
   width: 0;
   height: 0;
-  border-top: 0.5em solid #0059bc;
+  border-top: 0.5em solid #007d8a;
   border-left: .5em solid transparent;
 }
-.picker__day--selected,
+
+/*.picker__day--selected,
 .picker__day--selected:hover {
   border-color: #0089ec;
-}
+}*/
+
 .picker__day--highlighted {
-  background: #b1dcfb;
+  background: #007d8a;
 }
+
 .picker__day--disabled:before {
   border-top-color: #aaaaaa;
 }
+
 .picker__day--outfocus {
-  color: #dddddd;
+  color: #d2d2d2;
 }
+
 .picker__day--infocus:hover,
 .picker__day--outfocus:hover {
   cursor: pointer;
-  color: #000000;
-  background: #b1dcfb;
+  color: #f7f7f7;
+  background: #007d8a;
 }
+
 .picker__day--highlighted:hover,
 .picker--focused .picker__day--highlighted {
-  background: #0089ec;
-  color: #ffffff;
+  background: #f24f11;
+  color: #f7f7f7;
 }
+
 .picker__day--disabled,
 .picker__day--disabled:hover {
   background: #f5f5f5;
@@ -213,10 +228,12 @@
   color: #dddddd;
   cursor: default;
 }
+
 .picker__day--highlighted.picker__day--disabled,
 .picker__day--highlighted.picker__day--disabled:hover {
   background: #bbbbbb;
 }
+
 /**
  * The footer containing the "today" and "clear" buttons.
  */
@@ -225,8 +242,8 @@
 }
 .picker__button--today,
 .picker__button--clear {
-  border: 1px solid #ffffff;
-  background: #ffffff;
+  border: 1px solid #f7f7f7;
+  background: #f7f7f7;
   font-size: .8em;
   padding: .66em 0;
   font-weight: bold;
@@ -238,15 +255,15 @@
 .picker__button--clear:hover {
   cursor: pointer;
   color: #000000;
-  background: #b1dcfb;
-  border-bottom-color: #b1dcfb;
+  /*background: #b1dcfb;
+  border-bottom-color: #b1dcfb;*/
 }
-.picker__button--today:focus,
+/*.picker__button--today:focus,
 .picker__button--clear:focus {
   background: #b1dcfb;
   border-color: #0089ec;
   outline: none;
-}
+}*/
 .picker__button--today:before,
 .picker__button--clear:before {
   position: relative;
@@ -258,14 +275,14 @@
   margin-right: .45em;
   top: -0.05em;
   width: 0;
-  border-top: 0.66em solid #0059bc;
+  border-top: 0.66em solid #f24f11;
   border-left: .66em solid transparent;
 }
 .picker__button--clear:before {
   content: "\D7";
   margin-right: .35em;
   top: -0.1em;
-  color: #ee2200;
+  color: #f24f11;
   vertical-align: top;
   font-size: 1.1em;
 }
