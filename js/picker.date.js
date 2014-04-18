@@ -1248,22 +1248,22 @@ DatePicker.defaults = (function( prefix ) {
     return {
 
         // The title label to use for the month nav buttons
-        labelMonthNext: 'Next month',
-        labelMonthPrev: 'Previous month',
+        labelMonthNext: 'Volgende maand',
+        labelMonthPrev: 'Vorigemand maand',
 
         // The title label to use for the dropdown selectors
-        labelMonthSelect: 'Select a month',
-        labelYearSelect: 'Select a year',
+        labelMonthSelect: 'Selecteer een maand',
+        labelYearSelect: 'Selecteer een jaar',
 
         // Months and weekdays
-        monthsFull: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-        monthsShort: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
-        weekdaysFull: [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ],
-        weekdaysShort: [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ],
+        monthsFull: [ 'Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December' ],
+        monthsShort: [ 'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec' ],
+        weekdaysFull: [ 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag' ],
+        weekdaysShort: [ 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za', 'Zo' ],
 
         // Today and clear
-        today: 'Today',
-        clear: 'Clear',
+        today: 'Vandaag',
+        clear: 'Verwijder',
 
         // The format to show on the `input` element
         format: 'd mmmm yyyy',
