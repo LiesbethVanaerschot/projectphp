@@ -34,16 +34,17 @@ header p{
 
 h1 {
 	text-align: center;
-	font-size: 4rem;
+	font-size: 3rem;
 	font-family: 'Lato', sans-serif;
 	color: #f7f7f7;
 }
 
 h2 {
+	font-size: 2.5rem;
+	font-family: 'Lato', sans-serif;
+	color: #f7f7f7;
+	margin-top: 25px;
 	margin-bottom: 15px;
-	margin-top: 15px;
-	max-width: 100%;
-	margin: 15px auto;
 }
 
 /*NAVIGATON-----------------------------*/
@@ -178,6 +179,32 @@ input[type="submit"]:hover{
 }
 /*END INDEX.PHP------------------------------*/
 
+/*PERSONEEL----------------------------------*/
+.dag {
+	padding: 15px;
+	color: #083d3c;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 1px solid #083d3c;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.dag:hover {
+	cursor: pointer;
+	color: #f7f7f7;
+	background-color: #083d3c;
+}
+
+.selected {
+	color: #f7f7f7;
+	background-color: #083d3c;
+}
+
+
+
+
+/*END PERSONEEL----------------------------------*/
 
 /*MEDIAQUERIES-------------------------------*/
 @media (min-width: 768px){
@@ -186,6 +213,10 @@ input[type="submit"]:hover{
 		font-size: 5rem;
 	}
 
+	h2 {
+		font-size: 3.5rem;
+		font-family: 'Lato', sans-serif;
+	}
 	form {
 		width: 420px;
 		margin: 0 auto;

@@ -1,7 +1,6 @@
 <?php
 	// feedback en session een default waarde geven
 	$feedbackEr = "";
-	$_SESSION['loggedin'] = false;
 
 	//includen
 	include("classes/User.class.php");
@@ -32,19 +31,19 @@
 </head>
 <body>
 	<div id="container">
-		<nav <?php 	if($_SESSION['loggedin'] == false){
-						echo 'class="hidden"';
+		<nav <?php 	if(isset($_SESSION['loggedin'])){
+						echo 'class="block"';
 				  	}
 				  	else
 				  	{
-				  		echo 'class="block"';
+				  		echo 'class="hidden"';
 				  	}
 			  ?>> <!-- nav verschijnt als je inlogt -->
 			<div class="wrapper cf">
 				<ul>
 					<li class="welkom">Welkom
 					<?php
-						if($_SESSION['loggedin'] == true){
+						if(isset($_SESSION['loggedin'])){
 
 							$user = $u->userName();
 
@@ -65,7 +64,7 @@
 			<h1>MoreSchedule</h1>
 		</header> <!--  End header -->
 
-		<section id="login" <?php if($_SESSION['loggedin'] == true){
+		<section id="login" <?php if(isset($_SESSION['loggedin'])){
 										echo 'class="hidden"';
 								  }
 							?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
@@ -93,11 +92,11 @@
 			</div>
 		</section><!-- End login -->
 
-		<section id="loggedin" <?php if($_SESSION['loggedin'] == false){
-											echo 'class="hidden"';
+		<section id="loggedin" <?php if(isset($_SESSION['loggedin'])){
+											echo 'class="block"';
 									 }
 									 else{
-									 		echo 'class="block"';
+									 		echo 'class="hidden"';
 									 }
 							   ?>>
 			<div class="wrapper">
@@ -116,7 +115,7 @@
                     <tbody>
 
                       <?php
-						if($_SESSION['loggedin'] == true){
+						if(isset($_SESSION['loggedin'])){
 						$les = $u->getUurrooster();
 
 						while ($data = $les->fetch_assoc()){

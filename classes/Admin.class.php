@@ -44,8 +44,8 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "select * from tblAdmin 
-					where adminUnummer = '".$db->conn->real_escape_string($this->m_sANummer)."' 
+			$sql = "select * from tblAdmin
+					where adminUnummer = '".$db->conn->real_escape_string($this->m_sANummer)."'
 					AND adminPaswoord = '".$db->conn->real_escape_string($this->m_sAPaswoord)."';";
 			$check = $db->conn->query($sql);
 
@@ -63,5 +63,31 @@
 			}
 		}
 
+
+		public function getDagen()
+		{
+			$db = new Db();
+			$sql = "SELECT DISTINCT lesDag FROM tblles";
+
+			$dagen = $db->conn->query($sql);
+			return $dagen;
+		}
+// voor doceent en les tegelijk
+// SELECT lesNaam, docentNaam
+// FROM tblLes
+// 	 INNER JOIN tblDocent ON (tblLes.lesID = tblDocent.lesID)
+// WHERE lesDag="dinsdag";
+
+
+// enkel docenten
+// SELECT docentNaam
+// FROM tblLes
+// 	 INNER JOIN tblDocent ON (tblLes.lesID = tblDocent.lesID)
+// WHERE lesDag="dinsdag";
+
+//enkel vakken
+// select lesNaam
+// from tblLes
+// where lesDag="dinsdag";
 	}
 ?>

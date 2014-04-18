@@ -1,7 +1,6 @@
 <?php
 	// feedback en session een default waarde geven
 	$feedbackEr = "";
-	$_SESSION['loggedin'] = false;
 
 	// Zien of post niet leeg is en user uit databank halen
 	if(!empty($_POST))
@@ -31,12 +30,12 @@
 </head>
 <body>
 	<div id="container">
-		<nav <?php 	if($_SESSION['loggedin'] == false){
-						echo 'class="hidden"';
+		<nav <?php 	if(isset($_SESSION['loggedin'])){
+						echo 'class="block"';
 				  	}
 				  	else
 				  	{
-				  		echo 'class="block"';
+				  		echo 'class="hidden"';
 				  	}
 			  ?>> <!-- nav verschijnt als je inlogt -->
 			<div class="wrapper cf">
@@ -51,7 +50,7 @@
 			<h1>MoreSchedule</h1>
 		</header> <!--  End header -->
 
-		<section id="login" <?php if($_SESSION['loggedin'] == true){
+		<section id="login" <?php if(isset($_SESSION['loggedin'])){
 										echo 'class="hidden"';
 								  }
 							?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
@@ -79,21 +78,38 @@
 			</div>
 		</section><!-- End login -->
 
-		<section id="loggedin" <?php if($_SESSION['loggedin'] == false){
-											echo 'class="hidden"';
+		<section id="loggedin" <?php if(isset($_SESSION['loggedin'])){
+											echo 'class="block"';
 									 }
 									 else{
-									 		echo 'class="block"';
+									 		echo 'class="hidden"';
 									 }
 							   ?>>
 			<div class="wrapper">
 				<!-- php stuff here for personeel -->
+				<div class="weekdagen">
+					<h1>Interactive Multimedia Design</h1>
+					<h2>Welke dag?</h2>
+					<?php
+						if(isset($_SESSION['loggedin'])){
 
+							$dagen = $a->getDagen();
+
+							while ($row = $dagen->fetch_assoc()){
+								echo '<div class="dag">';
+								echo '<strong>' . $row['lesDag'] . '</strong>';
+								echo '</div>';
+							}
+						}
+					?>
+				</div>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<script src ="js/script.js"></script>
 	<!-- ./JS -->
 </body>
 </html>
