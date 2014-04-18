@@ -43,7 +43,7 @@ h2 {
 	font-size: 2.5rem;
 	font-family: 'Lato', sans-serif;
 	color: #f7f7f7;
-	margin-top: 25px;
+	margin-top: 10px;
 	margin-bottom: 15px;
 }
 
@@ -200,7 +200,17 @@ input[type="submit"]:hover{
 	color: #f7f7f7;
 	background-color: #083d3c;
 }
-/*END PERSONEEL----------------------------------*/
+/*END PERSONEEL------------------------------*/
+
+/*WEEKDAG------------------------------------*/
+.datum {
+	padding-top: 15px;
+}
+.datum input {
+	background-color: #f7f7f7;
+}
+
+/*END WEEKDAG--------------------------------*/
 
 /*MEDIAQUERIES-------------------------------*/
 @media (min-width: 768px){
