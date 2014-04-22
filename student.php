@@ -63,7 +63,7 @@
 		<header>
 			<h1>MoreSchedule</h1>
 		</header> <!--  End header -->
-
+//wat nu nog zou moeten gebeuren is template week table of dag table, aparte queries die mooi per dag tonen welke les je hebt, grijs wnr er geen les is.
 		<section id="login" <?php if(isset($_SESSION['loggedin'])){
 										echo 'class="hidden"';
 								  }
@@ -145,4 +145,19 @@
 <!-- select * from tblstudentles INNER JOIN tblles on(tblstudentles.lesID = tblles.lesID) where studentID = 1-->
 <!-- select tbldocent.lesID, tblles.lesID, docentNaam from tbldocent INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)-->
 <!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam from tbldocent INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)-->
-<!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag from tbldocent INNER JOIN tblles on(tbldocent.lesID = tblles.lesID) INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID) where studentID IN ( select studentID from tblstudent where studentRnummer = 'r0330949')-->
+<!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag from tbldocent 
+INNER JOIN tblles on(tbldocent.lesID = tblles.lesID) INNER JOIN tblstudentles 
+on(tblles.lesID = tblstudentles.lesID) where studentID IN ( select studentID from tblstudent where studentRnummer = 'r0330949')-->
+<!-- 
+	QUERIES VOOR TEMPLATE
+
+	query die les voor r0330949 per dag selecteert:
+	select tbldocent.lesID, tblles.lesID, lesNaam, docentNaam 
+	from tbldocent 
+	INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)
+	INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID)
+	where studentID IN(select studentID from tblstudent where studentRnummer = 'r0330949')
+	AND
+	lesDag IN(select lesDag from tblles where lesDag = 'dinsdag');
+	(per uur is gwn nog eens AND beginUur IN (...))
+-->

@@ -88,7 +88,10 @@
 					INNER JOIN tblles
 					on(tbldocent.lesID = tblles.lesID)
 					INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID)
-					where studentID = 1;";/*" . mysqli_insert_id($id) ."*/
+					where studentID IN
+					(select studentID 
+						from tblstudent
+						where studentRnummer ='" . $_POST['studentRnummer'] . "');";/*" . mysqli_insert_id($id) ."*/
 			$rooster = $db->conn->query($sql);
 			return $rooster;
 		}
