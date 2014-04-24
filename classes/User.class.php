@@ -96,5 +96,3 @@
 			return $rooster;
 		}
 	}
-?>
-<!-- /*http://stackoverflow.com/questions/13779338/use-results-from-one-sql-query-in-another-where-statement-subquery*/ -->

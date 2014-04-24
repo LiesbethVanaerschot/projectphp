@@ -1258,7 +1258,7 @@ DatePicker.defaults = (function( prefix ) {
         // Months and weekdays
         monthsFull: [ 'Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December' ],
         monthsShort: [ 'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec' ],
-        weekdaysFull: [ 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag' ],
+        weekdaysFull: [ 'Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' ],
         weekdaysShort: [ 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za', 'Zo' ],
 
         // Today and clear

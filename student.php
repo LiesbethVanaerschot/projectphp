@@ -63,7 +63,7 @@
 		<header>
 			<h1>MoreSchedule</h1>
 		</header> <!--  End header -->
-//wat nu nog zou moeten gebeuren is template week table of dag table, aparte queries die mooi per dag tonen welke les je hebt, grijs wnr er geen les is.
+		<!---wat nu nog zou moeten gebeuren is template week table of dag table, aparte queries die mooi per dag tonen welke les je hebt, grijs wnr er geen les is.---->
 		<section id="login" <?php if(isset($_SESSION['loggedin'])){
 										echo 'class="hidden"';
 								  }
