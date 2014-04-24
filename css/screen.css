@@ -232,7 +232,6 @@ form {
 }
 /*END WEEKDAG--------------------------------*/
 
-<<<<<<< HEAD
 /*STUDENT.PHP--------------------------------*/
 #dagnav
 {
@@ -276,9 +275,8 @@ form {
 	cursor: pointer;
 }
 
-
 /* END STUDENT.PHP---------------------------*/
-=======
+
 /*MELDINGEN----------------------------------*/
 .meldingScherm select{
 	margin: 0;
@@ -336,7 +334,6 @@ form {
 	margin-bottom: 15px;
 }
 /*END meldingen--------------------------------*/
->>>>>>> ziggy
 
 /*MEDIAQUERIES-------------------------------*/
 
