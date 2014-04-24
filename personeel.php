@@ -1,9 +1,10 @@
 <?php
 	// feedback en session een default waarde geven
 	$feedbackEr = "";
+	$crumbs[0] = "";
 
 	// Zien of post niet leeg is en user uit databank halen
-	if(!empty($_POST))
+	if(!empty($_POST['btnLogin']))
 	{
 		try
 		{
@@ -18,6 +19,21 @@
 			$feedbackEr = $e->getMessage();
 		}
 	}
+
+	if(!empty($_POST['volgende']))
+	{
+		try {
+			$datum = $_POST['datum'];
+			$crumbs = explode(" ", $datum);
+			if ($crumbs != ""){
+				// session_start();
+				// $_SESSION['loggedin'] = true;
+				header("location: melding.php?datum=" . $crumbs[0] . "&dag=" . $crumbs[1] . "&maand=" . $crumbs[2] . "&jaar=" . $crumbs[3]);
+			}
+		} catch (Exception $e) {
+			$feedbackEr = $e->getMessage();
+		}
+	}
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -25,6 +41,8 @@
 	<title>Personeel - More Schedule</title>
 	<link href="css/reset.css" rel="stylesheet" />
 	<link href="css/screen.css" rel="stylesheet" />
+	<link href="css/classic.css" rel="stylesheet" />
+	<link href="css/classic.date.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 </head>
@@ -87,21 +105,12 @@
 							   ?>>
 			<div class="wrapper">
 				<!-- php stuff here for personeel -->
-				<div class="weekdagen">
-					<h1>Interactive Multimedia Design</h1>
-					<h2>Welke dag?</h2>
-					<?php
-						if(isset($_SESSION['loggedin'])){
-
-							$dagen = $a->getDagen();
-
-							while ($row = $dagen->fetch_assoc()){
-								echo '<div class="dag">';
-								echo '<strong>' . $row['lesDag'] . '</strong>';
-								echo '</div>';
-							}
-						}
-					?>
+				<div class="datum">
+					<h2>Selecteer een datum:</h2>
+					<form action="" method="post">
+						<input type="text" class="datepicker" placeholder="Selecteer een datum..." name="datum">
+						<input type="submit" class="redirectAdmin" value="Volgende" name="volgende">
+					</form>
 				</div>
 			</div>
 		</section><!-- End loggedin -->
@@ -110,6 +119,13 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 	<script src ="js/script.js"></script>
+	<script src="js/legacy.js"></script>
+	<script src="js/picker.js"></script>
+	<script src="js/picker.date.js"></script>
+	<script>
+		$('.datepicker').pickadate();
+	</script>
+
 	<!-- ./JS -->
 </body>
 </html>

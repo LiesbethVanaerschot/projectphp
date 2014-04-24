@@ -63,14 +63,20 @@
 			}
 		}
 
-
-		public function getDagen()
+		public function getInfo()
 		{
 			$db = new Db();
-			$sql = "SELECT DISTINCT lesDag FROM tblles";
 
-			$dagen = $db->conn->query($sql);
-			return $dagen;
+			$dag = $_GET['datum'];
+
+			$sql = "SELECT DISTINCT lesNaam, docentNaam
+					from tblles
+					INNER JOIN tbldocent
+						ON (tblles.lesID = tbldocent.lesID)
+					where lesDag = '" . $dag . "';";
+
+			$lesdag = $db->conn->query($sql);
+			return $lesdag;
 		}
 // voor doceent en les tegelijk
 // SELECT lesNaam, docentNaam
