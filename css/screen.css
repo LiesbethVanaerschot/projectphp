@@ -92,14 +92,14 @@ form {
 	font-weight: bold;
 }
 
-label {
+.cf label {
 	display: block;
 	width: 100px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-input {
+#login input, #loggedin input {
 	width: 100%;
 	margin: 0;
 	margin-bottom: 10px;
@@ -108,14 +108,14 @@ input {
 	border: none;
 }
 
-input[type="submit"] {
+#login input[type="submit"] {
 	font-weight: bold;
 	color:#f7f7f7;
 	background-color: #007d8a;
 	border: 1px solid #f7f7f7;
 }
 
-input[type="submit"]:hover{
+#login input[type="submit"]:hover{
 	cursor: pointer;
 	background-color: #f7f7f7;
 	color: #007d8a;
@@ -142,10 +142,10 @@ input[type="submit"]:hover{
 	background-color: #007d8a;
 }
 
-.weekdag{
-	background-color: #fff;
-	padding: 25px;
-	margin-bottom: 15px;
+#meldingen {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #007d8a;
 }
 
 .nok {
@@ -210,13 +210,13 @@ input[type="submit"]:hover{
 	background-color: #f7f7f7;
 }
 
-.redirectAdmin a {
+#loggedin input[type="submit"]{
 	float:right;
 	text-align: center;
-	width: 250px;
-	margin-top: 75px;
+	width: 100%;
+	margin-top: 10px;
 	background-color: #007d8a;
-	padding: 20px;
+	padding: 15px;
 	border-radius: 5px;
 	text-decoration: none;
 	border: 1px solid #f7f7f7;
@@ -225,13 +225,14 @@ input[type="submit"]:hover{
 	font-size: 1.6rem;
 }
 
-.redirectAdmin a:hover {
+#loggedin input[type="submit"]:hover{
 	background-color: #fff;
 	color: #007d8a;
+	cursor: pointer;
 }
-
 /*END WEEKDAG--------------------------------*/
 
+<<<<<<< HEAD
 /*STUDENT.PHP--------------------------------*/
 #dagnav
 {
@@ -277,8 +278,74 @@ input[type="submit"]:hover{
 
 
 /* END STUDENT.PHP---------------------------*/
+=======
+/*MELDINGEN----------------------------------*/
+.meldingScherm select{
+	margin: 0;
+	padding: 10px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	width: 100%;
+}
+
+#vakOption {
+	margin-top: 50px;
+}
+
+.opmerkingScherm {
+	background-color: #f7f7f7;
+	color: #000;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.opmerkingScherm form {
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+.opmerkingScherm textarea {
+	display: block;
+	height: 75px;
+	width: 97%;
+	border-radius: 5px;
+	border: 1px solid #929292;
+	padding: 5px;
+	margin-top: 10px;
+	margin-left: 3%;
+}
+
+.opmerkingScherm input {
+	border-radius: 5px;
+	border: 1px solid #929292;
+	padding: 5px;
+}
+
+.opmerkingScherm input[type="radio"]{
+	width: 20px;
+	margin-right: 10px;
+	margin-left: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.opmerkingScherm label h3{
+	font-size: 2rem;
+	color: #000;
+	margin-bottom: 15px;
+}
+/*END meldingen--------------------------------*/
+>>>>>>> ziggy
 
 /*MEDIAQUERIES-------------------------------*/
+
+@media (min-width: 420px){
+	#loggedin input[type="submit"] {
+		width: 250px;
+	}
+}
+
 @media (min-width: 768px){
 
 	h1 {
@@ -289,7 +356,8 @@ input[type="submit"]:hover{
 		font-size: 3.5rem;
 		font-family: 'Lato', sans-serif;
 	}
-	form {
+
+	#login form {
 		width: 420px;
 		margin: 0 auto;
 		margin-top: 25px;
