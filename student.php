@@ -63,7 +63,9 @@
 		<header>
 			<h1>MoreSchedule</h1>
 		</header> <!--  End header -->
+
 		<!---wat nu nog zou moeten gebeuren is template week table of dag table, aparte queries die mooi per dag tonen welke les je hebt, grijs wnr er geen les is.---->
+
 		<section id="login" <?php if(isset($_SESSION['loggedin'])){
 										echo 'class="hidden"';
 								  }
@@ -100,6 +102,11 @@
 									 }
 							   ?>>
 			<div class="wrapper">
+				<div id="dagnav">
+					<div id="prev"></div>
+					<h3 id="dag"></h3><!-- DAG moet vervangen worden door dagen van de week -->
+					<div id="next"></div>
+				</div>
 				<!-- php stuff here -->
 				<table class="lessenrooster">
                     <thead>
@@ -111,32 +118,44 @@
                         <th>Lokaal</th>
                         <th>Docent</th>
                       </tr>
+                      <tr>
+
+                      </tr>
                     </thead>
                     <tbody>
 
                       <?php
 						if(isset($_SESSION['loggedin'])){
-						$les = $u->getUurrooster();
+							$les = $u->getUurrooster();
 
-						while ($data = $les->fetch_assoc()){
-							echo "<tr>";
-                             echo "<td>" . $data['lesDag'] . "</td>";
-                             echo "<td>" . $data['lesBegin'] . "</td>";
-                             echo "<td>" . $data['lesEind'] . "</td>";
-                             echo "<td>" . $data['lesNaam'] . "</td>";
-                             echo "<td>" . $data['lesLokaal'] . "</td>";
-                             echo "<td>" . $data['docentNaam'] . "</td>";
-                          echo "</tr>";
+							while ($data = $les->fetch_assoc()){
+								echo "<tr>";
+                             		echo "<td>" . $data['lesDag'] . "</td>";
+                            		 echo "<td>" . $data['lesBegin'] . "</td>";
+                            		 echo "<td>" . $data['lesEind'] . "</td>";
+                            		 echo "<td>" . $data['lesNaam'] . "</td>";
+                            		 echo "<td>" . $data['lesLokaal'] . "</td>";
+                            		 echo "<td>" . $data['docentNaam'] . "</td>";
+                         	 echo "</tr>";
+							}
 						}
-					}
+							
 					?>
                     </tbody>
                   </table>
+ 				<?php 
+ 					echo "<h1>HELP</h1>";
+					if(isset($_REQUEST['dag'])){
+						$dag = $_REQUEST['dag'];
+						echo "<p>" . $dag . "</p>";
+					}	
+				?>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src ="js/script.js"></script>
 	<!-- ./JS -->
 </body>
 </html>
@@ -160,4 +179,18 @@ on(tblles.lesID = tblstudentles.lesID) where studentID IN ( select studentID fro
 	AND
 	lesDag IN(select lesDag from tblles where lesDag = 'dinsdag');
 	(per uur is gwn nog eens AND beginUur IN (...))
+
+	SELECT lesNaam, tblles.lesID
+	from tblles
+	INNER JOIN tblstudentles 
+	ON (tblles.lesID = tblstudentles.lesID)
+	where studentID IN
+	(select studentID from tblstudent where studentRnummer = 'r0330949')
+	AND
+	(lesBegin = '08:30' OR lesEind = '08:30')
+	AND
+	lesDag IN (select lesDag from tblles where lesDag = 'dinsdag');
+
+	lesDag is var die uit dagnav komt.
+	studentRnummer komt uit input bij aanmelden.
 -->
