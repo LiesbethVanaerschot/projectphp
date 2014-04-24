@@ -48,7 +48,7 @@ $(document).ready(function(){
       // });
 
    		var request = $.ajax({
-   			url: "./student.php",
+   			url: "./ajax/sendingvar.php",
         /*
         HIER MOET JE NAAR VOLGENDE LINKEN   url: "./ajax/sendingvar.php"      zodat uwe student.php het niet allemaal moet laden.
 
@@ -61,6 +61,7 @@ $(document).ready(function(){
    		});
    		request.done(function(msg){
    			console.log("gestuurd!");
+        console.log(msg);
    		})
     });
     

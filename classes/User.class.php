@@ -1,10 +1,11 @@
 <?php
-	include_once("classes/Db.class.php");
+	include("Db.class.php");
 
 	class User {
 
 		private $m_sstudentRnummer;
 		private $m_sstudentPaswoord;
+		private $m_sDag;
 
 		public function __set($p_sProperty, $p_vValue)
 		{
@@ -24,6 +25,10 @@
 						$this->m_sstudentPaswoord = $p_vValue;
 						break;
 					}
+
+				case 'Dag':
+					$this->m_sDag = $p_vValue;
+					break;	
 			}
 		}
 
@@ -37,6 +42,10 @@
 				case 'studentPaswoord':
 					return $this->m_sstudentPaswoord;
 					break;
+
+				case 'Dag':
+					return $this->m_sDag;
+					break;	
 			}
 		}
 
@@ -95,7 +104,24 @@
 			$rooster = $db->conn->query($sql);
 			return $rooster;
 		}
+
+		public function getSchedule()
+		{
+			$db = new Db();
+			$sql = "select lesNaam, tblles.lesID
+					from tblles
+					INNER JOIN tblstudentles
+					ON (tblles.lesID = tblstudentles.lesID)
+					where studentID IN
+					(select studentID from tblstudent where studentRnummer = 'r0330949')
+					AND
+					lesDag IN
+					(select lesDag from tblles where lesDag = '" . $db->conn->real_escape_string($this->m_sDag) . "');";
+			
+			$schedule = $db->conn->query($sql);
+			var_dump($schedule);
+			$i = json_encode($schedule);
+			var_dump($i);
+		}
 	}
 ?>
-<!--http://stackoverflow.com/questions/13779338/use-results-from-one-sql-query-in-another-where-statement-subquery-->
-
