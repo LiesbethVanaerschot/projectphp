@@ -91,10 +91,7 @@
 	<script src="js/picker.js"></script>
 	<script src="js/picker.date.js"></script>
 	<script>
-		$(".datepicker").pickadate({
-		    formatSubmit: 'dd/mm/yyyy',
-		    hiddenName: true
-		})
+		$(".datepicker").pickadate()
 	</script>
 	<!-- ./JS -->
 </body>

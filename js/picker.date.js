@@ -764,10 +764,10 @@ DatePicker.prototype.isDateOverlap = function( one, two ) {
 
     // When we’re working with a weekday index, compare the days.
     if ( _.isInteger( one ) && ( _.isDate( two ) || $.isArray( two ) ) ) {
-        return one === calendar.create( two ).day + 1
+        return one === calendar.create( two ).day + 2
     }
     if ( _.isInteger( two ) && ( _.isDate( one ) || $.isArray( one ) ) ) {
-        return two === calendar.create( one ).day + 1
+        return two === calendar.create( one ).day + 2
     }
 
     // When we’re working with range objects, check if the ranges overlap.
