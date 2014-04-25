@@ -12,28 +12,26 @@
 	$jaar = $_GET['jaar'];
 
 	$afwezig = 'unchecked';
-	$lokaal = 'unchecked';	
+	$lokaal = 'unchecked';
 	$reden = 'unchecked';
 
 	if (isset($_POST['btnMelding']))
 	{
 		$selected_radio=$_POST['melding'];
 
-		if ($selected_radio == 'afwezig') 
+		if ($selected_radio == 'afwezig')
 		{
-				$afwezig = 'checked';
+			$afwezig = 'checked';
 		}
-		else if ($selected_radio == 'lokaal') 
+		else if ($selected_radio == 'lokaal')
 		{
 			$lokaal = 'checked';
 		}
-		else if ($selected_radio == 'reden') 
+		else if ($selected_radio == 'reden')
 		{
 			$reden = 'checked';
 		}
-
 		header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&melding=' . $selected_radio);
-
 	}
 
 ?><!doctype html>
@@ -104,7 +102,7 @@
 
 					<div class="opmerkingScherm hidden cf">
 						<form action="" method="POST">
-							<label for="Melding"><h3>Melding - <?php /*echo $datum . $dag . $maand . $jaar;*/ ?></h3></label>
+							<label for="Melding"><h3>Melding - <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></h3></label>
 							<p>
 								<input type="radio" name="melding" value="afwezig">Docent is afwezig
 							</p>
