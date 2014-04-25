@@ -11,29 +11,55 @@
 	$maand = $_GET['maand'];
 	$jaar = $_GET['jaar'];
 
-	$afwezig = 'unchecked';
-	$lokaal = 'unchecked';
-	$reden = 'unchecked';
+	// $afwezig = 'unchecked';
+	// $lokaal = 'unchecked';
+	// $reden = 'unchecked';
 
+	//checken of btnmelding gepost is
 	if (isset($_POST['btnMelding']))
 	{
-		$selected_radio=$_POST['melding'];
+		//checken of er een radiobutton is aangeklikt
+		if (isset($_POST['melding'])){
 
-		if ($selected_radio == 'afwezig')
-		{
-			$afwezig = 'checked';
+			//radio dat geselecteerd is in variabele schrijven
+			$selected_radio=$_POST['melding'];
+
+			//inputvelden in variabele schrijven
+			$anderLokaal=$_POST['lokaalText'];
+			$andereReden=$_POST['redenText'];
+
+			if ($selected_radio == 'afwezig')
+			{
+				// $afwezig = 'checked';
+				// echo $afwezig . " ";
+				// echo $selected_radio;
+				header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&selected=' . $selected_radio . '&melding=' . $selected_radio);
+			}
+
+			//trim om spaces te verwijderen (anders konden ze gwn spaties invoeren en toch nog doorgaan)
+			if ($selected_radio == 'lokaal' && trim($anderLokaal) != "")
+			{
+				// $lokaal = 'checked';
+				// echo $lokaal . " ";
+				// echo $selected_radio . " ";
+				// echo $anderLokaal;
+				header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&selected=' . $selected_radio .'&melding=' . $anderLokaal);
+			}
+
+			//zelfde hier met trim
+			if ($selected_radio == 'reden' && trim($andereReden) != "")
+			{
+				// $reden = 'checked';
+				// echo $reden . " ";
+				// echo $selected_radio . " ";
+				// echo $andereReden;
+				header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&selected=' . $selected_radio . '&melding=' . $andereReden);
+			}
+			//
+		} else {
+			echo "Vul alles in";
 		}
-		else if ($selected_radio == 'lokaal')
-		{
-			$lokaal = 'checked';
-		}
-		else if ($selected_radio == 'reden')
-		{
-			$reden = 'checked';
-		}
-		header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&melding=' . $selected_radio);
 	}
-
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -90,7 +116,7 @@
 								<option value='default' selected='selected' disabled>Kies een vak...</option>
 									<?php
 										while ($info = $lesInfo->fetch_assoc()){
-	                             		echo "<option value='" . $info['lesNaam'] . " (" . $info['docentNaam'] . ") '>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
+	                             			echo "<option value='" . $info['lesNaam'] . " (" . $info['docentNaam'] . ") '>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
 										}
 									?>
 							<select>
@@ -109,12 +135,12 @@
 
 							<p>
 								<input type="radio" name="melding" value="lokaal">Lokaal is veranderd naar:
-								<input type="text" name="lokaal">
+								<input type="text" name="lokaalText" placeholder="K3/03">
 							</p>
 
 							<p>
 								<input type="radio" name="melding" value="reden">Andere reden:
-								<textarea name="reden"> </textarea>
+								<textarea name="redenText" placeholde="Wat is uw reden?"> </textarea>
 							</p>
 
 							<input type="submit" name="btnMelding" id="btnMelding" value="Maak melding">
@@ -128,7 +154,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script>
 	$("#select").on('change', function(){
-		$(".opmerkingScherm").removeClass('hidden');
+		$(".opmerkingScherm").toggleClass('hidden');
 		$(".opmerkingScherm").addClass('block');
 	});
 

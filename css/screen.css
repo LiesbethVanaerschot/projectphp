@@ -368,6 +368,14 @@ form {
 	padding: 15px;
 }
 
+.check h3{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.check p{
+	margin-bottom: 15px;
+}
 
 /*END check--------------------------------*/
 
