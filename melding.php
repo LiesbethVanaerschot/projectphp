@@ -33,7 +33,7 @@
 				// $afwezig = 'checked';
 				// echo $afwezig . " ";
 				// echo $selected_radio;
-				header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&selected=' . $selected_radio . '&melding=' . $selected_radio);
+				header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&selected=' . $selected_radio);
 			}
 
 			//trim om spaces te verwijderen (anders konden ze gwn spaties invoeren en toch nog doorgaan)
@@ -112,11 +112,11 @@
 					<div class='vakken'>
 						<form action="" method="POST">
 							<label for="lesnaam"><h2>Kies een vak</h2></label>
-						 	<select id="select" onchange="getOption(this.value)">
+						 	<select id="select" name="option" onchange="getOption(this.value)">
 								<option value='default' selected='selected' disabled>Kies een vak...</option>
 									<?php
 										while ($info = $lesInfo->fetch_assoc()){
-	                             			echo "<option value='" . $info['lesNaam'] . " (" . $info['docentNaam'] . ") '>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
+	                             			echo "<option value='" . $info['lesNaam'] . " /" . $info['docentNaam'] . ") '>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
 										}
 									?>
 							<select>
@@ -128,7 +128,7 @@
 
 					<div class="opmerkingScherm hidden cf">
 						<form action="" method="POST">
-							<label for="Melding"><h3>Melding - <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></h3></label>
+							<label for="Melding"><h3>Melding <span class="smaller">(<?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?>)</span></h3></label>
 							<p>
 								<input type="radio" name="melding" value="afwezig">Docent is afwezig
 							</p>
@@ -153,9 +153,11 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script>
-	$("#select").on('change', function(){
-		$(".opmerkingScherm").toggleClass('hidden');
-		$(".opmerkingScherm").addClass('block');
+	$(document).ready(function(){
+		$("#select").on('change', function(){
+			$(".opmerkingScherm").toggleClass('hidden');
+			$(".opmerkingScherm").addClass('block');
+		});
 	});
 
 	function getOption(opt){
@@ -163,7 +165,8 @@
 				document.getElementById("vakOption").innerHTML="";
 			}
 			else {
-				document.getElementById("vakOption").innerHTML= opt;
+				var $option = document.getElementById("vakOption").innerHTML= opt;
+				alert($option);
 			}
 		}
 	</script>

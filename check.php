@@ -1,7 +1,8 @@
 <?php
 	session_start();
 		//als sessie = true en datum is gegeven
-	if ($_SESSION['loggedin']!=true && !isset($_GET['datum']) && !isset($_GET['dag']) && !isset($_GET['maand']) && !isset($_GET['jaar']) && !isset($_GET['selected']) && !isset($_GET['melding'])) {
+	if ($_SESSION['loggedin']!=true && !isset($_GET['datum']) && !isset($_GET['dag']) && !isset($_GET['maand']) && !isset($_GET['jaar']) && !isset($_GET['selected'])) 
+	{
 		header("Location: personeel.php");
 	}
 
@@ -11,7 +12,11 @@
 	$maand = $_GET['maand'];
 	$jaar = $_GET['jaar'];
 	$selected = $_GET['selected'];
-	$melding = $_GET['melding'];
+	
+	if(isset($_GET['melding']))
+	{
+		$melding = $_GET['melding'];
+	}
 
 ?><!doctype html>
 <html lang="en">
@@ -55,7 +60,7 @@
 				<!-- php stuff here for meldingen -->
 				<h2>Mededeling</h2>
 				<div class="check">
-					<h3>HIER KOMT DE MEDELING TE STAAN</h3>
+					<h3>U gaat de volgende melding doorgeven:</h3>
 					<!-- [Docent x[] [vak y] is afwezig op [datum z] -->
 					<!--OF-->
 					<!-- Afwezig: [Docent x] [vak y] op [datum z] -->
@@ -69,19 +74,23 @@
 					<!-- Melding: Op [datum x] zal [vak y] niet doorgaan door [MELDING z] -->
 
 					<?php if ($selected == 'afwezig') { ?>
-						<p>U heeft de docent op afwezig gezet.</p>
+						<p><?php echo "[docent naam]"; ?> zal afwezig zijn op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></p>
 					<?php } ?>
 
+					<!-- EIGENLIJK MOETEN WE DAN GEWOON DEZE MELDING IN DE DB ZETTEN (ALS 1 GEHEEL) ZONDER DIE DAAR NOG EENS OP TE SPLITSEN NIET?-->
+
+
+
 					<?php if ($selected == 'lokaal') { ?>
-						<p>U hebt het lokaal! Verschoven naar <?php echo $melding ?></p>
+						<p>Op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> zal <?php echo "[vak]"; ?> uitzonderlijk doorgaan in <?php echo $melding ?></p>
 					<?php } ?>
 
 					<?php if ($selected == 'reden') { ?>
 						<p><?php echo $melding ?></p>
 					<?php } ?>
 
-					<!-- Vaste datum -->
-					<p>Datum die u wilt wijzigen: <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar ?></p>
+					<!-- Vaste datum
+					<p>Datum die u wilt wijzigen: <?php /*echo $datum . " " . $dag . " " . $maand . " " . $jaar;*/ ?></p>-->
 				</div>
 			</div>
 		</section><!-- End loggedin -->
