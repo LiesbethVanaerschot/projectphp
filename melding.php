@@ -19,7 +19,8 @@
 	if (isset($_POST['btnMelding']))
 	{
 		//checken of er een radiobutton is aangeklikt
-		if (isset($_POST['melding'])){
+		if (isset($_POST['melding']))
+		{
 
 			//radio dat geselecteerd is in variabele schrijven
 			$selected_radio=$_POST['melding'];
@@ -160,15 +161,26 @@
 		});
 	});
 
-	function getOption(opt){
-			if (opt == ""){
-				document.getElementById("vakOption").innerHTML="";
-			}
-			else {
-				var $option = document.getElementById("vakOption").innerHTML= opt;
-				alert($option);
-			}
-		}
+		function getOption(opt){
+				if (opt == ""){
+					document.getElementById("vakOption").innerHTML="";
+				}
+				else {
+					var $option = document.getElementById("vakOption").innerHTML= opt;
+					alert($option);
+				}
+		};
+
+		/*$.ajax({
+   			url: "./ajax/getinfo.php",
+   			type: "POST",
+   			data: {option : option},
+   			dataType: "html"
+   		});
+   		.done(function(msg){
+   			console.log("gestuurd!");
+        	console.log(msg);
+   		});*/
 	</script>
 	<!-- ./JS -->
 </body>
