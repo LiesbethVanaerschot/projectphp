@@ -92,15 +92,16 @@
 		public function getUurrooster()
 		{
 			$db = new Db();
-			$sql = "select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag, lesLokaal
-					from tbldocent
+			$sql = "SELECT tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag, lesLokaal
+					FROM tbldocent
 					INNER JOIN tblles
-					on(tbldocent.lesID = tblles.lesID)
-					INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID)
-					where studentID IN
-					(select studentID 
-						from tblstudent
-						where studentRnummer ='" . $_POST['studentRnummer'] . "');";/*" . mysqli_insert_id($id) ."*/
+						  ON(tbldocent.lesID = tblles.lesID)
+						  INNER JOIN tblstudentles 
+						  		ON(tblles.lesID = tblstudentles.lesID)
+					WHERE studentID IN
+									(SELECT studentID 
+									 FROM tblstudent
+									 WHERE studentRnummer ='" . $_POST['studentRnummer'] . "');";/*" . mysqli_insert_id($id) ."*/
 			$rooster = $db->conn->query($sql);
 			return $rooster;
 		}
@@ -108,15 +109,18 @@
 		public function getSchedule()
 		{
 			$db = new Db();
-			$sql = "select lesNaam, tblles.lesID
-					from tblles
+			$sql = "SELECT lesNaam, tblles.lesID
+					FROM tblles
 					INNER JOIN tblstudentles
-					ON (tblles.lesID = tblstudentles.lesID)
-					where studentID IN
-					(select studentID from tblstudent where studentRnummer = 'r0330949')
-					AND
-					lesDag IN
-					(select lesDag from tblles where lesDag = '" . $db->conn->real_escape_string($this->m_sDag) . "');";
+						  ON (tblles.lesID = tblstudentles.lesID)
+					WHERE studentID IN
+									(SELECT studentID 
+									 FROM tblstudent 
+									 WHERE studentRnummer = 'r0330949')
+									 AND lesDag IN
+											    (SELECT lesDag 
+											     FROM tblles
+											   	 WHERE lesDag = '" . $db->conn->real_escape_string($this->m_sDag) . "');";
 			
 			$schedule = $db->conn->query($sql);
 			var_dump($schedule);

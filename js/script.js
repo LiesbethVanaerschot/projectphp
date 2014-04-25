@@ -56,7 +56,7 @@ $(document).ready(function(){
         Het resultaat met je json_encode terugsturen naar student.php en daar moet je dan een loop nodig hebben om in tabel weertegeven (zoals api).
         */
    			type: "POST",
-   			data: {'dag' : dag},
+   			data: {dag : dag},
    			dataType: "html"
    		});
    		request.done(function(msg){
