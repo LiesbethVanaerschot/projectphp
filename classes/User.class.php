@@ -126,6 +126,7 @@
 			var_dump($schedule);
 			$i = json_encode($schedule);
 			var_dump($i);
+			return $i;
 		}
 	}
 ?>
