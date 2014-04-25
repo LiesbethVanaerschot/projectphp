@@ -26,8 +26,6 @@
 			$datum = $_POST['datum'];
 			$crumbs = explode(" ", $datum);
 			if ($crumbs != ""){
-				// session_start();
-				// $_SESSION['loggedin'] = true;
 				header("location: melding.php?datum=" . $crumbs[0] . "&dag=" . $crumbs[1] . "&maand=" . $crumbs[2] . "&jaar=" . $crumbs[3]);
 			}
 		} catch (Exception $e) {
