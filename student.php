@@ -145,10 +145,7 @@
                   </table>
  				<?php 
  					echo "<h1>HELP</h1>";
-					if(isset($_REQUEST['dag'])){
-						$dag = $_REQUEST['dag'];
-						echo "<p>" . $dag . "</p>";
-					}	
+						
 				?>
 			</div>
 		</section><!-- End loggedin -->

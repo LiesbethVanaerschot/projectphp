@@ -109,7 +109,7 @@
 		public function getSchedule()
 		{
 			$db = new Db();
-			$sql = "SELECT lesNaam, tblles.lesID
+			$sql = "SELECT *
 					FROM tblles
 					INNER JOIN tblstudentles
 						  ON (tblles.lesID = tblstudentles.lesID)
@@ -120,12 +120,13 @@
 									 AND lesDag IN
 											    (SELECT lesDag 
 											     FROM tblles
-											   	 WHERE lesDag = '" . $db->conn->real_escape_string($this->m_sDag) . "');";
+											   	 WHERE lesDag = '" . $this->m_sDag . "');";
 			
 			$schedule = $db->conn->query($sql);
-			var_dump($schedule);
-			$i = json_encode($schedule);
-			var_dump($i);
+			return $schedule;
+			//print_r($schedule);
+			//$i = json_encode($schedule);
+			//echo $i;
 		}
 	}
 ?>

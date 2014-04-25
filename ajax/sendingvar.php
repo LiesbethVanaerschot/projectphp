@@ -7,11 +7,18 @@
 		$dag = $_POST['dag'];
 
 		$u->Dag = $_POST['dag'];
-		$u->getSchedule(); 
+		$schedule = $u->getSchedule(); 
 
-		if(isset($i))
-		{
-			echo $i;
+		if(isset($schedule)){
+			$array = array();
+			while($key = mysqli_fetch_array($schedule,MYSQLI_ASSOC))
+			{
+				$array[] = $key;
+				
+			}
+			var_dump($array);
+			$les = json_encode($array);
+			echo $les;
 		}
 	}
 	//$dag = $_POST['dag'];
