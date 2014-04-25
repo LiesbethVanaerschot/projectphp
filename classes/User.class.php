@@ -123,10 +123,17 @@
 											   	 WHERE lesDag = '" . $this->m_sDag . "');";
 			
 			$schedule = $db->conn->query($sql);
+<<<<<<< HEAD
 			return $schedule;
 			//print_r($schedule);
 			//$i = json_encode($schedule);
 			//echo $i;
+=======
+			var_dump($schedule);
+			$i = json_encode($schedule);
+			var_dump($i);
+			return $i;
+>>>>>>> sarah
 		}
 	}
 ?>

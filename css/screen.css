@@ -333,6 +333,29 @@ form {
 	color: #000;
 	margin-bottom: 15px;
 }
+
+#btnMelding
+{
+	float: right;
+	width: 250px;
+	text-align: center;
+	padding: 10px;
+	background-color: #f7f7f7;
+	border: 1px solid #929292;
+	color: #929292;
+	margin-top: 15px;
+	font-size: 1.4rem;
+}
+
+#btnMelding:hover
+{
+	background-color: #929292;
+	color: #f7f7f7;
+	cursor: pointer;
+}
+
+
+
 /*END meldingen--------------------------------*/
 
 /*MEDIAQUERIES-------------------------------*/
