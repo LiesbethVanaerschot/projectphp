@@ -55,7 +55,7 @@
 				  	{
 				  		echo 'class="hidden"';
 				  	}
-			  ?>> <!-- nav verschijnt als je inlogt -->
+		?>> <!-- nav verschijnt als je inlogt -->
 			<div class="wrapper cf">
 				<ul>
 					<li class="welkom">Welkom Admin</li>
@@ -73,7 +73,7 @@
 									 else{
 									 		echo 'class="hidden"';
 									 }
-							   ?>>
+							 	?>>
 			<div class="wrapper">
 				<!-- php stuff here for meldingen -->
 				<div class="meldingScherm">
@@ -83,6 +83,7 @@
 
 							$a = new Admin();
 							$lesInfo = $a->getInfo();
+						}
 					?>
 					<div class='vakken'>
 						<form action="" method="POST">
@@ -103,7 +104,7 @@
 
 					<div class="opmerkingScherm hidden cf">
 						<form action="" method="POST">
-							<label for="Melding"><h3>Melding</h3></label>
+							<label for="Melding"><h3>Melding - <?php /*echo $datum . $dag . $maand . $jaar;*/ ?></h3></label>
 							<p>
 								<input type="radio" name="melding" value="afwezig">Docent is afwezig
 							</p>
