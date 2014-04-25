@@ -104,7 +104,7 @@
 
 					<div class="opmerkingScherm hidden cf">
 						<form action="" method="POST">
-							<label for="Melding"><h3>Melding - <?php /*echo $datum . $dag . $maand . $jaar;*/ ?></h3></label>
+							<label for="Melding"><h3>Melding - <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></h3></label>
 							<p>
 								<input type="radio" name="melding" value="afwezig">Docent is afwezig
 							</p>
