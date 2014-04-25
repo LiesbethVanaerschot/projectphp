@@ -142,7 +142,7 @@ form {
 	background-color: #007d8a;
 }
 
-#meldingen {
+#meldingen, #check {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	background-color: #007d8a;
@@ -354,9 +354,22 @@ form {
 	cursor: pointer;
 }
 
-
-
 /*END meldingen--------------------------------*/
+
+
+
+/*check----------------------------------*/
+
+.check
+{
+	background-color: #f7f7f7;
+	color: #000;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+
+/*END check--------------------------------*/
 
 /*MEDIAQUERIES-------------------------------*/
 

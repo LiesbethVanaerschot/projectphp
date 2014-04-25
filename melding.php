@@ -6,6 +6,11 @@
 	}
 
 	//radiolist
+	$datum = $_GET['datum'];
+	$dag = $_GET['dag'];
+	$maand = $_GET['maand'];
+	$jaar = $_GET['jaar'];
+
 	$afwezig = 'unchecked';
 	$lokaal = 'unchecked';	
 	$reden = 'unchecked';
@@ -25,8 +30,10 @@
 		else if ($selected_radio == 'reden') 
 		{
 			$reden = 'checked';
-			header('Location: melding.php?melding=' . $selected_radio . "&checked=" . $reden);
 		}
+
+		header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&melding=' . $selected_radio);
+
 	}
 
 ?><!doctype html>
@@ -77,44 +84,43 @@
 							$a = new Admin();
 							$lesInfo = $a->getInfo();
 					?>
-						<div class='vakken'>
-							<form action="" method="POST">
-								<label for="lesnaam"><h2>Kies een vak</h2></label>
-						 		<select id="select" onchange="getOption(this.value)">
-									<option value='default' selected='selected' disabled>Kies een vak...</option>
+					<div class='vakken'>
+						<form action="" method="POST">
+							<label for="lesnaam"><h2>Kies een vak</h2></label>
+						 	<select id="select" onchange="getOption(this.value)">
+								<option value='default' selected='selected' disabled>Kies een vak...</option>
 									<?php
 										while ($info = $lesInfo->fetch_assoc()){
-	                             			echo "<option value='" . $info['lesNaam'] . " (" . $info['docentNaam'] . ") '>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
+	                             		echo "<option value='" . $info['lesNaam'] . " (" . $info['docentNaam'] . ") '>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
 										}
 									?>
-								<select>
-							</form>
-						</div>
+							<select>
+						</form>
+					</div>
 
 
-				<h2><div id="vakOption"></div></h2>
+					<h2><div id="vakOption"></div></h2>
 
-				<div class="opmerkingScherm hidden cf">
-					<form action="" method="POST">
-						<label for="Melding"><h3>Melding</h3></label>
-						<p>
-							<input type="radio" name="melding" value="afwezig">Docent is afwezig
-						</p>
+					<div class="opmerkingScherm hidden cf">
+						<form action="" method="POST">
+							<label for="Melding"><h3>Melding</h3></label>
+							<p>
+								<input type="radio" name="melding" value="afwezig">Docent is afwezig
+							</p>
 
-						<p>
-							<input type="radio" name="melding" value="lokaal">Lokaal is veranderd naar:
-							<input type="text" name="lokaal">
-						</p>
+							<p>
+								<input type="radio" name="melding" value="lokaal">Lokaal is veranderd naar:
+								<input type="text" name="lokaal">
+							</p>
 
-						<p>
-							<input type="radio" name="melding" value="reden">Andere reden:
-							<textarea name="reden"> </textarea>
-						</p>
+							<p>
+								<input type="radio" name="melding" value="reden">Andere reden:
+								<textarea name="reden"> </textarea>
+							</p>
 
-						<input type="submit" name="btnMelding" id="btnMelding" value="Maak melding">
-					</form>
-				</div>
-					<?php } ?>
+							<input type="submit" name="btnMelding" id="btnMelding" value="Maak melding">
+						</form>
+					</div>
 				</div>
 			</div>
 		</section><!-- End loggedin -->
