@@ -49,8 +49,25 @@
 							$lesInfo = $a->getInfo();
 						}
 					?>
-					<div class='vakken'>
+					<!-- <div class='vakken'>
 						<form action="" method="POST" >
+							<label for="lesnaam"><h2>Kies een vak</h2></label>
+						 	<select id="selectDocent" name="option">
+								<option value='default' selected='selected' disabled>Kies een vak...</option>
+									<?php
+										//while ($info = $lesInfo->fetch_assoc()){
+	                             		//	echo "<option value='" . $info['lesNaam'] . " / " . $info['docentNaam'] . "'>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
+										//}
+									?>
+							<select>
+						</form>
+					</div> -->
+
+
+					<h2><div id="vakOption"></div></h2>
+
+					<div class="opmerkingScherm cf">
+						<form action="" method="POST">
 							<label for="lesnaam"><h2>Kies een vak</h2></label>
 						 	<select id="selectDocent" name="option">
 								<option value='default' selected='selected' disabled>Kies een vak...</option>
@@ -60,14 +77,7 @@
 										}
 									?>
 							<select>
-						</form>
-					</div>
 
-
-					<h2><div id="vakOption"></div></h2>
-
-					<div class="opmerkingScherm hidden cf">
-						<form action="" method="POST">
 							<label for="Melding"><h3>Melding <span class="smaller">(<?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?>)</span></h3></label>
 							<p>
 								<input type="radio" name="melding" value="afwezig">Docent is afwezig
