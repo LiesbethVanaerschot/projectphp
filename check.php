@@ -42,45 +42,25 @@
 				<!-- php stuff here for meldingen -->
 				<h2>Mededeling</h2>
 				<div class="check">
-					<h3>U gaat de volgende melding doorgeven:</h3>
-					<!-- [Docent x[] [vak y] is afwezig op [datum z] -->
-					<!--OF-->
-					<!-- Afwezig: [Docent x] [vak y] op [datum z] -->
+					<form method="POST" action=" " class="formCheck cf">
+							<?php if ($selected == 'afwezig') { ?>
+								<p><?php echo "$docent"; ?> zal afwezig zijn op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></p>
+							<?php } ?>
 
-					<!-- Op [datum x] gaat [vak y] door in [lokaal z] -->
-					<!--OF-->
-					<!-- Lokaalwijziging: [Lokaal x] op [datum y] voor [vak z] -->
+							<?php if ($selected == 'lokaal') { ?>
+								<p>Op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> zal <?php echo "$vak"; ?> uitzonderlijk doorgaan in <?php echo $melding; ?></p>
+							<?php } ?>
 
-					<!-- Door[MELDING x] zal [vak y] op [datum z] niet doorgaan -->
-					<!--OF-->
-					<!-- Melding: Op [datum x] zal [vak y] niet doorgaan door [MELDING z] -->
-
-					<?php if ($selected == 'afwezig') { ?>
-						<p><?php echo "$docent"; ?> zal afwezig zijn op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></p>
-					<?php } ?>
-
-					<!-- EIGENLIJK MOETEN WE DAN GEWOON DEZE MELDING IN DE DB ZETTEN (ALS 1 GEHEEL) ZONDER DIE DAAR NOG EENS OP TE SPLITSEN NIET?-->
-
-
-
-					<?php if ($selected == 'lokaal') { ?>
-						<p>Op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> zal <?php echo "$vak"; ?> uitzonderlijk doorgaan in <?php echo $melding; ?></p>
-					<?php } ?>
-
-					<?php if ($selected == 'reden') { ?>
-						<p><?php echo $melding ?></p>
-					<?php } ?>
-				</div>
-
-				<div class="redirectCheck">
-						<a href="melding.php" class="links">Pas aan</a>
-						<a href="personeel.php" class="rechts">Verzend + maak nieuwe melding</a>
+							<?php if ($selected == 'reden') { ?>
+								<p><?php echo $melding ?></p>
+							<?php } ?>
+					</form>
 				</div>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
 
-	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!-- ./JS -->
 </body>
 </html>
