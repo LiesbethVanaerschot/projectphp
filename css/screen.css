@@ -58,7 +58,7 @@ nav {
 nav li a {
 	text-decoration: none;
 	color: #f7f7f7;
-	padding: 8px;
+	padding: 13px;
 }
 
 nav li a:hover{
@@ -158,6 +158,10 @@ form {
 	background-color: #007d8a;
 }
 
+#feedback{
+	margin-top: 10px;
+}
+
 .nok {
 	padding: 15px;
 	border: 1px solid;
@@ -251,7 +255,7 @@ form.datumSelect {
 
 /*END PERSONEEL--------------------------------*/
 
-/*STUDENT.PHP--------------------------------*/
+/*STUDENT--------------------------------------*/
 #dagnav
 {
 	text-align: center;
@@ -337,7 +341,6 @@ form.datumSelect {
 	width: 50%;
 }
 
-
 .studentLogin input[type="text"], input[type="password"]{
 	width: 100%;
 	margin: 0;
@@ -357,7 +360,7 @@ form.datumSelect {
 	border: 1px solid #f7f7f7;
 }
 
-/* END STUDENT.PHP---------------------------*/
+/* END STUDENT-------------------------------*/
 
 /*MELDINGEN----------------------------------*/
 .meldingScherm select{
@@ -440,7 +443,7 @@ form.datumSelect {
 	cursor: pointer;
 }
 
-/*END meldingen--------------------------------*/
+/*END meldingen-----------------------------*/
 
 
 
