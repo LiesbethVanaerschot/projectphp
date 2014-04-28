@@ -52,7 +52,7 @@
 						}
 					?>
 					</li>
-					<li class="logout"><a href="logout.php">LOG OUT</a></li>
+					<li class="logout"><a href="logout.php">Uitloggen</a></li>
 				</ul>
 			</div>
 		</nav> <!-- End nav -->
@@ -120,91 +120,91 @@
                     </thead>
                     <tbody>
 						<tr>
-							<td>8:30</td>
-							<td>9:30</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">8:30</td>
+							<td class="td-einduur">9:30</td>
+							<td class="td-lesnaam">Methoden en onderzoek van Rapportering - Theorie</td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>9:30</td>
-							<td>10:30</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">9:30</td>
+							<td class="td-einduur">10:30</td>
+							<td class="td-lesnaam"></td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>10:30</td>
-							<td>10:45</td>
-							<td>PAUZE</td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">10:30</td>
+							<td class="td-einduur">10:45</td>
+							<td class="td-lesnaam">PAUZE</td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>10:45</td>
-							<td>11:45</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">10:45</td>
+							<td class="td-einduur">11:45</td>
+							<td class="td-lesnaam"></td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>11:45</td>
-							<td>12:45</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">11:45</td>
+							<td class="td-einduur">12:45</td>
+							<td class="td-lesnaam"></td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>12:45</td>
-							<td>13:45</td>
-							<td>PAUZE</td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">12:45</td>
+							<td class="td-einduur">13:45</td>
+							<td class="td-lesnaam">PAUZE</td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>13:45</td>
-							<td>14:45</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">13:45</td>
+							<td class="td-einduur">14:45</td>
+							<td class="td-lesnaam"></td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>14:45</td>
-							<td>15:45</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">14:45</td>
+							<td class="td-einduur">15:45</td>
+							<td class="td-lesnaam"></td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>15:45</td>
-							<td>16:00</td>
-							<td>PAUZE</td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">15:45</td>
+							<td class="td-einduur">16:00</td>
+							<td class="td-lesnaam">PAUZE</td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>16:00</td>
-							<td>17:00</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">16:00</td>
+							<td class="td-einduur">17:00</td>
+							<td class="td-lesnaam"></td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td>17:00</td>
-							<td>18:00</td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="td-beginuur">17:00</td>
+							<td class="td-einduur">18:00</td>
+							<td class="td-lesnaam"></td>
+							<td class="td-lokaal"></td>
+							<td class="td-docent"></td>
 						</tr>
 
                     </tbody>
