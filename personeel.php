@@ -1,8 +1,4 @@
 <?php
-	// feedback en session een default waarde geven
-	$feedbackEr = "";
-	$crumbs[0] = "";
-
 	// Zien of post niet leeg is en user uit databank halen
 	if(!empty($_POST['btnLogin']))
 	{
@@ -25,7 +21,7 @@
 		try {
 			$datum = $_POST['datum'];
 			$crumbs = explode(" ", $datum);
-			if ($crumbs != ""){
+			if (isset($crumbs)){
 				header("location: melding.php?datum=" . $crumbs[0] . "&dag=" . $crumbs[1] . "&maand=" . $crumbs[2] . "&jaar=" . $crumbs[3]);
 			}
 		} catch (Exception $e) {
@@ -86,7 +82,7 @@
 					</p>
 				</form>
 
-				<?php if ($feedbackEr != ""){ ?>
+				<?php if (isset($feedbackEr)){ ?>
 					<div id="feedback">
 						<p class="nok"><?php echo $feedbackEr; ?></p>
 					</div>

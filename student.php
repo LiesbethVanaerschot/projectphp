@@ -1,7 +1,4 @@
 <?php
-	// feedback en session een default waarde geven
-	$feedbackEr = "";
-
 	//includen
 	include("classes/User.class.php");
 
@@ -86,7 +83,7 @@
 					</p>
 				</form>
 
-				<?php if ($feedbackEr != ""){ ?>
+				<?php if (isset($feedbackEr)){ ?>
 					<div id="feedback">
 						<p class="nok"><?php echo $feedbackEr; ?></p>
 					</div>
@@ -139,13 +136,13 @@
                          	 echo "</tr>";
 							}
 						}
-							
+
 					?>
                     </tbody>
                   </table>
- 				<?php 
+ 				<?php
  					echo "<h1>HELP</h1>";
-						
+
 				?>
 			</div>
 		</section><!-- End loggedin -->
@@ -161,15 +158,15 @@
 <!-- select * from tblstudentles INNER JOIN tblles on(tblstudentles.lesID = tblles.lesID) where studentID = 1-->
 <!-- select tbldocent.lesID, tblles.lesID, docentNaam from tbldocent INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)-->
 <!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam from tbldocent INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)-->
-<!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag from tbldocent 
-INNER JOIN tblles on(tbldocent.lesID = tblles.lesID) INNER JOIN tblstudentles 
+<!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag from tbldocent
+INNER JOIN tblles on(tbldocent.lesID = tblles.lesID) INNER JOIN tblstudentles
 on(tblles.lesID = tblstudentles.lesID) where studentID IN ( select studentID from tblstudent where studentRnummer = 'r0330949')-->
-<!-- 
+<!--
 	QUERIES VOOR TEMPLATE
 
 	query die les voor r0330949 per dag selecteert:
-	select tbldocent.lesID, tblles.lesID, lesNaam, docentNaam 
-	from tbldocent 
+	select tbldocent.lesID, tblles.lesID, lesNaam, docentNaam
+	from tbldocent
 	INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)
 	INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID)
 	where studentID IN(select studentID from tblstudent where studentRnummer = 'r0330949')
@@ -179,7 +176,7 @@ on(tblles.lesID = tblstudentles.lesID) where studentID IN ( select studentID fro
 
 	SELECT lesNaam, tblles.lesID
 	from tblles
-	INNER JOIN tblstudentles 
+	INNER JOIN tblstudentles
 	ON (tblles.lesID = tblstudentles.lesID)
 	where studentID IN
 	(select studentID from tblstudent where studentRnummer = 'r0330949')

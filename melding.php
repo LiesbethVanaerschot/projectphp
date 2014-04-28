@@ -11,17 +11,12 @@
 	$maand = $_GET['maand'];
 	$jaar = $_GET['jaar'];
 
-	// $afwezig = 'unchecked';
-	// $lokaal = 'unchecked';
-	// $reden = 'unchecked';
-
 	//checken of btnmelding gepost is
 	if (isset($_POST['btnMelding']))
 	{
 		//checken of er een radiobutton is aangeklikt
 		if (isset($_POST['melding']))
 		{
-
 			//radio dat geselecteerd is in variabele schrijven
 			$selected_radio=$_POST['melding'];
 
@@ -58,7 +53,7 @@
 			}
 			//
 		} else {
-			echo "Vul alles in";
+			$feedback = "Vul alles in!";
 		}
 	}
 ?><!doctype html>
@@ -113,11 +108,11 @@
 					<div class='vakken'>
 						<form action="" method="POST">
 							<label for="lesnaam"><h2>Kies een vak</h2></label>
-						 	<select id="select" name="option" onchange="getOption(this.value)">
+						 	<select id="selectDocent" name="option">
 								<option value='default' selected='selected' disabled>Kies een vak...</option>
 									<?php
 										while ($info = $lesInfo->fetch_assoc()){
-	                             			echo "<option value='" . $info['lesNaam'] . " /" . $info['docentNaam'] . ") '>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
+	                             			echo "<option value='" . $info['lesNaam'] . " / " . $info['docentNaam'] . "'>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
 										}
 									?>
 							<select>
@@ -147,6 +142,12 @@
 							<input type="submit" name="btnMelding" id="btnMelding" value="Maak melding">
 						</form>
 					</div>
+
+					<?php if (isset($feedback)) { ?>
+						<div id="feedback">
+							<p class="nok"><?php echo $feedback; ?></p>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</section><!-- End loggedin -->
@@ -154,33 +155,26 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script>
-	$(document).ready(function(){
-		$("#select").on('change', function(){
-			$(".opmerkingScherm").toggleClass('hidden');
-			$(".opmerkingScherm").addClass('block');
+		$(document).ready(function(){
+			$("#selectDocent").on("change",function(e){
+				e.preventDefault();
+
+				$(".opmerkingScherm").slideDown();
+
+				var optionName = $("#selectDocent option:selected").val();
+
+				var request = $.ajax({
+					url: "ajax/getOption.php",
+					type: "POST",
+					data: {optionName : optionName},
+					dataType: "json"
+				});
+
+				request.done(function(msg){
+					$('#vakOption').html(msg)
+				});
+			});
 		});
-	});
-
-		function getOption(opt){
-				if (opt == ""){
-					document.getElementById("vakOption").innerHTML="";
-				}
-				else {
-					var $option = document.getElementById("vakOption").innerHTML= opt;
-					alert($option);
-				}
-		};
-
-		/*$.ajax({
-   			url: "./ajax/getinfo.php",
-   			type: "POST",
-   			data: {option : option},
-   			dataType: "html"
-   		});
-   		.done(function(msg){
-   			console.log("gestuurd!");
-        	console.log(msg);
-   		});*/
 	</script>
 	<!-- ./JS -->
 </body>
