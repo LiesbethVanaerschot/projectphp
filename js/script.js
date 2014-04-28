@@ -24,8 +24,25 @@ $(document).ready(function(){
    		});
    		request.done(function(msg){
    			console.log("gestuurd!");
-        console.log(msg);
-   		})
+        //var json = msg;
+        var json = jQuery.parseJSON(msg);
+        console.log(typeof json);
+        $.each(json, function(index, value){
+          console.log(index);
+          console.log(value.lesBegin);
+
+          if(value.lesBegin === '08:30'){
+            console.log('php');
+            $('.lessenrooster .td').html(value.lesNaam);
+          }
+          
+          /*$.each(value, function(key, value){
+            document.write(value);
+          });*/
+          
+        });
+        //console.log(msg);
+   		});
     });
     
     $("#prev").on("click",function(){

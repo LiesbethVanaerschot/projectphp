@@ -122,7 +122,7 @@
 						<tr>
 							<td>8:30</td>
 							<td>9:30</td>
-							<td></td>
+							<td class="td"></td>
 							<td></td>
 							<td></td>
 						</tr>

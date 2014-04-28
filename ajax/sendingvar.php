@@ -8,7 +8,7 @@
 		$u->Dag = $_POST['dag'];
 		$u->Student = $_POST['student'];
 		$schedule = $u->getSchedule(); 
-		var_dump($schedule);
+		//var_dump($schedule);
 		if(isset($schedule)){
 			$array = array();
 			while($key = mysqli_fetch_array($schedule,MYSQLI_ASSOC))
@@ -16,7 +16,7 @@
 				$array[] = $key;
 				
 			}
-			var_dump($array);
+			//var_dump($array);
 			$les = json_encode($array);
 			echo $les;
 		}
