@@ -26,6 +26,7 @@ body {
 	font-family: 'Roboto', serif;
 	background-color: #f7f7f7;
 	color: #000;
+	line-height: 24px;
 }
 
 header p{
@@ -247,6 +248,7 @@ form.datumSelect {
 	color: #007d8a;
 	cursor: pointer;
 }
+
 /*END PERSONEEL--------------------------------*/
 
 /*STUDENT.PHP--------------------------------*/
@@ -266,7 +268,7 @@ form.datumSelect {
 
 #next
 {
-	background-image: url(../images/next.gif);
+	background-image: url(../images/next.png);
 	background-repeat: no-repeat;
 	background-size: 20px;
 	height: 20px;
@@ -279,12 +281,13 @@ form.datumSelect {
 	font-size: 2.2rem;
 	text-transform: uppercase;
 	margin: 0px 20px 0px 20px;
+	color: white;
 
 }
 
 #prev
 {
-	background-image: url(../images/prev.gif);
+	background-image: url(../images/prev.png);
 	background-repeat: no-repeat;
 	background-size: 20px;
 	height: 20px;
@@ -317,6 +320,11 @@ form.datumSelect {
 	word-wrap: break-word;
 }
 
+.lessenrooster td.pauze{
+	font-weight: 500;
+	text-align: center;
+}
+
 .td-beginuur, .td-einduur, .td-lokaal{
 	width: 10%;
 }
@@ -327,6 +335,26 @@ form.datumSelect {
 
 .td-lesnaam{
 	width: 50%;
+}
+
+
+.studentLogin input[type="text"], input[type="password"]{
+	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 15px;
+	border-radius: 5px;
+	border: none;
+}
+
+.studentLogin input[type="submit"] {
+	width: 100%;
+	padding: 15px;
+	border-radius: 5px;
+	font-weight: bold;
+	color:#f7f7f7;
+	background-color: #007d8a;
+	border: 1px solid #f7f7f7;
 }
 
 /* END STUDENT.PHP---------------------------*/
@@ -479,6 +507,12 @@ form.datumSelect {
 	}
 
 	.personeelLogin {
+		width: 420px;
+		margin: 0 auto;
+		margin-top: 25px;
+	}
+
+	.studentLogin {
 		width: 420px;
 		margin: 0 auto;
 		margin-top: 25px;
