@@ -1,23 +1,5 @@
 <?php
-	session_start();
-		//als sessie = true en datum is gegeven
-	if ($_SESSION['loggedin']!=true && !isset($_GET['datum']) && !isset($_GET['dag']) && !isset($_GET['maand']) && !isset($_GET['jaar']) && !isset($_GET['selected'])) 
-	{
-		header("Location: personeel.php");
-	}
-
-	//uit url halen
-	$datum = $_GET['datum'];
-	$dag = $_GET['dag'];
-	$maand = $_GET['maand'];
-	$jaar = $_GET['jaar'];
-	$selected = $_GET['selected'];
-	
-	if(isset($_GET['melding']))
-	{
-		$melding = $_GET['melding'];
-	}
-
+	include ('classes/Check.include.php')
 ?><!doctype html>
 <html lang="en">
 <head>
