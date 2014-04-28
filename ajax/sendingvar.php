@@ -5,10 +5,10 @@
 	if(!empty($_POST['dag']))
 	{
 		$dag = $_POST['dag'];
-
 		$u->Dag = $_POST['dag'];
+		$u->Student = $_POST['student'];
 		$schedule = $u->getSchedule(); 
-
+		var_dump($schedule);
 		if(isset($schedule)){
 			$array = array();
 			while($key = mysqli_fetch_array($schedule,MYSQLI_ASSOC))

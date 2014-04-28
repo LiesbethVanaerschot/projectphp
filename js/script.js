@@ -13,12 +13,13 @@ $(document).ready(function(){
     	var dag = $("#dag").html();
     	console.log(dag);
     	
-    
+      var student = $(".user").html();
+      console.log(student);
 
    		var request = $.ajax({
    			url: "./ajax/sendingvar.php",
    			type: "POST",
-   			data: {dag : dag},
+   			data: {dag : dag, student : student},
    			dataType: "html"
    		});
    		request.done(function(msg){

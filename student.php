@@ -46,7 +46,7 @@
 
 							while ($row = $user->fetch_assoc()){
 								// $id = $row['studentID'];
-								echo '<strong>' . $row['studentVoornaam'] . '</strong>';
+								echo "<strong class='user'>" . $row['studentVoornaam'] . "</strong>";
 								// echo $id;
 							}
 						}

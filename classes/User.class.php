@@ -6,6 +6,7 @@
 		private $m_sstudentRnummer;
 		private $m_sstudentPaswoord;
 		private $m_sDag;
+		private $m_sStudent;
 
 		public function __set($p_sProperty, $p_vValue)
 		{
@@ -28,7 +29,11 @@
 
 				case 'Dag':
 					$this->m_sDag = $p_vValue;
-					break;	
+					break;
+
+				case 'Student':
+					$this->m_sStudent = $p_vValue;
+					break;		
 			}
 		}
 
@@ -45,6 +50,10 @@
 
 				case 'Dag':
 					return $this->m_sDag;
+					break;	
+
+				case 'Student':
+					return $this->m_sStudent;
 					break;	
 			}
 		}
@@ -116,14 +125,13 @@
 					WHERE studentID IN
 									(SELECT studentID 
 									 FROM tblstudent 
-									 WHERE studentRnummer = 'r0330949')
+									 WHERE studentVoornaam = '".$this->m_sStudent."')
 									 AND lesDag IN
 											    (SELECT lesDag 
 											     FROM tblles
 											   	 WHERE lesDag = '" . $this->m_sDag . "');";
 			
 			$schedule = $db->conn->query($sql);
-
 			return $schedule;
 			//print_r($schedule);
 			//$i = json_encode($schedule);
