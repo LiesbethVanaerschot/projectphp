@@ -69,7 +69,7 @@
 							?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
 			<div class="wrapper">
 				<h1>Login</h1>
-				<form action="" method="post">
+				<form action="" method="post" class="studentLogin">
 					<p class="cf">
 						<label for="name">Studentennummer</label>
 						<input type="text" name="studentRnummer" id="studentRnummer" placeholder="r0123456">
@@ -138,7 +138,7 @@
 						<tr>
 							<td class="td-beginuur">10:30</td>
 							<td class="td-einduur">10:45</td>
-							<td class="td-lesnaam">PAUZE</td>
+							<td class="td-lesnaam pauze">Pauze</td>
 							<td class="td-lokaal"></td>
 							<td class="td-docent"></td>
 						</tr>
@@ -162,7 +162,7 @@
 						<tr>
 							<td class="td-beginuur">12:45</td>
 							<td class="td-einduur">13:45</td>
-							<td class="td-lesnaam">PAUZE</td>
+							<td class="td-lesnaam pauze">Pauze</td>
 							<td class="td-lokaal"></td>
 							<td class="td-docent"></td>
 						</tr>
@@ -186,7 +186,7 @@
 						<tr>
 							<td class="td-beginuur">15:45</td>
 							<td class="td-einduur">16:00</td>
-							<td class="td-lesnaam">PAUZE</td>
+							<td class="td-lesnaam pauze">Pauze</td>
 							<td class="td-lokaal"></td>
 							<td class="td-docent"></td>
 						</tr>

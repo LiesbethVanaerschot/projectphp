@@ -45,7 +45,7 @@
  * Note: the root picker element should *NOT* be styled more than what’s here.
  */
 .picker {
-  width: 100%;
+  width: 420px;
 }
 /**
  * The holder is the base of the picker.

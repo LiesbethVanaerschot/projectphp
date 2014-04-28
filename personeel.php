@@ -25,7 +25,7 @@
 			<div class="wrapper cf">
 				<ul>
 					<li class="welkom">Welkom Admin</li>
-					<li class="logout"><a href="logout.php">LOG OUT</a></li>
+					<li class="logout"><a href="logout.php">Uitloggen</a></li>
 				</ul>
 			</div>
 		</nav> <!-- End nav -->
