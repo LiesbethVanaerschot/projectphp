@@ -351,6 +351,10 @@ form.datumSelect {
 	margin-bottom: 15px;
 }
 
+#selectDocent {
+	margin-bottom: 20px;
+}
+
 #btnMelding
 {
 	float: right;
@@ -393,6 +397,36 @@ form.datumSelect {
 .check p{
 	margin-bottom: 15px;
 }
+
+.redirectCheck a {
+	display: block;
+	text-align: center;
+	margin: 15px auto;
+	padding: 10px;
+	background-color: #007d8a;
+	border-radius: 5px;
+	text-decoration: none;
+	border: 1px solid #fff;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+.redirectCheck a:hover {
+	background-color: #fff;
+	color: #007d8a;
+}
+
+.redirectCheck .links {
+	float: left;
+	width: 250px;
+}
+
+.redirectCheck .rechts {
+	float: right;
+	width: 300px;
+}
+
 
 /*END check--------------------------------*/
 
