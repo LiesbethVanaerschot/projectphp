@@ -24,8 +24,17 @@ $(document).ready(function(){
    		});
    		request.done(function(msg){
    			console.log("gestuurd!");
+        //var json = msg;
         console.log(msg);
-   		})
+        $.each(msg, function(index, value){
+          console.log(value);
+          $.each(value, function(key, value){
+            document.write(value);
+          });
+          
+        });
+        //console.log(msg);
+   		});
     });
     
     $("#prev").on("click",function(){
