@@ -25,12 +25,20 @@ $(document).ready(function(){
    		request.done(function(msg){
    			console.log("gestuurd!");
         //var json = msg;
-        console.log(msg);
-        $.each(msg, function(index, value){
-          console.log(value);
-          $.each(value, function(key, value){
+        var json = jQuery.parseJSON(msg);
+        console.log(typeof json);
+        $.each(json, function(index, value){
+          console.log(index);
+          console.log(value.lesBegin);
+
+          if(value.lesBegin === '08:30'){
+            console.log('php');
+            $('.lessenrooster .td-lesnaam').html(value.lesNaam);
+          }
+          
+          /*$.each(value, function(key, value){
             document.write(value);
-          });
+          });*/
           
         });
         //console.log(msg);
