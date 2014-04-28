@@ -1,33 +1,5 @@
 <?php
-	// Zien of post niet leeg is en user uit databank halen
-	if(!empty($_POST['btnLogin']))
-	{
-		try
-		{
-			include_once("classes/Admin.class.php");
-
-			$a = new Admin();
-			$a->ANummer = $_POST['personeelsNummer'];
-			$a->APaswoord = $_POST['paswoord'];
-			$a->Find();
-
-		} catch (Exception $e) {
-			$feedbackEr = $e->getMessage();
-		}
-	}
-
-	if(!empty($_POST['volgende']))
-	{
-		try {
-			$datum = $_POST['datum'];
-			$crumbs = explode(" ", $datum);
-			if (isset($crumbs)){
-				header("location: melding.php?datum=" . $crumbs[0] . "&dag=" . $crumbs[1] . "&maand=" . $crumbs[2] . "&jaar=" . $crumbs[3]);
-			}
-		} catch (Exception $e) {
-			$feedbackEr = $e->getMessage();
-		}
-	}
+	include ('classes/Personeel.include.php');
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -68,7 +40,7 @@
 							?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
 			<div class="wrapper">
 				<h1>Login</h1>
-				<form action="" method="post">
+				<form action="" method="post" class="personeelLogin">
 					<p class="cf">
 						<label for="name">Persooneelsnummer</label>
 						<input type="text" name="personeelsNummer" id="personeelsNummer" placeholder="u0123456">
@@ -101,7 +73,7 @@
 				<!-- php stuff here for personeel -->
 				<div class="datum">
 					<h2>Selecteer een datum:</h2>
-					<form action="" method="post">
+					<form action="" method="post" class="datumSelect">
 						<input type="text" class="datepicker" placeholder="Selecteer een datum..." name="datum">
 						<input type="submit" class="redirectAdmin" value="Volgende" name="volgende">
 					</form>
