@@ -105,7 +105,7 @@ form {
 	color: #929292;
 }
 
-#login input, #loggedin input {
+.personeelLogin input[type="text"], input[type="password"]{
 	width: 100%;
 	margin: 0;
 	margin-bottom: 10px;
@@ -114,7 +114,10 @@ form {
 	border: none;
 }
 
-#login input[type="submit"] {
+.personeelLogin input[type="submit"] {
+	width: 100%;
+	padding: 15px;
+	border-radius: 5px;
 	font-weight: bold;
 	color:#f7f7f7;
 	background-color: #007d8a;
@@ -206,37 +209,45 @@ form {
 	color: #f7f7f7;
 	background-color: #083d3c;
 }
-/*END PERSONEEL------------------------------*/
 
-/*WEEKDAG------------------------------------*/
 .datum {
 	padding-top: 15px;
 }
-.datum input {
-	background-color: #f7f7f7;
+
+form.datumSelect {
+	text-align: center;
 }
 
-#loggedin input[type="submit"]{
-	float:right;
+.datumSelect .datepicker {
+	background-color: #f7f7f7;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 15px;
+	border-radius: 5px;
+	border: none;
+}
+
+.datum input[type="submit"].redirectAdmin {
 	text-align: center;
 	width: 100%;
 	margin-top: 10px;
 	background-color: #007d8a;
 	padding: 15px;
-	border-radius: 5px;
+	border-radius:5px;
 	text-decoration: none;
 	border: 1px solid #f7f7f7;
 	color: #f7f7f7;
-	font-weight: bold;
 	font-size: 1.6rem;
+	font-weight: bold;
 }
 
-#loggedin input[type="submit"]:hover{
-	background-color: #fff;
+.datum input[type="submit"].redirectAdmin:hover{
+	background-color: #f7f7f7;
 	color: #007d8a;
 	cursor: pointer;
 }
-/*END WEEKDAG--------------------------------*/
+/*END PERSONEEL--------------------------------*/
 
 /*STUDENT.PHP--------------------------------*/
 #dagnav
@@ -423,13 +434,12 @@ form {
 /*END check--------------------------------*/
 
 /*MEDIAQUERIES-------------------------------*/
-
-@media (min-width: 420px){
-	#loggedin input[type="submit"] {
+@media (min-width: 420px) {
+	.datum input[type="submit"].redirectAdmin {
+		float: right;
 		width: 250px;
 	}
 }
-
 @media (min-width: 768px){
 
 	h1 {
@@ -441,7 +451,7 @@ form {
 		font-family: 'Lato', sans-serif;
 	}
 
-	#login form {
+	.personeelLogin {
 		width: 420px;
 		margin: 0 auto;
 		margin-top: 25px;
@@ -461,4 +471,3 @@ form {
 	}
 }
 /*END MEDIAQUERIES-------------------------------*/
-
