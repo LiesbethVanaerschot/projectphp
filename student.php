@@ -108,7 +108,6 @@
 				<table class="lessenrooster">
                     <thead>
                       <tr>
-                        <th>Dag</th>
                         <th>Beginuur</th>
                         <th>Einduur</th>
                         <th>Les</th>
@@ -120,30 +119,96 @@
                       </tr>
                     </thead>
                     <tbody>
+						<tr>
+							<td>8:30</td>
+							<td>9:30</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
 
-                      <?php
-						if(isset($_SESSION['loggedin'])){
-							$les = $u->getUurrooster();
+						<tr>
+							<td>9:30</td>
+							<td>10:30</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
 
-							while ($data = $les->fetch_assoc()){
-								echo "<tr>";
-                             		echo "<td>" . $data['lesDag'] . "</td>";
-                            		 echo "<td>" . $data['lesBegin'] . "</td>";
-                            		 echo "<td>" . $data['lesEind'] . "</td>";
-                            		 echo "<td>" . $data['lesNaam'] . "</td>";
-                            		 echo "<td>" . $data['lesLokaal'] . "</td>";
-                            		 echo "<td>" . $data['docentNaam'] . "</td>";
-                         	 echo "</tr>";
-							}
-						}
+						<tr>
+							<td>10:30</td>
+							<td>10:45</td>
+							<td>PAUZE</td>
+							<td></td>
+							<td></td>
+						</tr>
 
-					?>
+						<tr>
+							<td>10:45</td>
+							<td>11:45</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>11:45</td>
+							<td>12:45</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>12:45</td>
+							<td>13:45</td>
+							<td>PAUZE</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>13:45</td>
+							<td>14:45</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>14:45</td>
+							<td>15:45</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>15:45</td>
+							<td>16:00</td>
+							<td>PAUZE</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>16:00</td>
+							<td>17:00</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>17:00</td>
+							<td>18:00</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
                     </tbody>
                   </table>
- 				<?php
- 					echo "<h1>HELP</h1>";
-
-				?>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
