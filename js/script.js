@@ -26,12 +26,16 @@ $(document).ready(function(){
    			console.log("gestuurd!");
         //var json = msg;
         var json = jQuery.parseJSON(msg);
-        console.log(typeof json);
+        console.log(json);
+        //iets met als json === "" alle text in tabel weg 
+        // als json !== "" $.each en dan met switch case tabel invullen.
         $.each(json, function(index, value){
           console.log(index);
-          console.log(value.lesBegin);
+          console.log(value);
 
-          if(value.lesBegin === '08:30'){
+          var begin = $('.td-beginuur').html();
+          console.log(begin);
+          if(value.lesBegin === begin){
             console.log('php');
             $('.lessenrooster .td-lesnaam').html(value.lesNaam);
           }

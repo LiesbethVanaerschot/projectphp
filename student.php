@@ -120,15 +120,15 @@
                     </thead>
                     <tbody>
 						<tr>
-							<td class="td-beginuur">8:30</td>
-							<td class="td-einduur">9:30</td>
-							<td class="td-lesnaam">Methoden en onderzoek van Rapportering - Theorie</td>
+							<td class="td-beginuur">08:30</td>
+							<td class="td-einduur">09:30</td>
+							<td class="td-lesnaam"></td>
 							<td class="td-lokaal"></td>
 							<td class="td-docent"></td>
 						</tr>
 
 						<tr>
-							<td class="td-beginuur">9:30</td>
+							<td class="td-beginuur">09:30</td>
 							<td class="td-einduur">10:30</td>
 							<td class="td-lesnaam"></td>
 							<td class="td-lokaal"></td>
