@@ -56,7 +56,7 @@
 					<!-- Melding: Op [datum x] zal [vak y] niet doorgaan door [MELDING z] -->
 
 					<?php if ($selected == 'afwezig') { ?>
-						<p><?php echo "[docent naam]"; ?> zal afwezig zijn op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></p>
+						<p><?php echo "$docent"; ?> zal afwezig zijn op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></p>
 					<?php } ?>
 
 					<!-- EIGENLIJK MOETEN WE DAN GEWOON DEZE MELDING IN DE DB ZETTEN (ALS 1 GEHEEL) ZONDER DIE DAAR NOG EENS OP TE SPLITSEN NIET?-->
@@ -64,15 +64,17 @@
 
 
 					<?php if ($selected == 'lokaal') { ?>
-						<p>Op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> zal <?php echo "[vak]"; ?> uitzonderlijk doorgaan in <?php echo $melding ?></p>
+						<p>Op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> zal <?php echo "$vak"; ?> uitzonderlijk doorgaan in <?php echo $melding; ?></p>
 					<?php } ?>
 
 					<?php if ($selected == 'reden') { ?>
 						<p><?php echo $melding ?></p>
 					<?php } ?>
+				</div>
 
-					<!-- Vaste datum
-					<p>Datum die u wilt wijzigen: <?php /*echo $datum . " " . $dag . " " . $maand . " " . $jaar;*/ ?></p>-->
+				<div class="redirectCheck">
+						<a href="melding.php" class="links">Pas aan</a>
+						<a href="personeel.php" class="rechts">Verzend + maak nieuwe melding</a>
 				</div>
 			</div>
 		</section><!-- End loggedin -->

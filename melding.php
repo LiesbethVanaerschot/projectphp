@@ -49,26 +49,10 @@
 							$lesInfo = $a->getInfo();
 						}
 					?>
-					<!-- <div class='vakken'>
-						<form action="" method="POST" >
-							<label for="lesnaam"><h2>Kies een vak</h2></label>
-						 	<select id="selectDocent" name="option">
-								<option value='default' selected='selected' disabled>Kies een vak...</option>
-									<?php
-										//while ($info = $lesInfo->fetch_assoc()){
-	                             		//	echo "<option value='" . $info['lesNaam'] . " / " . $info['docentNaam'] . "'>" .  $info['lesNaam'] . " / " . $info['docentNaam'] . "</option>";
-										//}
-									?>
-							<select>
-						</form>
-					</div> -->
-
-
-					<h2><div id="vakOption"></div></h2>
 
 					<div class="opmerkingScherm cf">
 						<form action="" method="POST">
-							<label for="lesnaam"><h2>Kies een vak</h2></label>
+							<label for="lesnaam"><h3>Kies een vak</h3></label>
 						 	<select id="selectDocent" name="option">
 								<option value='default' selected='selected' disabled>Kies een vak...</option>
 									<?php
@@ -108,28 +92,6 @@
 	</div> <!-- End container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("#selectDocent").on("change",function(e){
-				e.preventDefault();
-
-				$(".opmerkingScherm").slideDown();
-
-				var optionName = $("#selectDocent option:selected").val();
-
-				var request = $.ajax({
-					url: "ajax/getOption.php",
-					type: "POST",
-					data: {optionName : optionName},
-					dataType: "json"
-				});
-
-				request.done(function(msg){
-					$('#vakOption').html(msg)
-				});
-			});
-		});
-	</script>
 	<!-- ./JS -->
 </body>
 </html>
