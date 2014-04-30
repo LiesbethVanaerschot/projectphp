@@ -371,6 +371,7 @@ form.datumSelect {
 .tabbladen ul{
 	display: inline-block;
 	text-align: center;
+	float: right;
 }
 
 .tabbladen a{
@@ -424,7 +425,6 @@ h3#student-meldingen
 	color: white;
 	padding-bottom: 40px;
 }
-
 /* END STUDENT-------------------------------*/
 
 /*MELDINGEN----------------------------------*/
@@ -488,8 +488,7 @@ h3#student-meldingen
 	margin-bottom: 20px;
 }
 
-#btnMelding
-{
+#btnMelding {
 	float: right;
 	text-align: center;
 	width: 97%;
@@ -501,8 +500,7 @@ h3#student-meldingen
 	font-size: 1.4rem;
 }
 
-#btnMelding:hover
-{
+#btnMelding:hover {
 	background-color: #929292;
 	color: #f7f7f7;
 	cursor: pointer;
@@ -532,7 +530,7 @@ h3#student-meldingen
 	margin-top: 0;
 }
 
-.formCheck input[type="submit"] {
+#btnCheck {
 	text-align: center;
 	width: 200px;
 	padding: 10px;
@@ -544,7 +542,7 @@ h3#student-meldingen
 	font-size: 1.4rem;
 }
 
-.formCheck input[type="submit"]:hover {
+#btnCheck:hover {
 	background-color: #929292;
 	color: #f7f7f7;
 	cursor: pointer;

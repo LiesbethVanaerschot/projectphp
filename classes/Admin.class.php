@@ -78,6 +78,15 @@
 			$lesdag = $db->conn->query($sql);
 			return $lesdag;
 		}
+
+		public function save()
+		{
+			$db = new Db();
+			$sql = "INSERT INTO tblMelding(melding)
+					VALUES(
+						'". HIER KOMT VARIABELE VAN AJAX ."')";
+			$db->conn->query($sql);
+		}
 // voor doceent en les tegelijk
 // SELECT lesNaam, docentNaam
 // FROM tblLes

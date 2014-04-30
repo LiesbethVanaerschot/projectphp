@@ -109,7 +109,7 @@
 			</div>
 
 
-			<div id="div-rooster" class="wrapper clear">
+			<div class="wrapper clear">
 				<?php include("tabel.php"); ?>
 			</div>
 
