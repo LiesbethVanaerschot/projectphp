@@ -76,7 +76,7 @@ nav .logout {
 }
 /* END NAVIGATON-----------------------------*/
 
-.wrapper {
+.wrapper, .tabbladen{
 	padding: 0 15px;
 }
 
@@ -147,7 +147,6 @@ form {
 }
 
 #loggedin {
-	padding-top: 50px;
 	padding-bottom: 50px;
 	background-color: #007d8a;
 }
@@ -360,6 +359,46 @@ form.datumSelect {
 	border: 1px solid #f7f7f7;
 }
 
+.clear{
+	padding-top: 50px;
+}
+
+.tabbladen{
+	padding-top: -100px;
+	display: block;
+}
+
+.tabbladen ul{
+	display: inline-block;
+	float: right;
+}
+
+.tabbladen a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 10px 0 10px;
+}
+
+.tabbladen li{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.tabbladen li.active-tab, .tabbladen li:hover{
+	background-color: #f24f11;
+}
+
+.tabbladen li:first-child{
+	float: left;
+}
+
+.tabbladen li:last-child{
+	float: right;
+}
+
 /* END STUDENT-------------------------------*/
 
 /*MELDINGEN----------------------------------*/
@@ -529,7 +568,7 @@ form.datumSelect {
 
 @media (min-width: 960px) {
 
-	.wrapper {
+	.wrapper, .tabbladen {
 		width: 960px;
 		margin: 0 auto;
 	}
