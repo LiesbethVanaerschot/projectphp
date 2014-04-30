@@ -26,8 +26,8 @@
 						break;
 					}
 
-				case 'AMelding':
-					$this->m_sAMelding = $p_vValue;
+				case 'Melding':
+					$this->m_sMelding = $p_vValue;
 					break;
 			}
 		}
@@ -44,7 +44,7 @@
 					break;
 
 				case 'Melding':
-					return $this->m_sAMelding;
+					return $this->m_sMelding;
 					break;
 			}
 		}

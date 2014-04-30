@@ -72,7 +72,7 @@
 	   			url: "./ajax/getMessage.php",
 	   			type: "POST",
 	   			data: {melding : melding},
-	   			dataType: "html"
+	   			dataType: "json"
    			});
    			request.done(function(msg){
    				console.log(msg);
