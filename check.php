@@ -75,11 +75,11 @@
 	   			dataType: "html"
    			});
    			request.done(function(msg){
-   			console.log("gestuurd!");
+   				console.log(msg);
+   				console.log("succes!");
    			});
 		});
 	});
-
 	</script>
 
 	<!-- ./JS -->
