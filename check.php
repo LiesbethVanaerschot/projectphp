@@ -1,5 +1,5 @@
 <?php
-	include ('classes/Check.include.php')
+	include ('include/Check.include.php')
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -65,11 +65,11 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
-		$("#btnCheck").on("click",function(){
+		$("#btnCheck").on("click",function(e){
 			var melding = $(".meldingS").html();
 
 			var request = $.ajax({
-	   			url: "./ajax/getMessage.php",
+	   			url: "ajax/getMessage.php",
 	   			type: "POST",
 	   			data: {melding : melding},
 	   			dataType: "json"
@@ -78,6 +78,8 @@
    				console.log(msg);
    				console.log("succes!");
    			});
+
+   			e.preventDefault();
 		});
 	});
 	</script>

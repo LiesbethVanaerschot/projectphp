@@ -1,5 +1,5 @@
 <?php
-	include_once('Admin.class.php');
+	include_once('../Admin.class.php');
 
 	if(isset($_POST['melding'])){
 		try {

@@ -96,8 +96,6 @@
 						'".$this->m_sMelding."')";
 			$melding = $db->conn->query($sql);
 			return $melding;
-			
-			var_dump($melding);
 		}
 // voor doceent en les tegelijk
 // SELECT lesNaam, docentNaam

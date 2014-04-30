@@ -110,11 +110,11 @@
 
 
 			<div class="wrapper clear">
-				<?php include("tabel.php"); ?>
+				<?php include("include/StudentTabel.include.php"); ?>
 			</div>
 
 			<div id="div-meldingen" class="wrapper clear" style="display:none">
-				<?php include("student-meldingen.php"); ?>
+				<?php include("include/StudentMeldingen.include.php"); ?>
 
 			</div>
 

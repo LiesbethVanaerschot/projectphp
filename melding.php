@@ -1,5 +1,5 @@
 <?php
-	include ('classes/Melding.include.php')
+	include ('include/Melding.include.php')
 ?><!doctype html>
 <html lang="en">
 <head>
