@@ -1,5 +1,5 @@
 <?php
-	include ('classes/Personeel.include.php');
+	include ('include/Personeel.include.php');
 ?><!doctype html>
 <html lang="en">
 <head>
