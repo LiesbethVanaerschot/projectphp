@@ -96,7 +96,7 @@
    			request.done(function(msg){
    				if(msg.status == 'ok'){
    					$('.feedbackCheck').html("<h2>" + msg.message + "</h2>");
-   					$('.allfeedback').slideDown();
+   					$('.allfeedback').slideDown("slow");
    					$('#check').slideUp();
    				} else {
    					$('.feedbackCheck').html("<h2>" + msg.message + "</h2>");
