@@ -98,7 +98,7 @@
 			return $id;
 		}*/
 
-		public function getUurrooster()
+		/*public function getUurrooster()
 		{
 			$db = new Db();
 			$sql = "SELECT tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag, lesLokaal
@@ -110,10 +110,10 @@
 					WHERE studentID IN
 									(SELECT studentID 
 									 FROM tblstudent
-									 WHERE studentRnummer ='" . $_POST['studentRnummer'] . "');";/*" . mysqli_insert_id($id) ."*/
+									 WHERE studentRnummer ='" . $_POST['studentRnummer'] . "');";/*" . mysqli_insert_id($id) ."
 			$rooster = $db->conn->query($sql);
 			return $rooster;
-		}
+		}*/
 
 		public function getSchedule()
 		{

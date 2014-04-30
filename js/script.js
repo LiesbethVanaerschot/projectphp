@@ -15,6 +15,8 @@ $(document).ready(function(){
     	
       var student = $(".user").html();
       console.log(student);
+      
+      reset();
 
    		var request = $.ajax({
    			url: "./ajax/sendingvar.php",
@@ -29,25 +31,96 @@ $(document).ready(function(){
         console.log(json);
         //iets met als json === "" alle text in tabel weg 
         // als json !== "" $.each en dan met switch case tabel invullen.
-        $.each(json, function(index, value){
-          console.log(index);
-          console.log(value);
+        if(json.length){
+          $.each(json, function(index, value){
+            console.log(index);
+            console.log(value);
+            var begin = $('.td-beginuur').html();
+            var eind = $('.td-einduur').html();
 
-          var begin = $('.td-beginuur').html();
-          console.log(begin);
-          if(value.lesBegin === begin){
-            console.log('php');
-            $('.lessenrooster .td-lesnaam').html(value.lesNaam);
-          }
+            switch(value.lesBegin){
+              case '08:30':
+                  $('.l1').html(value.lesNaam);
+                break;
+              case '09:30':
+                $('.l2').html(value.lesNaam);
+                break; 
+              case '10:45':
+                $('.l4').html(value.lesNaam);
+                break;
+              case '11:45':
+                $('.l5').html(value.lesNaam);
+                break;
+              case '13:45':
+                $('.l7').html(value.lesNaam);
+                break; 
+              case '14:45':
+                $('.l8').html(value.lesNaam);
+                break;
+              case '16:00':
+                $('.l10').html(value.lesNaam);
+                break; 
+              case '17:00':
+                $('.l11').html(value.lesNaam);
+                break;            
+            }
+
+            switch(value.lesEind){
+              case '09:30':
+                  $('.l1').html(value.lesNaam);
+                break;
+              case '10:30':
+                $('.l2').html(value.lesNaam);
+                break; 
+              case '11:45':
+                $('.l4').html(value.lesNaam);
+                break;
+              case '12:45':
+                $('.l5').html(value.lesNaam);
+                break;
+              case '14:45':
+                $('.l7').html(value.lesNaam);
+                break; 
+              case '15:45':
+                $('.l8').html(value.lesNaam);
+                break;
+              case '17:00':
+                $('.l10').html(value.lesNaam);
+                break; 
+              case '18:00':
+                $('.l11').html(value.lesNaam);
+                break;            
+            }
+               console.log(begin);
+               /*if(begin == value.lesBegin || eind == value.lesEind){
+                console.log('php');
+
+                $('.lessenrooster .l1').html(value.lesNaam);
+                $('.lessenrooster .l2').html(value.lesNaam);
+                $('.lessenrooster .l4').html(value.lesNaam);
+                $('.lessenrooster .l5').html(value.lesNaam);
+                $('.lessenrooster .l7').html(value.lesNaam);
+                $('.lessenrooster .l8').html(value.lesNaam);
+                $('.lessenrooster .l10').html(value.lesNaam);
+                $('.lessenrooster .l11').html(value.lesNaam);
+                }*/
+               });
+              }  
+        else
+        {
+          $('.lessenrooster .td-lesnaam').html(" ");
+          $('.lessenrooster .td-lokaal').html(" ");
+          $('.lessenrooster .td-docent').html(" ");
+        }
+         
           
           /*$.each(value, function(key, value){
             document.write(value);
           });*/
           
         });
+      });
         //console.log(msg);
-   		});
-    });
     
     $("#prev").on("click",function(){
     	if(i>0)
@@ -59,6 +132,13 @@ $(document).ready(function(){
    			console.log(dag);
     	}
     });
+
+    //reset functie uitschrijven
+    var reset = function(){
+        $('.lessenrooster .td-lesnaam').html(" ");
+        $('.lessenrooster .td-lokaal').html(" ");
+        $('.lessenrooster .td-docent').html(" ");
+    }
 
 
 });
