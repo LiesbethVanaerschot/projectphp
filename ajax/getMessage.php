@@ -4,9 +4,13 @@
 	$a = new Admin();
 
 	if(isset($_POST['melding'])){
-		$selectedOption = $_POST['melding'];
-		$a->Save();
-	}
+		$doorgeven = $_POST['melding'];
+		$a->Melding = $_POST['melding'];
+		$melding = $a->Save();
 
-	echo json_encode($selectedOption);
+		if(isset($melding))
+		{
+			echo $melding;
+		}
+	}
 ?>
