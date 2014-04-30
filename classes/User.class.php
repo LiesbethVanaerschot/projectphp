@@ -119,9 +119,11 @@
 		{
 			$db = new Db();
 			$sql = "SELECT *
-					FROM tblles
-					INNER JOIN tblstudentles
-						  ON (tblles.lesID = tblstudentles.lesID)
+					FROM tbldocent
+					INNER JOIN tblles
+						  ON (tbldocent.lesID = tblles.lesID)
+						  INNER JOIN tblstudentles
+						  		ON(tblles.lesID = tblstudentles.lesID)
 					WHERE studentID IN
 									(SELECT studentID 
 									 FROM tblstudent 
