@@ -76,7 +76,7 @@ nav .logout {
 }
 /* END NAVIGATON-----------------------------*/
 
-.wrapper {
+.wrapper, .tabbladen{
 	padding: 0 15px;
 }
 
@@ -147,7 +147,6 @@ form {
 }
 
 #loggedin {
-	padding-top: 50px;
 	padding-bottom: 50px;
 	background-color: #007d8a;
 }
@@ -258,7 +257,6 @@ form.datumSelect {
 /*STUDENT--------------------------------------*/
 #dagnav
 {
-	text-align: center;
 	margin-bottom: 40px;
 }
 
@@ -360,7 +358,73 @@ form.datumSelect {
 	border: 1px solid #f7f7f7;
 }
 
+.clear{
+	padding-top: 50px;
+}
 
+.tabbladen{
+	padding-top: -100px;
+	display: block;
+	text-align: center;
+}
+
+.tabbladen ul{
+	display: inline-block;
+	text-align: center;
+	float: right;
+}
+
+.tabbladen a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 10px 0 10px;
+}
+
+.tabbladen li{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.tabbladen ul li.active-tab-rooster, .tabbladen li:hover{
+	background-color: #f24f11;
+}
+
+.tabbladen li:first-child{
+	float: left;
+}
+
+.tabbladen li:last-child{
+	float: right;
+}
+
+#meldingen-head li, .meldingen-melding li{
+	display: inline-block;
+}
+
+#meldingen-head{
+	background-color: #f24f11;
+	color: white;
+	padding: 5px;
+}
+.melding-row{
+
+	padding: 10px;
+}
+
+#meldingen-lijst li.melding-row:nth-of-type(even){
+	background-color: rgba(250,250,250,0.2);
+}
+
+h3#student-meldingen
+{
+	font-size: 2.2rem;
+	text-transform: uppercase;
+	color: white;
+	padding-bottom: 40px;
+}
 /* END STUDENT-------------------------------*/
 
 /*MELDINGEN----------------------------------*/
@@ -424,8 +488,7 @@ form.datumSelect {
 	margin-bottom: 20px;
 }
 
-#btnMelding
-{
+#btnMelding {
 	float: right;
 	text-align: center;
 	width: 97%;
@@ -437,8 +500,7 @@ form.datumSelect {
 	font-size: 1.4rem;
 }
 
-#btnMelding:hover
-{
+#btnMelding:hover {
 	background-color: #929292;
 	color: #f7f7f7;
 	cursor: pointer;
@@ -468,7 +530,7 @@ form.datumSelect {
 	margin-top: 0;
 }
 
-.formCheck input[type="submit"] {
+#btnCheck {
 	text-align: center;
 	width: 200px;
 	padding: 10px;
@@ -480,7 +542,7 @@ form.datumSelect {
 	font-size: 1.4rem;
 }
 
-.formCheck input[type="submit"]:hover {
+#btnCheck:hover {
 	background-color: #929292;
 	color: #f7f7f7;
 	cursor: pointer;
@@ -526,11 +588,20 @@ form.datumSelect {
 		width: 420px;
 		margin: 0 auto;
 	}
+
+	.tabbladen ul{
+		float: right;
+	}
+
+	h3#student-meldingen, #dagnav
+	{
+		text-align: center
+	}
 }
 
 @media (min-width: 960px) {
 
-	.wrapper {
+	.wrapper, .tabbladen {
 		width: 960px;
 		margin: 0 auto;
 	}

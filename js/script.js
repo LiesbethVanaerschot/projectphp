@@ -92,20 +92,9 @@ $(document).ready(function(){
                 break;            
             }
                console.log(begin);
-               /*if(begin == value.lesBegin || eind == value.lesEind){
-                console.log('php');
 
-                $('.lessenrooster .l1').html(value.lesNaam);
-                $('.lessenrooster .l2').html(value.lesNaam);
-                $('.lessenrooster .l4').html(value.lesNaam);
-                $('.lessenrooster .l5').html(value.lesNaam);
-                $('.lessenrooster .l7').html(value.lesNaam);
-                $('.lessenrooster .l8').html(value.lesNaam);
-                $('.lessenrooster .l10').html(value.lesNaam);
-                $('.lessenrooster .l11').html(value.lesNaam);
-                }*/
-               });
-              }  
+          });
+        }  
         else
         {
           $('.lessenrooster .td-lesnaam').html(" ");

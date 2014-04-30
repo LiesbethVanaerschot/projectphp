@@ -5,6 +5,7 @@
 
 		private $m_sANummer;
 		private $m_sAPaswoord;
+		private $m_sMelding;
 
 		public function __set($p_sProperty, $p_vValue)
 		{
@@ -24,6 +25,10 @@
 						$this->m_sAPaswoord = $p_vValue;
 						break;
 					}
+
+				case 'Melding':
+					$this->m_sMelding = $p_vValue;
+					break;
 			}
 		}
 
@@ -37,6 +42,10 @@
 				case 'APaswoord':
 					return $this->m_sAPaswoord;
 					break;
+
+				case 'Melding':
+					return $this->m_sMelding;
+					break;
 			}
 		}
 
@@ -44,7 +53,7 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "select * from tblAdmin
+			$sql = "SELECT * FROM tblAdmin
 					where adminUnummer = '".$db->conn->real_escape_string($this->m_sANummer)."'
 					AND adminPaswoord = '".$db->conn->real_escape_string($this->m_sAPaswoord)."';";
 			$check = $db->conn->query($sql);
@@ -70,13 +79,25 @@
 			$dag = $_GET['datum'];
 
 			$sql = "SELECT DISTINCT lesNaam, docentNaam
-					from tblles
+					FROM tblles
 					INNER JOIN tbldocent
 						ON (tblles.lesID = tbldocent.lesID)
 					where lesDag = '" . $dag . "';";
 
 			$lesdag = $db->conn->query($sql);
 			return $lesdag;
+		}
+
+		public function Save()
+		{
+			$db = new Db();
+			$sql = "INSERT INTO tblMelding(melding)
+					VALUES(
+						'".$this->m_sMelding."')";
+			$melding = $db->conn->query($sql);
+			return $melding;
+			
+			var_dump($melding);
 		}
 // voor doceent en les tegelijk
 // SELECT lesNaam, docentNaam

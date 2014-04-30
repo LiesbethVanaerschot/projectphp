@@ -62,6 +62,7 @@
 			
 		</header> <!--  End header -->
 
+
 		<!---wat nu nog zou moeten gebeuren is template week table of dag table, aparte queries die mooi per dag tonen welke les je hebt, grijs wnr er geen les is.---->
 
 		<section id="login" <?php if(isset($_SESSION['loggedin'])){
@@ -99,14 +100,46 @@
 									 		echo 'class="hidden"';
 									 }
 							   ?></section>
-			<div class="wrapper">
+			<!-- als er geklikt wordt op rooster moet de div div-meldingen verborgen worden en omgekeerd -->
+			<div class="tabbladen">
+				<ul>
+					<li class="active-tab-rooster"><a onclick="ClickRooster()" href="#">Rooster</a></li>
+					<li class="active-tab-meldingen"><a onclick="ClickMeldingen()" href="#">Meldingen</a></li>
+				</ul>
+			</div>
+
+
+			<div class="wrapper clear">
 				<?php include("tabel.php"); ?>
 			</div>
+
+			<div id="div-meldingen" class="wrapper clear" style="display:none">
+				<?php include("student-meldingen.php"); ?>
+
+			</div>
+
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src ="js/script.js"></script>
+
+	<script>
+		function ClickRooster () {
+			$("#div-rooster").css("display", "block");
+			$("#div-meldingen").css("display", "none");
+			$(".active-tab-rooster").css("background-color", "#f24f11");
+			$(".active-tab-meldingen").css("background-color", "#007d8a");
+    	}
+
+    	function ClickMeldingen () {
+			$("#div-meldingen").css("display", "block");
+			$("#div-rooster").css("display", "none");
+			$(".active-tab-meldingen").css("background-color", "#f24f11");
+			$(".active-tab-rooster").css("background-color", "#007d8a");
+    	}
+	</script>
+
 	<!-- ./JS -->
 </body>
 </html>
