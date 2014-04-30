@@ -44,16 +44,18 @@
 				<div class="check">
 					<form method="POST" action=" " class="formCheck cf">
 							<?php if ($selected == 'afwezig') { ?>
-								<p><?php echo "$docent"; ?> zal afwezig zijn op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?></p>
+								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo "$docent ($vak)"; ?> zal niet aanwezig zijn</p>
 							<?php } ?>
 
 							<?php if ($selected == 'lokaal') { ?>
-								<p>Op <?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> zal <?php echo "$vak"; ?> uitzonderlijk doorgaan in <?php echo $melding; ?></p>
+								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo "$vak"; ?> zal uitzonderlijk doorgaan in <?php echo $melding; ?></p>
 							<?php } ?>
 
 							<?php if ($selected == 'reden') { ?>
-								<p><?php echo $melding ?></p>
+								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo $melding ?></p>
 							<?php } ?>
+
+							<input type="submit" name="btnCheck" id="btnCheck" value="Verzend">
 					</form>
 				</div>
 			</div>
@@ -61,6 +63,25 @@
 	</div> <!-- End container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#btnCheck").on("click",function(){
+			var melding = $(".meldingS").html();
+
+			var request = $.ajax({
+	   			url: "./ajax/getMessage.php",
+	   			type: "POST",
+	   			data: {melding : melding},
+	   			dataType: "html"
+   			});
+   			request.done(function(msg){
+   			console.log("gestuurd!");
+   			});
+		});
+	});
+
+	</script>
+
 	<!-- ./JS -->
 </body>
 </html>

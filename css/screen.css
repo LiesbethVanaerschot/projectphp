@@ -423,8 +423,7 @@ form.datumSelect {
 	margin-bottom: 20px;
 }
 
-#btnMelding
-{
+#btnMelding {
 	float: right;
 	text-align: center;
 	width: 97%;
@@ -436,8 +435,7 @@ form.datumSelect {
 	font-size: 1.4rem;
 }
 
-#btnMelding:hover
-{
+#btnMelding:hover {
 	background-color: #929292;
 	color: #f7f7f7;
 	cursor: pointer;
@@ -467,7 +465,7 @@ form.datumSelect {
 	margin-top: 0;
 }
 
-.formCheck input[type="submit"] {
+#btnCheck {
 	text-align: center;
 	width: 200px;
 	padding: 10px;
@@ -479,7 +477,7 @@ form.datumSelect {
 	font-size: 1.4rem;
 }
 
-.formCheck input[type="submit"]:hover {
+#btnCheck:hover {
 	background-color: #929292;
 	color: #f7f7f7;
 	cursor: pointer;
