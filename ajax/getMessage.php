@@ -1,16 +1,23 @@
 <?php
-	include_once('../Admin.class.php');
+	session_start();
 
-	if(isset($_POST['melding'])){
+
+	include_once('../classes/Melding.class.php');
+
+	if(!empty($_POST['check'])){
 		try {
-			$a = new Admin();
-			$a->Melding = $_POST['melding'];
-			$melding = $a->Save();
+			$m = new Melding();
+			$m->Melding = $_POST['check'];
+			$resultaat = $m->Save();
+
+			$feedback['status'] = 'ok';
+			$feedback['message'] = 'Melding succesvol toegevoegd!';
 		}
 		catch(Exception $e){
-			$feedbackEr = $e->getMessage();
+			$feedback['status'] = 'nok';
+			$feedback['message'] = $e->getMessage();
 		}
 	}
 
-	echo json_encode($melding);
+	echo json_encode($feedback);
 ?>

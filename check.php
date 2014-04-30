@@ -60,23 +60,49 @@
 				</div>
 			</div>
 		</section><!-- End loggedin -->
+
+
+		<section id="feedbackCheck">
+			<div class="wrapper">
+				<div class="allfeedback">
+					<div class="feedbackCheck"></div>
+					<div class="redirectCheck">
+						<a href="#">Nieuwe melding</a>
+						<a href="logout.php">Uitloggen</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div> <!-- End container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
+		$('.allfeedback').hide();
+
+		//ajax on click
 		$("#btnCheck").on("click",function(e){
-			var melding = $(".meldingS").html();
+			$('.allfeedback').slideUp();
+
+			var check = $(".meldingS").text();
 
 			var request = $.ajax({
 	   			url: "ajax/getMessage.php",
 	   			type: "POST",
-	   			data: {melding : melding},
+	   			data: {check : check},
 	   			dataType: "json"
    			});
    			request.done(function(msg){
-   				console.log(msg);
-   				console.log("succes!");
+   				if(msg.status == 'ok'){
+   					$('.feedbackCheck').html("<h2>" + msg.message + "</h2>");
+   					$('.allfeedback').slideDown();
+   					$('#check').slideUp();
+   				} else {
+   					$('.feedbackCheck').html("<h2>" + msg.message + "</h2>");
+   					$('.allfeedback').slideDown();
+   					$('#check').slideUp();
+   				}
    			});
 
    			e.preventDefault();
