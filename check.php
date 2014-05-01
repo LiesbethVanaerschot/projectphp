@@ -67,7 +67,8 @@
 				<div class="allfeedback">
 					<div class="feedbackCheck"></div>
 					<div class="redirectCheck">
-						<a href="#">Nieuwe melding</a>
+						<a href="javascript:history.go(-2)">Nieuwe melding</a>
+						<!--nu gaat hij al terug naar personeel.php enkel moet je nog eens refreshen om terug de pagina te zien-->
 						<a href="logout.php">Uitloggen</a>
 					</div>
 				</div>
