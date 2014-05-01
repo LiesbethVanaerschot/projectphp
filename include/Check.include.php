@@ -19,5 +19,4 @@
 	{
 		$melding = $_GET['melding'];
 	}
-
 ?>
