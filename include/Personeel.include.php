@@ -1,11 +1,4 @@
 <?php
-	header("ETag: PUB" . time());
-	header("Last-Modified: " . gmdate("D, d M Y H:i:s", time()-10) . " GMT");
-	header("Expires: " . gmdate("D, d M Y H:i:s", time() + 5) . " GMT");
-	header("Pragma: no-cache");
-	header("Cache-Control: max-age=1, s-maxage=1, no-cache, must-revalidate");
-	session_cache_limiter("nocache");
-
 	if(!empty($_POST['btnLogin']))
 	{
 		try
@@ -34,4 +27,11 @@
 			$feedbackEr = $e->getMessage();
 		}
 	}
+
+	header("ETag: PUB" . time());
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s", time()-10) . " GMT");
+	header("Expires: " . gmdate("D, d M Y H:i:s", time() + 5) . " GMT");
+	header("Pragma: no-cache");
+	header("Cache-Control: max-age=1, s-maxage=1, no-cache, must-revalidate");
+	session_cache_limiter("nocache");
 ?>
