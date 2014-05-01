@@ -1,12 +1,13 @@
 <?php
-	session_start();
-			//als sessie = true en datum is gegeven
-	if ($_SESSION['loggedin']!=true && !isset($_GET['datum']) && !isset($_GET['dag']) && !isset($_GET['maand']) && !isset($_GET['jaar'])) {
+	//als sessie = true en datum is gegeven
+	if (!isset($_SESSION['loggedin']) && !isset($_GET['datum']) && !isset($_GET['dag']) && !isset($_GET['maand']) && !isset($_GET['jaar'])) {
 			header("Location: personeel.php");
 	}
 
 	else
 	{
+		session_start();
+
 		$datum = $_GET['datum'];
 		$dag = $_GET['dag'];
 		$maand = $_GET['maand'];
