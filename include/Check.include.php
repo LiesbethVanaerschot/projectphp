@@ -5,18 +5,20 @@
 	{
 		header("Location: personeel.php");
 	}
-
-	//uit url halen
-	$datum = $_GET['datum'];
-	$dag = $_GET['dag'];
-	$maand = $_GET['maand'];
-	$jaar = $_GET['jaar'];
-	$selected = $_GET['selected'];
-	$vak = $_GET['vak'];
-	$docent = $_GET['docent'];
-	
-	if(isset($_GET['melding']))
+	else
 	{
-		$melding = $_GET['melding'];
+		//uit url halen
+		$datum = $_GET['datum'];
+		$dag = $_GET['dag'];
+		$maand = $_GET['maand'];
+		$jaar = $_GET['jaar'];
+		$selected = $_GET['selected'];
+		$vak = $_GET['vak'];
+		$docent = $_GET['docent'];
+		
+		if(isset($_GET['melding']))
+		{
+			$melding = $_GET['melding'];
+		}
 	}
 ?>
