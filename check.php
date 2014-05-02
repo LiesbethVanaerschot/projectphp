@@ -52,7 +52,7 @@
 							<?php } ?>
 
 							<?php if ($selected == 'reden') { ?>
-								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo $melding ?></p>
+								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo "$docent ($vak)"; ?> - <?php echo $melding ?></p>
 							<?php } ?>
 
 							<input type="submit" name="btnCheck" id="btnCheck" value="Verzend">

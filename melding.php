@@ -83,7 +83,7 @@
 
 					<?php if (isset($feedback)) { ?>
 						<div id="feedback">
-							<p class="nok"><?php echo $feedback; ?></p>
+							<p class="nokMelding"><?php echo $feedback; ?></p>
 						</div>
 					<?php } ?>
 				</div>

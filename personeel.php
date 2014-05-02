@@ -78,6 +78,9 @@
 						<input type="submit" class="redirectAdmin" value="Volgende" name="volgende">
 					</form>
 				</div>
+				<div class="feedback">
+					<div class="nok"></div>
+				</div>
 			</div>
 		</section><!-- End loggedin -->
 	</div> <!-- End container -->

@@ -17,14 +17,18 @@
 
 	if(!empty($_POST['volgende']))
 	{
-		try {
+		if(!empty($_POST['datum']))
+		{
 			$datum = $_POST['datum'];
 			$crumbs = explode(" ", $datum);
 			if (isset($crumbs)){
 				header("location: melding.php?datum=" . $crumbs[0] . "&dag=" . $crumbs[1] . "&maand=" . $crumbs[2] . "&jaar=" . $crumbs[3]);
 			}
-		} catch (Exception $e) {
-			$feedbackEr = $e->getMessage();
+		}
+		else {
+			session_start();
+
+
 		}
 	}
 

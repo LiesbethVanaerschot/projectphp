@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	//als sessie = true en datum is gegeven
-	if (!isset($_SESSION['loggedin']) /*&& !isset($_GET['datum']) && !isset($_GET['dag']) && !isset($_GET['maand']) && !isset($_GET['jaar']))*/) 
+	if (!isset($_SESSION['loggedin']) && !isset($_GET['datum']) && !isset($_GET['dag']) && !isset($_GET['maand']) && !isset($_GET['jaar']))
 	{
 			header("Location: personeel.php");
 	}
@@ -16,14 +16,14 @@
 		//checken of btnmelding gepost is
 		if (isset($_POST['btnMelding']))
 		{
-			$vakDocent = $_POST['option'];
-			$crumbs = explode("/", $vakDocent);
-			$vak = $crumbs[0];
-			$docent = $crumbs[1];
-
 			//checken of er een radiobutton is aangeklikt
 			if (isset($_POST['melding']))
 			{
+				$vakDocent = $_POST['option'];
+				$crumbs = explode("/", $vakDocent);
+				$vak = $crumbs[0];
+				$docent = $crumbs[1];
+
 				//radio dat geselecteerd is in variabele schrijven
 				$selected_radio=$_POST['melding'];
 
@@ -47,10 +47,10 @@
 				{
 					header('Location: check.php?datum=' . $datum . '&dag=' . $dag . '&maand=' . $maand . '&jaar=' . $jaar . '&selected=' . $selected_radio . '&melding=' . $andereReden . "&vak=" . $vak . "&docent=" . $docent);
 				}
-			} 
+			}
 			else
 			{
-				$feedback = "Vul alles in!";
+				$feedback = "Gelieve alles in te vullen!";
 			}
 		}
 	}
