@@ -100,31 +100,6 @@ form {
 	margin-bottom: 10px;
 }
 
-.smaller{
-	font-size: 1.4rem;
-	font-weight: normal;
-	color: #929292;
-}
-
-.personeelLogin input[type="text"], input[type="password"]{
-	width: 100%;
-	margin: 0;
-	margin-bottom: 10px;
-	padding: 15px;
-	border-radius: 5px;
-	border: none;
-}
-
-.personeelLogin input[type="submit"] {
-	width: 100%;
-	padding: 15px;
-	border-radius: 5px;
-	font-weight: bold;
-	color:#f7f7f7;
-	background-color: #007d8a;
-	border: 1px solid #f7f7f7;
-}
-
 #login input[type="submit"]:hover{
 	cursor: pointer;
 	background-color: #f7f7f7;
@@ -144,11 +119,6 @@ form {
 
 .block {
 	display: block;
-}
-
-#loggedin {
-	padding-bottom: 50px;
-	background-color: #007d8a;
 }
 
 #meldingen, #check{
@@ -193,7 +163,7 @@ form {
 /*END INDEX.PHP------------------------------*/
 
 /*PERSONEEL----------------------------------*/
-.dag {
+/*.dag {
 	padding: 15px;
 	color: #083d3c;
 	font-weight: bold;
@@ -207,11 +177,36 @@ form {
 	cursor: pointer;
 	color: #f7f7f7;
 	background-color: #083d3c;
+}*/
+#loggedin {
+	padding-bottom: 50px;
+	background-color: #007d8a;
 }
 
 .selected {
 	color: #f7f7f7;
 	background-color: #083d3c;
+}
+
+.personeelLogin input[type="text"], input[type="password"]{
+	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+}
+
+.personeelLogin input[type="submit"] {
+	background-color: #007d8a;
+	width: 100%;
+	margin-top: 20px;
+	padding: 15px;
+	border: 1px solid #f7f7f7;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.4rem;
+	color:#f7f7f7;
 }
 
 .datum {
@@ -237,7 +232,7 @@ form.datumSelect {
 	width: 100%;
 	margin-top: 10px;
 	background-color: #007d8a;
-	padding: 15px;
+	padding: 10px;
 	border-radius:5px;
 	text-decoration: none;
 	border: 1px solid #f7f7f7;
@@ -255,6 +250,27 @@ form.datumSelect {
 /*END PERSONEEL--------------------------------*/
 
 /*STUDENT--------------------------------------*/
+.studentLogin input[type="text"], input[type="password"]{
+	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+}
+
+.studentLogin input[type="submit"] {
+	background-color: #007d8a;
+	width: 100%;
+	margin-top: 20px;
+	padding: 15px;
+	border: 1px solid #f7f7f7;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.4rem;
+	color:#f7f7f7;
+}
+
 #dagnav
 {
 	margin-bottom: 40px;
@@ -339,25 +355,6 @@ form.datumSelect {
 	width: 50%;
 }
 
-.studentLogin input[type="text"], input[type="password"]{
-	width: 100%;
-	margin: 0;
-	margin-bottom: 10px;
-	padding: 15px;
-	border-radius: 5px;
-	border: none;
-}
-
-.studentLogin input[type="submit"] {
-	width: 100%;
-	padding: 15px;
-	border-radius: 5px;
-	font-weight: bold;
-	color:#f7f7f7;
-	background-color: #007d8a;
-	border: 1px solid #f7f7f7;
-}
-
 .clear{
 	padding-top: 50px;
 }
@@ -428,6 +425,12 @@ h3#student-meldingen
 /* END STUDENT-------------------------------*/
 
 /*MELDINGEN----------------------------------*/
+.smaller{
+	font-size: 1.4rem;
+	font-weight: normal;
+	color: #929292;
+}
+
 .meldingScherm select{
 	margin: 0;
 	padding: 10px;
@@ -488,29 +491,47 @@ h3#student-meldingen
 	margin-bottom: 20px;
 }
 
-#btnMelding {
+#terug, #btnMelding {
 	float: right;
 	text-align: center;
 	width: 97%;
 	padding: 10px;
 	background-color: #f7f7f7;
-	border: 1px solid #929292;
-	color: #929292;
 	margin-top: 15px;
 	font-size: 1.4rem;
 }
 
-#btnMelding:hover {
-	background-color: #929292;
+#terug {
+	text-decoration: none;
+	font-weight: normal;
+	color: #929292;
+	padding: 6.5px 50px;
+	border-radius: 5px;
+	border: 1px solid #929292;
+}
+
+#btnMelding {
+	color: #f24f11;
+	border: 1px solid #f24f11;
+}
+
+#terug:hover, #btnMelding:hover {
 	color: #f7f7f7;
 	cursor: pointer;
 }
 
-/*END meldingen-----------------------------*/
+#terug:hover {
+	background-color: #929292;
+}
+
+#btnMelding:hover {
+	background-color: #f24f11;
+}
+/*END MELDINGEN-----------------------------*/
 
 
 
-/*check----------------------------------*/
+/*CHECK----------------------------------*/
 
 .check
 {
@@ -535,15 +556,15 @@ h3#student-meldingen
 	width: 200px;
 	padding: 10px;
 	background-color: #f7f7f7;
-	border: 1px solid #929292;
+	border: 1px solid #f24f11;
 	border-radius: 5px;
-	color: #929292;
+	color: #f24f11;
 	margin-top: 15px;
 	font-size: 1.4rem;
 }
 
 #btnCheck:hover {
-	background-color: #929292;
+	background-color: #f24f11;
 	color: #f7f7f7;
 	cursor: pointer;
 }
@@ -573,24 +594,24 @@ h3#student-meldingen
 
 .redirectCheck a {
 	display: inline-block;
-	text-align: center;
+	background-color: #007d8a;
 	width: 250px;
 	margin: 15px auto;
-	background-color: #007d8a;
 	padding: 10px;
 	border-radius: 5px;
-	text-decoration: none;
 	border: 1px solid #fff;
-	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	color: #f7f7f7;
 	font-weight: bold;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 }
 
 .redirectCheck a:hover {
-	background-color: #fff;
+	background-color: #f7f7f7;
 	color: #007d8a;
 }
-/*END check--------------------------------*/
+/*END CHECK--------------------------------*/
 
 /*MEDIAQUERIES-------------------------------*/
 @media (min-width: 420px) {
@@ -599,8 +620,12 @@ h3#student-meldingen
 		width: 250px;
 	}
 
-	#btnMelding {
+	#terug, #btnMelding {
 		width: 250px;
+	}
+
+	#terug {
+		margin-right: 10px;
 	}
 }
 @media (min-width: 768px){

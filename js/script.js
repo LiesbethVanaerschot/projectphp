@@ -6,7 +6,7 @@ $(document).ready(function(){
     var i = 0;
     console.log(dagArray[i]);
 //ON READY
-  getschedule();
+  //getschedule();
 
 //NEXT KLIKKEN
 

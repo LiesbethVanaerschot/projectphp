@@ -49,10 +49,9 @@
 							$lesInfo = $a->getInfo();
 						}
 					?>
-
 					<div class="opmerkingScherm cf">
 						<form action="" method="POST">
-							<label for="lesnaam"><h3>Kies een vak</h3></label>
+							<label for="lesnaam" id="meld"><h3>Kies een vak</h3></label>
 						 	<select id="selectDocent" name="option">
 								<option value='default' selected='selected' disabled>Kies een vak...</option>
 									<?php
@@ -76,8 +75,9 @@
 								<input type="radio" name="melding" value="reden">Andere reden:
 								<textarea name="redenText" placeholde="Wat is uw reden?"> </textarea>
 							</p>
-
 							<input type="submit" name="btnMelding" id="btnMelding" value="Maak melding">
+							<a href="javascript:history.go(-1)" id="terug">Kies andere datum</a>
+
 						</form>
 					</div>
 

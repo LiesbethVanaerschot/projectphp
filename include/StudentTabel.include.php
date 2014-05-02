@@ -1,113 +1,110 @@
-<div id="dagnav">
-	<div id="prev"></div>
-	<h3 id="dag"></h3><!-- DAG moet vervangen worden door dagen van de week -->
-	<div id="next"></div>
-</div>
+				<div id="dagnav">
+					<div id="prev"></div>
+					<h3 id="dag"></h3><!-- DAG moet vervangen worden door dagen van de week -->
+					<div id="next"></div>
+				</div>
+				<!-- php stuff here -->
+				<table class="lessenrooster">
+                    <thead>
+                      <tr>
+                        <th>Beginuur</th>
+                        <th>Einduur</th>
+                        <th>Les</th>
+                        <th>Lokaal</th>
+                        <th>Docent</th>
+                      </tr>
+                      <tr>
 
-<!-- php stuff here -->
+                      </tr>
+                    </thead>
+                    <tbody>
+						<tr>
+							<td class="td-beginuur b1">08:30</td>
+							<td class="td-einduur e1">09:30</td>
+							<td class="td-lesnaam l1"></td>
+							<td class="td-lokaal lo1"></td>
+							<td class="td-docent d1"></td>
+						</tr>
 
-<table class="lessenrooster">
-    <thead>
-    	<tr>
-        	<th>Beginuur</th>
-       		<th>Einduur</th>
-       		<th>Les</th>
-       		<th>Lokaal</th>
-        	<th>Docent</th>
-    	</tr>
-    	<tr>
+						<tr>
+							<td class="td-beginuur b2">09:30</td>
+							<td class="td-einduur e2">10:30</td>
+							<td class="td-lesnaam l2"></td>
+							<td class="td-lokaal lo2"></td>
+							<td class="td-docent d2"></td>
+						</tr>
 
-    	</tr>
-    </thead>
-                    
-    <tbody>
-		<tr>
-			<td class="td-beginuur b1">08:30</td>
-			<td class="td-einduur e1">09:30</td>
-			<td class="td-lesnaam l1"></td>
-			<td class="td-lokaal lo1"></td>
-			<td class="td-docent d1"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b3">10:30</td>
+							<td class="td-einduur e3">10:45</td>
+							<td class="td-pauze">Pauze</td>
+							<td class="td-lokaal lo3"></td>
+							<td class="td-docent d3"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b2">09:30</td>
-			<td class="td-einduur e2">10:30</td>
-			<td class="td-lesnaam l2"></td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b4">10:45</td>
+							<td class="td-einduur e4">11:45</td>
+							<td class="td-lesnaam l4"></td>
+							<td class="td-lokaal lo4"></td>
+							<td class="td-docent d4"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b3">10:30</td>
-			<td class="td-einduur e3">10:45</td>
-			<td class="td-pauze">Pauze</td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b5">11:45</td>
+							<td class="td-einduur e5">12:45</td>
+							<td class="td-lesnaam l5"></td>
+							<td class="td-lokaal lo5"></td>
+							<td class="td-docent d5"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b4">10:45</td>
-			<td class="td-einduur e4">11:45</td>
-			<td class="td-lesnaam l4"></td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b6">12:45</td>
+							<td class="td-einduur e6">13:45</td>
+							<td class="td-pauze">Pauze</td>
+							<td class="td-lokaal lo6"></td>
+							<td class="td-docent d6"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b5">11:45</td>
-			<td class="td-einduur e5">12:45</td>
-			<td class="td-lesnaam l5"></td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b7">13:45</td>
+							<td class="td-einduur e7">14:45</td>
+							<td class="td-lesnaam l7"></td>
+							<td class="td-lokaal lo7"></td>
+							<td class="td-docent d7"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b6">12:45</td>
-			<td class="td-einduur e6">13:45</td>
-			<td class="td-pauze">Pauze</td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b8">14:45</td>
+							<td class="td-einduur e8">15:45</td>
+							<td class="td-lesnaam l8"></td>
+							<td class="td-lokaal lo8"></td>
+							<td class="td-docent d8"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b7">13:45</td>
-			<td class="td-einduur e7">14:45</td>
-			<td class="td-lesnaam l7"></td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b9">15:45</td>
+							<td class="td-einduur e9">16:00</td>
+							<td class="td-pauze">Pauze</td>
+							<td class="td-lokaal lo9"></td>
+							<td class="td-docent d9"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b8">14:45</td>
-			<td class="td-einduur e8">15:45</td>
-			<td class="td-lesnaam l8"></td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b10">16:00</td>
+							<td class="td-einduur e10">17:00</td>
+							<td class="td-lesnaam l10"></td>
+							<td class="td-lokaal lo10"></td>
+							<td class="td-docent d10"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b9">15:45</td>
-			<td class="td-einduur e9">16:00</td>
-			<td class="td-pauze">Pauze</td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
+						<tr>
+							<td class="td-beginuur b11">17:00</td>
+							<td class="td-einduur e11">18:00</td>
+							<td class="td-lesnaam l11"></td>
+							<td class="td-lokaal lo11"></td>
+							<td class="td-docent d11"></td>
+						</tr>
 
-		<tr>
-			<td class="td-beginuur b10">16:00</td>
-			<td class="td-einduur e10">17:00</td>
-			<td class="td-lesnaam l10"></td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
-
-		<tr>
-			<td class="td-beginuur b11">17:00</td>
-			<td class="td-einduur e11">18:00</td>
-			<td class="td-lesnaam l11"></td>
-			<td class="td-lokaal"></td>
-			<td class="td-docent"></td>
-		</tr>
-
-    </tbody>
-</table>
+                    </tbody>
+                  </table>

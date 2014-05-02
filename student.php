@@ -109,7 +109,7 @@
 			</div>
 
 
-			<div class="wrapper clear">
+			<div id="div-rooster" class="wrapper clear">
 				<?php include("include/StudentTabel.include.php"); ?>
 			</div>
 
@@ -133,10 +133,10 @@
     	}
 
     	function ClickMeldingen () {
-			$("#div-meldingen").css("display", "block");
 			$("#div-rooster").css("display", "none");
-			$(".active-tab-meldingen").css("background-color", "#f24f11");
+			$("#div-meldingen").css("display", "block");
 			$(".active-tab-rooster").css("background-color", "#007d8a");
+			$(".active-tab-meldingen").css("background-color", "#f24f11");
     	}
 	</script>
 
