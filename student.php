@@ -27,6 +27,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	
+	<!--COMMENTAAR-->
 	<div id="container">
 		<nav <?php 	if(isset($_SESSION['loggedin'])){
 						echo 'class="block"';
