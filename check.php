@@ -44,15 +44,15 @@
 				<div class="check">
 					<form method="POST" action=" " class="formCheck cf">
 							<?php if ($selected == 'afwezig') { ?>
-								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo "$docent ($vak)"; ?> zal niet aanwezig zijn</p>
+								<p class="meldingS"><?php echo $dag . " " . $datum; ?> - <?php echo "$docent ($vak)"; ?> zal niet aanwezig zijn</p>
 							<?php } ?>
 
 							<?php if ($selected == 'lokaal') { ?>
-								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo "$vak"; ?> zal uitzonderlijk doorgaan in <?php echo $melding; ?></p>
+								<p class="meldingS"><?php echo $dag . " " . $datum; ?> - <?php echo "$vak"; ?> zal uitzonderlijk doorgaan in <?php echo $melding; ?></p>
 							<?php } ?>
 
 							<?php if ($selected == 'reden') { ?>
-								<p class="meldingS"><?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?> - <?php echo "$docent ($vak)"; ?> - <?php echo $melding ?></p>
+								<p class="meldingS"><?php echo $dag . " " . $datum; ?> - <?php echo "$docent ($vak)"; ?> - <?php echo $melding ?></p>
 							<?php } ?>
 
 							<input type="submit" name="btnCheck" id="btnCheck" value="Verzend">

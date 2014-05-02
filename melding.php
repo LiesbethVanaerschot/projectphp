@@ -61,7 +61,7 @@
 									?>
 							<select>
 
-							<label for="Melding"><h3>Melding <span class="smaller">(<?php echo $datum . " " . $dag . " " . $maand . " " . $jaar; ?>)</span></h3></label>
+							<label for="Melding"><h3>Melding <span class="smaller">(<?php echo $dag . " " . $datum; ?>)</span></h3></label>
 							<p>
 								<input type="radio" name="melding" value="afwezig">Docent is afwezig
 							</p>

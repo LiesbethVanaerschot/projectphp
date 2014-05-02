@@ -65,7 +65,7 @@
 		{
 			$db = new Db();
 
-			$dag = $_GET['datum'];
+			$dag = $_GET['dag'];
 
 			$sql = "SELECT DISTINCT lesNaam, docentNaam
 					FROM tblles

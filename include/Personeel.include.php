@@ -22,7 +22,7 @@
 			$datum = $_POST['datum'];
 			$crumbs = explode(" ", $datum);
 			if (isset($crumbs)){
-				header("location: melding.php?datum=" . $crumbs[0] . "&dag=" . $crumbs[1] . "&maand=" . $crumbs[2] . "&jaar=" . $crumbs[3]);
+				header("location: melding.php?dag=" . $crumbs[0] . "&datum=" . $crumbs[1]);
 			}
 		}
 		else {
