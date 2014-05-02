@@ -5,44 +5,8 @@ $(document).ready(function(){
 
     var i = 0;
     console.log(dagArray[i]);
-//ON READY
-  //getschedule();
 
-//NEXT KLIKKEN
-
-    $("#next").on("click",function(e){
-    	i = (i + 1) % dagArray.length;
-    	$("#dag").text(dagArray[i]);
-
-    	var dag = $("#dag").html();
-    	console.log(dag);
-    	
-      var student = $(".user").html();
-      console.log(student);
-      
-      resetschedule();
-
-   		getschedule();
-
-        e.preventDefault();
-      });
-
-//PREVIOUS KLIKKEN
-    
-    $("#prev").on("click",function(e){
-    	if(i>0)
-    	{
-    		i = (i-1);
-    		$("#dag").text(dagArray[i]);
-    	}
-      
-      resetschedule();
-      getschedule();
-
-      
-      e.preventDefault();
-    });
-
+//FUNCTIES
 //reset functie uitschrijven
   var resetschedule = function(){
         $('.lessenrooster .td-lesnaam').html(" ");
@@ -175,4 +139,41 @@ $(document).ready(function(){
           });
   }
 
+//AUTOLOAD MAANDAG
+  getschedule();
+
+//NEXT KLIKKEN
+
+    $("#next").on("click",function(e){
+    	i = (i + 1) % dagArray.length;
+    	$("#dag").text(dagArray[i]);
+
+    	var dag = $("#dag").html();
+    	console.log(dag);
+    	
+      var student = $(".user").html();
+      console.log(student);
+      
+      resetschedule();
+
+   		getschedule();
+
+        e.preventDefault();
+      });
+
+//PREVIOUS KLIKKEN
+    
+    $("#prev").on("click",function(e){
+    	if(i>0)
+    	{
+    		i = (i-1);
+    		$("#dag").text(dagArray[i]);
+    	}
+      
+      resetschedule();
+      getschedule();
+
+      
+      e.preventDefault();
+    });
 });
