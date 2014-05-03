@@ -1,5 +1,5 @@
 <?php
-	include_once("classes/Db.class.php");
+	include_once("Db.class.php");
 
 	class Admin {
 
@@ -50,7 +50,6 @@
 
 			if(mysqli_num_rows($check) == 1)
 			{
-				session_start();
 				$_SESSION['loggedin'] = true;
 			}
 			else
@@ -65,7 +64,7 @@
 		{
 			$db = new Db();
 
-			$dag = $_GET['dag'];
+			$dag = $_SESSION['date'];
 
 			$sql = "SELECT DISTINCT lesNaam, docentNaam
 					FROM tblles

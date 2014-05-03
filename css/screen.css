@@ -122,22 +122,23 @@ form {
 }
 
 #meldingen, #check{
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	background-color: #007d8a;
 }
 
-#feedback{
+#feedback, #feedbackLogin, #feedbackMelding{
 	margin-top: 10px;
 }
 
 .nok {
 	padding: 15px;
-	border: 1px solid;
-	color: #D8000C;
-	border-radius: 10px;
-    background-color: #FFBABA;
+	color: #007d8a;
+	border-radius: 5px;
+    background-color: #f7f7f7;
 	text-align: center;
+	width: 100%;
+	font-weight: 500;
 }
 
 /*INDEX.PHP------------------------------*/
@@ -159,6 +160,39 @@ form {
 .redirect a:hover {
 	background-color: #fff;
 	color: #007d8a;
+}
+
+.nokDatum {
+	padding: 10px;
+	color: #007d8a;
+	border-radius: 5px;
+    background-color: #f7f7f7;
+	text-align: center;
+	width: 100%;
+	font-weight: 500;
+}
+
+#feedbackDatum {
+	margin-top: 10px;
+}
+
+h2.meldingS {
+	margin: 0;
+	font-size: 2.2rem;
+	color:  #007d8a;
+}
+
+form.formCheck {
+	margin-top: 5px;
+}
+
+.datumCheck {
+	color:  #929292;
+	text-transform: lowercase;
+}
+
+#check {
+	padding-bottom: 35px;
 }
 /*END INDEX.PHP------------------------------*/
 
@@ -227,26 +261,54 @@ form.datumSelect {
 	border: none;
 }
 
-.datum input[type="submit"].redirectAdmin {
-	text-align: center;
-	width: 100%;
-	margin-top: 10px;
-	background-color: #007d8a;
-	padding: 10px;
-	border-radius:5px;
+.redirectAdmin {
+	background: url('../images/hoverdown.png') no-repeat scroll transparent;
+	padding: 0;
+	border: none;
+	width: 48px;
+	height: 48px;
 	text-decoration: none;
-	border: 1px solid #f7f7f7;
-	color: #f7f7f7;
-	font-size: 1.6rem;
-	font-weight: bold;
+	text-indent: -9999px;
 }
 
-.datum input[type="submit"].redirectAdmin:hover{
-	background-color: #f7f7f7;
-	color: #007d8a;
+.redirectAdmin:hover {
+	background-image: url('../images/down.png');
 	cursor: pointer;
 }
 
+.nokPersoneel {
+	padding: 10px;
+	color: #007d8a;
+	border-radius: 5px;
+    background-color: #f7f7f7;
+	text-align: center;
+	font-weight: 500;
+	width: 100%;
+}
+
+.arrow {
+	margin-top: 10px;
+	background-color: #007d8a;
+	text-align: center;
+}
+
+#loggedinAdmin{
+	background-color: #007d8a;
+}
+
+.nokCheck {
+	padding: 15px;
+	color: #007d8a;
+	border-radius: 5px;
+    background-color: #f7f7f7;
+	text-align: center;
+	font-weight: 500;
+	width: 100%;
+}
+
+.nokCheck h2{
+	color: #007d8a;
+}
 /*END PERSONEEL--------------------------------*/
 
 /*STUDENT--------------------------------------*/
@@ -447,7 +509,10 @@ h3#student-meldingen
 	background-color: #f7f7f7;
 	color: #000;
 	border-radius: 5px;
-	padding: 15px;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .opmerkingScherm form {
@@ -463,8 +528,11 @@ h3#student-meldingen
 	border-radius: 5px;
 	border: 1px solid #929292;
 	padding: 5px;
+	padding-left: 8px;
 	margin-top: 10px;
 	margin-left: 3%;
+	font-size: 1.4rem;
+	font-family: 'Roboto', serif;
 }
 
 .opmerkingScherm input {
@@ -530,7 +598,7 @@ h3#student-meldingen
 
 .nokMelding {
 	padding: 15px;
-	color: #f24f11;
+	color: #007d8a;
 	border-radius: 5px;
     background-color: #f7f7f7;
 	text-align: center;
@@ -558,13 +626,9 @@ h3#student-meldingen
 	font-size: 1.6rem;
 }
 
-.formCheck{
-	margin-top: 0;
-}
-
 #btnCheck {
 	text-align: center;
-	width: 200px;
+	width: 250px;
 	padding: 10px;
 	background-color: #f7f7f7;
 	border: 1px solid #f24f11;
@@ -596,7 +660,7 @@ h3#student-meldingen
 
 #feedbackCheck {
 	background-color: #007d8a;
-	padding-top: 15px;
+	padding-bottom: 35px;
 }
 
 .redirectCheck {
@@ -626,9 +690,10 @@ h3#student-meldingen
 
 /*MEDIAQUERIES-------------------------------*/
 @media (min-width: 420px) {
-	.datum input[type="submit"].redirectAdmin {
-		float: right;
-		width: 250px;
+	.nokPersoneel {
+		float: left;
+		margin-top: 10px;
+		width: 100%;
 	}
 
 	#terug, #btnMelding {
@@ -663,6 +728,12 @@ h3#student-meldingen
 	}
 
 	.nok {
+		width: 420px;
+		margin: 0 auto;
+	}
+
+	.nokPersoneel {
+		float: left;
 		width: 420px;
 		margin: 0 auto;
 	}

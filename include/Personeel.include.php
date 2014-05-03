@@ -10,32 +10,9 @@
 			$a->APaswoord = $_POST['paswoord'];
 			$a->Find();
 
+			header('Location: adminSide.php?nummer=' . $_POST['personeelsNummer'] . '&pass=' . $_POST['paswoord']);
 		} catch (Exception $e) {
 			$feedbackEr = $e->getMessage();
 		}
 	}
-
-	if(!empty($_POST['volgende']))
-	{
-		if(!empty($_POST['datum']))
-		{
-			$datum = $_POST['datum'];
-			$crumbs = explode(" ", $datum);
-			if (isset($crumbs)){
-				header("location: melding.php?dag=" . $crumbs[0] . "&datum=" . $crumbs[1]);
-			}
-		}
-		else {
-			session_start();
-
-
-		}
-	}
-
-	header("ETag: PUB" . time());
-	header("Last-Modified: " . gmdate("D, d M Y H:i:s", time()-10) . " GMT");
-	header("Expires: " . gmdate("D, d M Y H:i:s", time() + 5) . " GMT");
-	header("Pragma: no-cache");
-	header("Cache-Control: max-age=1, s-maxage=1, no-cache, must-revalidate");
-	session_cache_limiter("nocache");
 ?>
