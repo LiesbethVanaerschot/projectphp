@@ -1,5 +1,5 @@
 <h3 id="student-meldingen">Meldingen</h3>
-
+	<!-- SELECT TOP 2 FROM tblmelding ORDER BY meldingID DESC -->
 	<ul id="meldingen-lijst">
 		<li>
 			<ul id="meldingen-head">
