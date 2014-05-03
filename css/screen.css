@@ -271,11 +271,6 @@ form.datumSelect {
 	text-indent: -9999px;
 }
 
-.redirectAdmin:hover {
-	background-image: url('../images/down.png');
-	cursor: pointer;
-}
-
 .nokPersoneel {
 	padding: 10px;
 	color: #007d8a;
