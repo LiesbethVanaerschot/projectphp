@@ -7,8 +7,9 @@
 		try {
 			$melding = $_POST['meldingWegschrijven'];
 			$datum = $_POST['weekdagWegschrijven'];
+			$crumbs = explode( " ", $datum );
 
-			$heleMelding = $datum . " - " . $melding;
+			$heleMelding = $crumbs[1] . " (" . $crumbs[0] . ")" . " - " . $melding;
 
 			$m = new Melding();
 			$m->Melding = $heleMelding;

@@ -31,20 +31,21 @@
 		}
 
 
-		if ($gekozen == "afwezig")
+		switch($gekozen)
 		{
-			$keuzeText ="";
-			$feedback['keuze'] = $docent . " zal afwezig zijn op ";
-		}
-		elseif ($gekozen == "lokaal")
-		{
-			$feedback['keuze'] = $vak . " zal uitzonderlijk doorgaan in lokaal " . $keuzeText . ".";
-		}
-		else
-		{
-			$feedback['keuze'] = $vak . " - " . $docent . " : " . $keuzeText . ".";
-		}
+			case "afwezig";
+				$keuzeText="";
+				$feedback['keuze'] = $docent . " (" . $vak . ")" . " zal niet aanwezig zijn";
+			break;
 
+			case "lokaal";
+				$feedback['keuze'] = $vak . " (" . $docent . ")" . " zal uitzonderlijk doorgaan in lokaal " . $keuzeText . ".";
+			break;
+
+			case "reden";
+				$feedback['keuze'] = $vak . " (" . $docent . ") : " . $keuzeText . ".";
+			break;
+		}
 
 		$feedback['status'] = 'meldingOK';
 		$feedback['vak'] = $vak;

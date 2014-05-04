@@ -121,13 +121,7 @@ form {
 	display: block;
 }
 
-#meldingen, #check{
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #007d8a;
-}
-
-#feedback, #feedbackLogin, #feedbackMelding{
+#feedback, #feedbackLogin, #feedbackDatum, #feedbackMelding{
 	margin-top: 10px;
 }
 
@@ -161,152 +155,15 @@ form {
 	background-color: #fff;
 	color: #007d8a;
 }
-
-.nokDatum {
-	padding: 10px;
-	color: #007d8a;
-	border-radius: 5px;
-    background-color: #f7f7f7;
-	text-align: center;
-	width: 100%;
-	font-weight: 500;
-}
-
-#feedbackDatum {
-	margin-top: 10px;
-}
-
-h2.meldingS {
-	margin: 0;
-	font-size: 2.2rem;
-	color:  #007d8a;
-}
-
-form.formCheck {
-	margin-top: 5px;
-}
-
-.datumCheck {
-	color:  #929292;
-	text-transform: lowercase;
-}
-
-#check {
-	padding-bottom: 35px;
-}
 /*END INDEX.PHP------------------------------*/
 
-/*PERSONEEL----------------------------------*/
-/*.dag {
-	padding: 15px;
-	color: #083d3c;
-	font-weight: bold;
-	text-transform: uppercase;
-	border: 1px solid #083d3c;
-	margin-bottom: 5px;
-	text-align: center;
-}
 
-.dag:hover {
-	cursor: pointer;
-	color: #f7f7f7;
-	background-color: #083d3c;
-}*/
+/*STUDENT--------------------------------------*/
 #loggedin {
 	padding-bottom: 50px;
 	background-color: #007d8a;
 }
 
-.selected {
-	color: #f7f7f7;
-	background-color: #083d3c;
-}
-
-.personeelLogin input[type="text"], input[type="password"]{
-	width: 100%;
-	margin: 0;
-	margin-bottom: 10px;
-	padding: 15px;
-	border: none;
-	border-radius: 5px;
-}
-
-.personeelLogin input[type="submit"] {
-	background-color: #007d8a;
-	width: 100%;
-	margin-top: 20px;
-	padding: 15px;
-	border: 1px solid #f7f7f7;
-	border-radius: 5px;
-	font-weight: bold;
-	font-size: 1.4rem;
-	color:#f7f7f7;
-}
-
-.datum {
-	padding-top: 15px;
-}
-
-form.datumSelect {
-	text-align: center;
-}
-
-.datumSelect .datepicker {
-	background-color: #f7f7f7;
-	width: 100%;
-	margin: 0;
-	margin-bottom: 10px;
-	padding: 15px;
-	border-radius: 5px;
-	border: none;
-}
-
-.redirectAdmin {
-	background: url('../images/hoverdown.png') no-repeat scroll transparent;
-	padding: 0;
-	border: none;
-	width: 48px;
-	height: 48px;
-	text-decoration: none;
-	text-indent: -9999px;
-}
-
-.nokPersoneel {
-	padding: 10px;
-	color: #007d8a;
-	border-radius: 5px;
-    background-color: #f7f7f7;
-	text-align: center;
-	font-weight: 500;
-	width: 100%;
-}
-
-.arrow {
-	margin-top: 10px;
-	background-color: #007d8a;
-	text-align: center;
-}
-
-#loggedinAdmin{
-	background-color: #007d8a;
-}
-
-.nokCheck {
-	padding: 15px;
-	color: #007d8a;
-	border-radius: 5px;
-    background-color: #f7f7f7;
-	text-align: center;
-	font-weight: 500;
-	width: 100%;
-}
-
-.nokCheck h2{
-	color: #007d8a;
-}
-/*END PERSONEEL--------------------------------*/
-
-/*STUDENT--------------------------------------*/
 .studentLogin input[type="text"], input[type="password"]{
 	width: 100%;
 	margin: 0;
@@ -481,25 +338,74 @@ h3#student-meldingen
 }
 /* END STUDENT-------------------------------*/
 
-/*MELDINGEN----------------------------------*/
-.smaller{
-	font-size: 1.4rem;
-	font-weight: normal;
-	color: #929292;
-}
 
-.meldingScherm select{
-	margin: 0;
-	padding: 10px;
-	font-size: 1.6rem;
-	font-weight: bold;
+
+/*PERSONEEL----------------------------------*/
+.personeelLogin input[type="text"], input[type="password"]{
 	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
 }
 
-#vakOption {
-	margin-top: 50px;
+.personeelLogin input[type="submit"] {
+	background-color: #007d8a;
+	width: 100%;
+	margin-top: 20px;
+	padding: 15px;
+	border: 1px solid #f7f7f7;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.4rem;
+	color:#f7f7f7;
+}
+/*END PERSONEEL--------------------------------*/
+
+
+/* ADMINSIDE.PHP---------------------------------------------------*/
+#meldingen, #check{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #007d8a;
+}
+/*--------------- // DATUM // ---------------*/
+#loggedinAdmin{
+	background-color: #007d8a;
 }
 
+.datum {
+	padding-top: 15px;
+}
+
+form.datumSelect {
+	text-align: center;
+}
+
+.datumSelect .datepicker {
+	background-color: #f7f7f7;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 15px;
+	border-radius: 5px;
+	border: none;
+}
+
+.nokDatum {
+	padding: 10px;
+	color: #007d8a;
+	border-radius: 5px;
+    background-color: #f7f7f7;
+	text-align: center;
+	width: 100%;
+	font-weight: 500;
+}
+/*--------------- // END DATUM // ---------------*/
+
+
+/*---------------- // MELDING // ----------------*/
 .opmerkingScherm {
 	background-color: #f7f7f7;
 	color: #000;
@@ -516,6 +422,41 @@ h3#student-meldingen
 	color: #000;
 }
 
+.opmerkingScherm label h3{
+	font-size: 2rem;
+	color: #000;
+	margin-bottom: 15px;
+}
+
+#selectDocent {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 10px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	width: 100%;
+}
+
+.smaller{
+	font-size: 1.4rem;
+	font-weight: normal;
+	color: #929292;
+}
+
+.opmerkingScherm input[type="radio"]{
+	width: 20px;
+	margin-right: 10px;
+	margin-left: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.opmerkingScherm input {
+	border-radius: 5px;
+	border: 1px solid #929292;
+	padding: 5px;
+}
+
 .opmerkingScherm textarea {
 	display: block;
 	height: 75px;
@@ -530,67 +471,6 @@ h3#student-meldingen
 	font-family: 'Roboto', serif;
 }
 
-.opmerkingScherm input {
-	border-radius: 5px;
-	border: 1px solid #929292;
-	padding: 5px;
-}
-
-.opmerkingScherm input[type="radio"]{
-	width: 20px;
-	margin-right: 10px;
-	margin-left: 0;
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-
-.opmerkingScherm label h3{
-	font-size: 2rem;
-	color: #000;
-	margin-bottom: 15px;
-}
-
-#selectDocent {
-	margin-bottom: 20px;
-}
-
-#terug, #btnMelding {
-	float: right;
-	text-align: center;
-	width: 97%;
-	padding: 10px;
-	background-color: #f7f7f7;
-	margin-top: 15px;
-	font-size: 1.4rem;
-}
-
-#terug {
-	text-decoration: none;
-	font-weight: normal;
-	color: #929292;
-	padding: 6.5px 50px;
-	border-radius: 5px;
-	border: 1px solid #929292;
-}
-
-#btnMelding {
-	color: #f24f11;
-	border: 1px solid #f24f11;
-}
-
-#terug:hover, #btnMelding:hover {
-	color: #f7f7f7;
-	cursor: pointer;
-}
-
-#terug:hover {
-	background-color: #929292;
-}
-
-#btnMelding:hover {
-	background-color: #f24f11;
-}
-
 .nokMelding {
 	padding: 15px;
 	color: #007d8a;
@@ -601,11 +481,29 @@ h3#student-meldingen
 	font-weight: 500;
 	text-transform: uppercase;
 }
-/*END MELDINGEN-----------------------------*/
+
+.arrow {
+	margin-top: 10px;
+	background-color: #007d8a;
+	text-align: center;
+}
+
+.redirectAdmin {
+	background: url('../images/hoverdown.png') no-repeat scroll transparent;
+	padding: 0;
+	border: none;
+	width: 48px;
+	height: 48px;
+	text-decoration: none;
+	text-indent: -9999px;
+}
+/*-------------- // END MELDING // --------------*/
 
 
-
-/*CHECK----------------------------------*/
+/*----------------- // CHECK // -----------------*/
+#check {
+	padding-bottom: 35px;
+}
 
 .check
 {
@@ -615,10 +513,19 @@ h3#student-meldingen
 	padding: 15px;
 }
 
-.check p{
-	margin: 20px 0;
-	color: #000;
-	font-size: 1.6rem;
+form.formCheck {
+	margin-top: 5px;
+}
+
+h2.meldingS {
+	margin: 0;
+	font-size: 2.2rem;
+	color:  #007d8a;
+}
+
+.datumCheck {
+	color:  #929292;
+	text-transform: lowercase;
 }
 
 #btnCheck {
@@ -639,65 +546,33 @@ h3#student-meldingen
 	cursor: pointer;
 }
 
-.feedbackCheck {
-	display: block;
-	text-align: center;
-	padding-bottom: 50px;
-	padding-top: 50px;
-	background-color: #f7f7f7;
-	border-radius: 5px;
-}
-
-.feedbackCheck h2{
-	margin: 0;
-	color: #007d8a;
-}
-
 #feedbackCheck {
 	background-color: #007d8a;
 	padding-bottom: 35px;
 }
 
-.redirectCheck {
-	float: right;
-}
-
-.redirectCheck a {
-	display: inline-block;
-	background-color: #007d8a;
-	width: 250px;
-	margin: 15px auto;
-	padding: 10px;
+.nokCheck {
+	padding: 15px;
+	color: #007d8a;
 	border-radius: 5px;
-	border: 1px solid #fff;
+    background-color: #f7f7f7;
 	text-align: center;
-	text-decoration: none;
-	color: #f7f7f7;
-	font-weight: bold;
-	font-size: 1.4rem;
+	font-weight: 500;
+	width: 100%;
 }
 
-.redirectCheck a:hover {
-	background-color: #f7f7f7;
+.nokCheck h2{
 	color: #007d8a;
 }
-/*END CHECK--------------------------------*/
+/*--------------- // END CHECK // ---------------*/
+
+
+/* END ADMINSIDE.PHP-----------------------------------------------*/
+
 
 /*MEDIAQUERIES-------------------------------*/
 @media (min-width: 420px) {
-	.nokPersoneel {
-		float: left;
-		margin-top: 10px;
-		width: 100%;
-	}
 
-	#terug, #btnMelding {
-		width: 250px;
-	}
-
-	#terug {
-		margin-right: 10px;
-	}
 }
 @media (min-width: 768px){
 
@@ -723,12 +598,6 @@ h3#student-meldingen
 	}
 
 	.nok {
-		width: 420px;
-		margin: 0 auto;
-	}
-
-	.nokPersoneel {
-		float: left;
 		width: 420px;
 		margin: 0 auto;
 	}
