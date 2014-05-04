@@ -85,7 +85,7 @@
 			</div>
 
 			<div class="arrow">
-				<input type="submit" class="redirectAdmin" value="Volgende" name="volgende" form="myForm">
+				<button type="submit" class="redirectAdmin" name="volgende">Maak melding<img src="images/hoverdown.png" alt="maak melding"></button>
 			</div>
 		</section><!-- End meldingen -->
 

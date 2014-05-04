@@ -16,7 +16,7 @@
 			$resultaat = $m->Save();
 
 			$feedback['status'] = 'ok';
-			$feedback['message'] = 'Melding succesvol toegevoegd!';
+			$feedback['message'] = 'Melding is succesvol toegevoegd!';
 		}
 		catch(Exception $e){
 			$feedback['status'] = 'nok';

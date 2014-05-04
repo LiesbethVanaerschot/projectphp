@@ -484,11 +484,25 @@ form.datumSelect {
 
 .arrow {
 	margin-top: 10px;
-	background-color: #007d8a;
 	text-align: center;
 }
 
+.arrow img{
+	width: 23px;
+	padding-left: 10px;
+}
+
 .redirectAdmin {
+	padding: 0;
+	padding: 5px 20px;
+	background-color: #f7f7f7;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.4rem;
+	color: #007d8a;
+}
+
+/*.redirectAdmin {
 	background: url('../images/hoverdown.png') no-repeat scroll transparent;
 	padding: 0;
 	border: none;
@@ -496,7 +510,7 @@ form.datumSelect {
 	height: 48px;
 	text-decoration: none;
 	text-indent: -9999px;
-}
+}*/
 /*-------------- // END MELDING // --------------*/
 
 
