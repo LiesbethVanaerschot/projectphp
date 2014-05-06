@@ -35,5 +35,10 @@
 			$resultaat = $db->conn->query($sql);
 			return $resultaat;
 		}
+
+		public function getAll()
+		{
+			
+		}
 	}
 ?>

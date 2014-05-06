@@ -147,12 +147,6 @@ $(document).ready(function(){
     $("#next").on("click",function(e){
     	i = (i + 1) % dagArray.length;
     	$("#dag").text(dagArray[i]);
-
-    	var dag = $("#dag").html();
-    	console.log(dag);
-    	
-      var student = $(".user").html();
-      console.log(student);
       
       resetschedule();
 
@@ -166,10 +160,14 @@ $(document).ready(function(){
     $("#prev").on("click",function(e){
     	if(i>0)
     	{
-    		i = (i-1);
+    		i = (i - 1) % dagArray.length;
     		$("#dag").text(dagArray[i]);
     	}
-      
+      else
+      {
+        i = 4
+        $("#dag").text(dagArray[i]);
+      }
       resetschedule();
       getschedule();
 
