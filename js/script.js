@@ -29,7 +29,7 @@ $(document).ready(function(){
         });
         request.done(function(msg){
           console.log("gestuurd!");
-          //var json = msg;
+          
           var json = jQuery.parseJSON(msg);
           console.log(json);
           //iets met als json === "" alle text in tabel weg 
