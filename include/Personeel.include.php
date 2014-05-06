@@ -10,19 +10,7 @@
 			$a->APaswoord = $_POST['paswoord'];
 			$a->Find();
 
-		} catch (Exception $e) {
-			$feedbackEr = $e->getMessage();
-		}
-	}
-
-	if(!empty($_POST['volgende']))
-	{
-		try {
-			$datum = $_POST['datum'];
-			$crumbs = explode(" ", $datum);
-			if (isset($crumbs)){
-				header("location: melding.php?datum=" . $crumbs[0] . "&dag=" . $crumbs[1] . "&maand=" . $crumbs[2] . "&jaar=" . $crumbs[3]);
-			}
+			header('Location: adminSide.php?nummer=' . $_POST['personeelsNummer'] . '&pass=' . $_POST['paswoord']);
 		} catch (Exception $e) {
 			$feedbackEr = $e->getMessage();
 		}
