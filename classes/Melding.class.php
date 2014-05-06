@@ -39,7 +39,7 @@
 		public function getAll()
 		{
 			$db = new Db();
-			$sql = "select * from tblMelding order by meldingID ASC;";
+			$sql = "select * from tblMelding order by melding ASC;";
 			$result = $db->conn->query($sql);
 
 			return $result;
