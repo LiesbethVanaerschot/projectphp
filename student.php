@@ -1,6 +1,6 @@
 <?php
 	//includen
-	include("classes/User.class.php");
+	include_once("classes/User.class.php");
 
 	// Zien of post niet leeg is en user uit databank halen
 	if(!empty($_POST))
@@ -105,18 +105,18 @@
 			<!-- als er geklikt wordt op rooster moet de div div-meldingen verborgen worden en omgekeerd -->
 			<div class="tabbladen">
 				<ul>
-					<li class="active-tab-rooster"><a onclick="ClickRooster()" href="#">Rooster</a></li>
-					<li class="active-tab-meldingen"><a onclick="ClickMeldingen()" href="#">Meldingen</a></li>
+					<li class="active-tab-rooster"><a href="#">Rooster</a></li>
+					<li class="active-tab-meldingen"><a href="#">Meldingen</a></li>
 				</ul>
 			</div>
 
 
 			<div id="div-rooster" class="wrapper clear">
-				<?php include("include/StudentTabel.include.php"); ?>
+				<?php include_once("include/StudentTabel.include.php"); ?>
 			</div>
 
 			<div id="div-meldingen" class="wrapper clear" style="display:none">
-				<?php include("include/StudentMeldingen.include.php"); ?>
+				<?php include_once("include/StudentMeldingen.include.php"); ?>
 
 			</div>
 
@@ -125,24 +125,6 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src ="js/script.js"></script>
-
-	<script>
-		function ClickRooster () {
-			$("#div-rooster").css("display", "block");
-			$("#div-meldingen").css("display", "none");
-			$(".active-tab-rooster").css("background-color", "#f24f11");
-			$(".active-tab-meldingen").css("background-color", "#007d8a");
-    	}
-
-    	function ClickMeldingen () {
-			$("#div-rooster").css("display", "none");
-			$("#div-meldingen").css("display", "block");
-			$(".active-tab-rooster").css("background-color", "#007d8a");
-			$(".active-tab-meldingen").css("background-color", "#f24f11");
-    	}
-	</script>
-
-	<!-- ./JS -->
 </body>
 </html>
 

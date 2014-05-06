@@ -174,4 +174,29 @@ $(document).ready(function(){
       
       e.preventDefault();
     });
+
+//TAB HIDE EN SHOW FUNCTIES
+  $(".active-tab-rooster a").on("click",function(){
+      console.log("click rooster");
+      ClickRooster();
+  });
+
+  $(".active-tab-meldingen a").on("click",function(){
+      console.log("click meldingen");
+      ClickMeldingen();
+  });
+
+  function ClickRooster () {
+      $("#div-rooster").css("display", "block");
+      $("#div-meldingen").css("display", "none");
+      $(".active-tab-rooster").css("background-color", "#f24f11");
+      $(".active-tab-meldingen").css("background-color", "#007d8a");
+      }
+
+  function ClickMeldingen () {
+      $("#div-rooster").css("display", "none");
+      $("#div-meldingen").css("display", "block");
+      $(".active-tab-rooster").css("background-color", "#007d8a");
+      $(".active-tab-meldingen").css("background-color", "#f24f11");
+      }    
 });

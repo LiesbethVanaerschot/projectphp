@@ -4,28 +4,20 @@
 		
 		SELECT melding FROM tblmelding ORDER BY melding ASC 
 	-->
-	<ul id="meldingen-lijst">
-		<li>
-			<ul id="meldingen-head">
-				<li class="melding-melding">Meldingen</li>
-			</ul>
-		</li>
+<?php
+	include_once("./classes/Melding.class.php");
+				$melding = new Melding();
+				$res = $melding->getAll();
+				echo "<ul id='meldingen-lijst'>";
 
-		<li class="melding-row">
-			<ul class="meldingen-melding">
-				<li class="melding-melding"> 02/05/2014 - D. Heerinckx zal niet aanwezig zijn.</li>
-			</ul>
-		</li>
-
-		<li class="melding-row">
-			<ul class="meldingen-melding">
-				<li class="melding-melding"> 30/04/2014 - Vandaag zullen K. Rutten, R. Vanelderen en K. Aerts niet aanwezig zijn, maar de les gaat gewoon door</li>
-			</ul>
-		</li>
-
-		<li class="melding-row">
-			<ul class="meldingen-melding">
-				<li class="melding-melding"> 29/04/2014 - Digital Publishing gaat door in de Creativity Gym</li>
-			</ul>
-		</li>
-	</ul>
+				while($result = $res->fetch_assoc())
+				{
+					echo "<li class='melding-row'>";
+					echo "<ul class='meldingen-melding'>";
+					echo "<li class='melding-melding'>".$result['melding']."</li>";
+					echo "</ul>";
+					echo "</li>";
+				}		
+					
+				echo "</ul>";
+?>

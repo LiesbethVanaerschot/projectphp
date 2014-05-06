@@ -38,7 +38,11 @@
 
 		public function getAll()
 		{
-			
+			$db = new Db();
+			$sql = "select * from tblmelding order by meldingID ASC;";
+			$result = $db->conn->query($sql);
+
+			return $result;
 		}
 	}
 ?>
