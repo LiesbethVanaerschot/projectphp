@@ -105,8 +105,8 @@
 			<!-- als er geklikt wordt op rooster moet de div div-meldingen verborgen worden en omgekeerd -->
 			<div class="tabbladen">
 				<ul>
-					<li class="active-tab-rooster"><a href="#">Rooster</a></li>
-					<li class="active-tab-meldingen"><a href="#">Meldingen</a></li>
+					<li class="active-tab-rooster"><a href="#">ROOSTER</a></li>
+					<li class="active-tab-meldingen"><a href="#">MELDINGEN</a></li>
 				</ul>
 			</div>
 
