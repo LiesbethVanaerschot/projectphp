@@ -5,6 +5,8 @@
 	{
 		$u = new User();
 		$nummer = $_GET['nummer'];
+
+		echo $nummer;
 		$user = $u->userName($nummer);
 	}
 	else
@@ -44,10 +46,13 @@
 			</div>
 		</nav> <!-- End nav -->
 
+<<<<<<< HEAD
 		<header>
 			<h1>MoreSchedule</h1>
 		</header> <!--  End header -->
 
+=======
+>>>>>>> 624c11b6ad3603779836a91b9d019f1e21117238
 		<section id="loggedin" >
 			<!-- als er geklikt wordt op rooster moet de div div-meldingen verborgen worden en omgekeerd -->
 			<div class="tabbladen">
