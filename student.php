@@ -1,21 +1,7 @@
 <?php
 	//includen
-	include_once("classes/User.class.php");
+	include_once("include/Student.include.php");
 
-	// Zien of post niet leeg is en user uit databank halen
-	if(!empty($_POST))
-	{
-		try
-		{
-			$u = new User();
-			$u->studentRnummer = $_POST['studentRnummer'];
-			$u->studentPaswoord = $_POST['studentPaswoord'];
-			$u->Find();
-
-		} catch (Exception $e) {
-			$feedbackEr = $e->getMessage();
-		}
-	}
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -29,36 +15,6 @@
 <body>
 	
 	<!--COMMENTAAR-->
-	<div id="container">
-		<nav <?php 	if(isset($_SESSION['loggedin'])){
-						echo 'class="block"';
-				  	}
-				  	else
-				  	{
-				  		echo 'class="hidden"';
-				  	}
-			  ?>> <!-- nav verschijnt als je inlogt -->
-			<div class="wrapper cf">
-				<ul>
-					<li class="welkom">Welkom
-					<?php
-						if(isset($_SESSION['loggedin'])){
-
-							$user = $u->userName();
-
-							while ($row = $user->fetch_assoc()){
-								// $id = $row['studentID'];
-								echo "<strong class='user'>" . $row['studentVoornaam'] . "</strong>";
-								// echo $id;
-							}
-						}
-					?>
-					</li>
-					<li class="logout"><a href="logout.php">Uitloggen</a></li>
-				</ul>
-			</div>
-		</nav> <!-- End nav -->
-
 		<header>
 			<h1>MoreSchedule</h1>
 			
@@ -67,10 +23,7 @@
 
 		<!---wat nu nog zou moeten gebeuren is template week table of dag table, aparte queries die mooi per dag tonen welke les je hebt, grijs wnr er geen les is.---->
 
-		<section id="login" <?php if(isset($_SESSION['loggedin'])){
-										echo 'class="hidden"';
-								  }
-							?>> <!-- als je inlogt dan moet de loginform verdwijnen -->
+		<section id="login"> 
 			<div class="wrapper">
 				<h1>Login</h1>
 				<form action="" method="post" class="studentLogin">
@@ -95,36 +48,6 @@
 			</div>
 		</section><!-- End login -->
 
-		<section id="loggedin" <?php if(isset($_SESSION['loggedin'])){
-											echo 'class="block"';
-									 }
-									 else{
-									 		echo 'class="hidden"';
-									 }
-							   ?></section>
-			<!-- als er geklikt wordt op rooster moet de div div-meldingen verborgen worden en omgekeerd -->
-			<div class="tabbladen">
-				<ul>
-					<li class="active-tab-rooster"><a href="#">ROOSTER</a></li>
-					<li class="active-tab-meldingen"><a href="#">MELDINGEN</a></li>
-				</ul>
-			</div>
-
-
-			<div id="div-rooster" class="wrapper clear">
-				<?php include_once("include/StudentTabel.include.php"); ?>
-			</div>
-
-			<div id="div-meldingen" class="wrapper clear" style="display:none">
-				<?php include_once("include/StudentMeldingen.include.php"); ?>
-
-			</div>
-
-		</section><!-- End loggedin -->
-	</div> <!-- End container -->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src ="js/script.js"></script>
 </body>
 </html>
 

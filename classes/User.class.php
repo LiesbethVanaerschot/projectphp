@@ -70,8 +70,10 @@
 			if(mysqli_num_rows($check) == 1)
 			{
 				//sessie starten en sessie loggedin op true zetten
-				session_start();
+				//session_start();
+				
 				$_SESSION['loggedin'] = true;
+				
 			}
 			else
 			{
@@ -81,12 +83,13 @@
 			}
 		}
 
-		public function userName()
+		public function userName($nummer)
 		{
 			$db = new Db();
-			$sql = "select studentID, studentVoornaam from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
+			$sql = "select studentID, studentVoornaam from tblstudent where studentRnummer ='" .$nummer. "';";
 			$check = $db->conn->query($sql);
 			return $check;
+			var_dump($check);
 		}
 
 		/*public function getID()
