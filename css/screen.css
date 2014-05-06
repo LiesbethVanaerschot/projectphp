@@ -188,6 +188,8 @@ form {
 #dagnav
 {
 	margin-bottom: 40px;
+	margin-right: auto;
+	margin-left:  auto;
 }
 
 #dagnav #next,
@@ -594,6 +596,11 @@ h2.meldingS {
 @media (min-width: 420px) {
 	.redirectAdmin{
 		width: 250px;
+	}
+
+	h3#student-meldingen, #dagnav
+	{
+		text-align: center
 	}
 
 }
