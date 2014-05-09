@@ -6,19 +6,12 @@
 
 ####More Schedule####
 
-* Registratie
-* Login (eigen db voorlopig)
+* Login student:
+	- r0330949 (test1)
+	- r0376986 (test2)
+	- r0382075 (test3)
+	- r0417768 (test4)
 
-* Database tabellen:
 
-| **tblStudent**  	| **tblDocent**   	| **tblVak**		| **tblLokaal**		| **tblKlas**		| **tblRooster**	|
-| ----------------- | ----------------- | ----------------- | ----------------- | ----------------- | ----------------- |
-| StudentID     	| DocentID			| VakID				| LokaalID			| KlasID			| RoosterID			|
-| KlasID        	| DocentVoornaam    | VakNaam			| LokaalNaam		| KlasNaam			| VakID				|
-| StudentenNummer	| DocentAchternaam	| 					|  					|  					| DocentID 			|
-| StudentVoornaam   | 					|					|  					| 					| LokaalID 			|
-| StudentAchternaam |             		|					| 					| 					| KlasID 			|
-| StudentEmail		|             		|					| 					| 					| Dag ???	 		|
-| StudentGsm		|             		|					| 					| 					| BeginUur			|
-| 			    	|             		|					| 					| 					| EindUur			|
-| 			    	|             		|					| 					| 					| Actief			|
+* Login admin:
+	- u0123456 (test123)

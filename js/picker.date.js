@@ -1266,7 +1266,7 @@ DatePicker.defaults = (function( prefix ) {
         clear: 'Verwijder',
 
         // The format to show on the `input` element
-        format: 'dddd d/mm/yyyy',
+        format: 'dddd dd/mm/yyyy',
 
         // Classes
         klass: {
