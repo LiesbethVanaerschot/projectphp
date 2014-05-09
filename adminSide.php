@@ -224,6 +224,8 @@
    			requestCheck.done(function(msg){
    				console.log(msg);
    				$('#feedbackMelding').slideUp();
+   				$('.nokCheck').hide();
+
    				if (msg.status=='meldingOK')
    				{
    					$('#check').slideDown();
@@ -258,10 +260,12 @@
    			});
    			requestWegschrijven.done(function(msg){
    				if(msg.status == 'ok'){
+   					$('.nokCheck').slideDown();
 					$('.nokCheck').html("<h2>" + msg.message + "</h2>");
    					$('#feedbackCheck').slideDown("slow");
    					$('#check').slideUp();
    				} else {
+   					$('.nokCheck').slideDown();
    					$('.nokCheck').html("<h2>" + msg.message + "</h2>");
    					$('#feedbackCheck').slideDown();
    					$('#check').slideUp();
