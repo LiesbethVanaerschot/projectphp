@@ -58,7 +58,6 @@
 			}
 		}
 
-		// zoeken naar user in database --> table en velden zijn nog niet correct!
 		public function Find()
 		{
 			$db = new Db();
@@ -69,8 +68,6 @@
 
 			if(mysqli_num_rows($check) == 1)
 			{
-				//sessie starten en sessie loggedin op true zetten
-				//session_start();
 				
 				$_SESSION['loggedin'] = true;
 				
@@ -92,32 +89,6 @@
 			var_dump($check);
 		}
 
-		/*public function getID()
-		{
-			$db = new Db();
-			$sql = "select studentID from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
-			$id = $db->conn->query($sql);
-			print_r($id);
-			return $id;
-		}*/
-
-		/*public function getUurrooster()
-		{
-			$db = new Db();
-			$sql = "SELECT tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag, lesLokaal
-					FROM tbldocent
-					INNER JOIN tblles
-						  ON(tbldocent.lesID = tblles.lesID)
-						  INNER JOIN tblstudentles 
-						  		ON(tblles.lesID = tblstudentles.lesID)
-					WHERE studentID IN
-									(SELECT studentID 
-									 FROM tblstudent
-									 WHERE studentRnummer ='" . $_POST['studentRnummer'] . "');";/*" . mysqli_insert_id($id) ."
-			$rooster = $db->conn->query($sql);
-			return $rooster;
-		}*/
-
 		public function getSchedule($dag, $rNummer)
 		{
 			$db = new Db();
@@ -138,9 +109,6 @@
 			
 			$schedule = $db->conn->query($sql);
 			return $schedule;
-			//print_r($schedule);
-			//$i = json_encode($schedule);
-			//echo $i;
 		}
 	}
 ?>

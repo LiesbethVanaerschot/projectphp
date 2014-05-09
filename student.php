@@ -50,38 +50,3 @@
 
 </body>
 </html>
-
-<!-- select * from tblstudentles INNER JOIN tblles on(tblstudentles.lesID = tblles.lesID)-->
-<!-- select * from tblstudentles INNER JOIN tblles on(tblstudentles.lesID = tblles.lesID) where studentID = 1-->
-<!-- select tbldocent.lesID, tblles.lesID, docentNaam from tbldocent INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)-->
-<!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam from tbldocent INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)-->
-<!-- select tbldocent.lesID, tblles.lesID, lesNaam, lesBegin, lesEind, docentNaam, lesDag from tbldocent
-INNER JOIN tblles on(tbldocent.lesID = tblles.lesID) INNER JOIN tblstudentles
-on(tblles.lesID = tblstudentles.lesID) where studentID IN ( select studentID from tblstudent where studentRnummer = 'r0330949')-->
-<!--
-	QUERIES VOOR TEMPLATE
-
-	query die les voor r0330949 per dag selecteert:
-	select tbldocent.lesID, tblles.lesID, lesNaam, docentNaam
-	from tbldocent
-	INNER JOIN tblles on(tbldocent.lesID = tblles.lesID)
-	INNER JOIN tblstudentles on(tblles.lesID = tblstudentles.lesID)
-	where studentID IN(select studentID from tblstudent where studentRnummer = 'r0330949')
-	AND
-	lesDag IN(select lesDag from tblles where lesDag = 'dinsdag');
-	(per uur is gwn nog eens AND beginUur IN (...))
-
-	SELECT lesNaam, tblles.lesID
-	from tblles
-	INNER JOIN tblstudentles
-	ON (tblles.lesID = tblstudentles.lesID)
-	where studentID IN
-	(select studentID from tblstudent where studentRnummer = 'r0330949')
-	AND
-	(lesBegin = '08:30' OR lesEind = '08:30')
-	AND
-	lesDag IN (select lesDag from tblles where lesDag = 'dinsdag');
-
-	lesDag is var die uit dagnav komt.
-	studentRnummer komt uit input bij aanmelden.
--->

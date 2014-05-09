@@ -28,7 +28,7 @@
 		public function Save()
 		{
 			$db = new Db();
-			$sql = "INSERT INTO tblMelding(melding)
+			$sql = "INSERT INTO tblmelding(melding)
 					VALUES(
 						'" . $this->m_sMelding . "')";
 
@@ -39,7 +39,7 @@
 		public function getAll()
 		{
 			$db = new Db();
-			$sql = "select * from tblMelding order by melding ASC;";
+			$sql = "select * from tblmelding order by melding ASC;";
 			$result = $db->conn->query($sql);
 
 			return $result;

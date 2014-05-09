@@ -43,7 +43,7 @@
 		public function Find()
 		{
 			$db = new Db();
-			$sql = "SELECT * FROM tblAdmin
+			$sql = "SELECT * FROM tbladmin
 					where adminUnummer = '".$db->conn->real_escape_string($this->m_sANummer)."'
 					AND adminPaswoord = '".$db->conn->real_escape_string($this->m_sAPaswoord)."';";
 			$check = $db->conn->query($sql);

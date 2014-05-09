@@ -2,9 +2,9 @@
 	// klasse Db --> database name nog aanpassen!
 	class Db
 	{
-		private $m_sHost = "localhost";
-		private $m_sUser = "root";
-		private $m_sPassword = "root";
+		private $m_sHost = "jijwilteenwebsite.be.mysql";
+		private $m_sUser = "jijwilteenwebsi";
+		private $m_sPassword = "lissasleeckx";
 		private $m_sDatabase = "jijwilteenwebsi";
 		public $conn;
 
