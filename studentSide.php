@@ -6,7 +6,6 @@
 		$u = new User();
 		$nummer = $_GET['nummer'];
 
-		// echo $nummer;
 		$user = $u->userName($nummer);
 	}
 	else

@@ -6,6 +6,9 @@ $(document).ready(function(){
     var i = 0;
     // console.log(dagArray[i]);
 
+    var nummer = window.location.href.slice(window.location.href.indexOf('?') + 1);
+    console.log(nummer);
+
 //FUNCTIES
 //reset functie uitschrijven
   var resetschedule = function(){
@@ -19,15 +22,22 @@ $(document).ready(function(){
     // console.log(dag);
         
     var student = $(".user").html();
-    // console.log(student);
+
+    console.log(student);
+    var nummer = window.location.href.slice(window.location.href.indexOf('?') + 1);
+    //console.log(nummer);
+    arrayRnummer = nummer.split('=');
+    rNummer = arrayRnummer[1];
+    //console.log(rNummer);
 
     var request = $.ajax({
           url: "./ajax/sendingvar.php",
           type: "POST",
-          data: {dag : dag, student : student},
+          data: {dag : dag, rNummer: rNummer},
           dataType: "html"
         });
         request.done(function(msg){
+
           var json = jQuery.parseJSON(msg);
           // console.log(json);
           // iets met als json === "" alle text in tabel weg 

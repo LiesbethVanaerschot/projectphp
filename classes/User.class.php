@@ -118,7 +118,7 @@
 			return $rooster;
 		}*/
 
-		public function getSchedule()
+		public function getSchedule($dag, $rNummer)
 		{
 			$db = new Db();
 			$sql = "SELECT *
@@ -130,11 +130,11 @@
 					WHERE studentID IN
 									(SELECT studentID 
 									 FROM tblstudent 
-									 WHERE studentVoornaam = '".$this->m_sStudent."')
+									 WHERE studentRnummer = '".$rNummer."')
 									 AND lesDag IN
 											    (SELECT lesDag 
 											     FROM tblles
-											   	 WHERE lesDag = '" . $this->m_sDag . "');";
+											   	 WHERE lesDag = '" . $dag . "');";
 			
 			$schedule = $db->conn->query($sql);
 			return $schedule;

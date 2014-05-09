@@ -5,9 +5,8 @@
 	if(!empty($_POST['dag']))
 	{
 		$dag = $_POST['dag'];
-		$u->Dag = $_POST['dag'];
-		$u->Student = $_POST['student'];
-		$schedule = $u->getSchedule(); 
+		$rNummer = $_POST['rNummer'];
+		$schedule = $u->getSchedule($dag, $rNummer); 
 		//var_dump($schedule);
 		if(isset($schedule)){
 			$array = array();
