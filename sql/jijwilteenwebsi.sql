@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost:8889
--- Genereertijd: 06 Mei 2014 om 11:14
+-- Genereertijd: 07 Mei 2014 om 21:54
 -- Serverversie: 5.5.9
 -- PHP-Versie: 5.3.5
 
@@ -90,7 +90,7 @@ CREATE TABLE `tblLes` (
   `lesLokaal` varchar(255) NOT NULL,
   `lesSemester` int(11) NOT NULL,
   PRIMARY KEY (`lesID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `tblLes`
@@ -101,10 +101,10 @@ INSERT INTO `tblLes` VALUES(2, 'Methoden van onderzoek en rapportering - theorie
 INSERT INTO `tblLes` VALUES(3, 'Engels 2', 'maandag', '13:45', '15:45', 'K3/5', 2);
 INSERT INTO `tblLes` VALUES(4, 'PHP1', 'dinsdag', '08:30', '10:30', 'K3/5', 2);
 INSERT INTO `tblLes` VALUES(5, 'Projectmanagement', 'dinsdag', '10:45', '12:45', 'T014', 2);
-INSERT INTO `tblLes` VALUES(6, 'Digital Publishing', 'dinsdag', '13:45', '15:45', 'K0/3', 2);
+INSERT INTO `tblLes` VALUES(6, 'Digital Publishing', 'dinsdag', '13:45', '18:00', 'K0/3', 2);
 INSERT INTO `tblLes` VALUES(7, 'Content Management Systemen 2', 'dinsdag', '13:45', '17:00', 'K3/3', 2);
 INSERT INTO `tblLes` VALUES(8, 'Ethiek 1 - theorie', 'woensdag', '08:30', '09:30', 'T014', 2);
-INSERT INTO `tblLes` VALUES(9, 'Project 2', 'woensdag', '09:30', '10:30', 'Creativity Gym', 2);
+INSERT INTO `tblLes` VALUES(9, 'Project 2', 'woensdag', '09:30', '18:00', 'Creativity Gym', 2);
 INSERT INTO `tblLes` VALUES(10, 'PHP1', 'donderdag', '14:45', '18:00', 'K3/5', 2);
 INSERT INTO `tblLes` VALUES(11, 'Motion Design', 'vrijdag', '08:30', '10:30', 'K3/3', 2);
 INSERT INTO `tblLes` VALUES(12, 'Webtechnologie 2', 'vrijdag', '08:30', '10:30', 'Creativity Gym', 2);
@@ -113,11 +113,8 @@ INSERT INTO `tblLes` VALUES(14, 'Methoden van onderzoek en rapportering - practi
 INSERT INTO `tblLes` VALUES(15, 'Methoden van onderzoek en rapportering - practicum', 'vrijdag', '13:45', '14:45', 'K3/1', 2);
 INSERT INTO `tblLes` VALUES(16, 'Ethiek 1 - Begeleiding', 'vrijdag', '13:45', '14:45', 'K1/1', 2);
 INSERT INTO `tblLes` VALUES(17, 'Ethiek 1 - Begeleiding', 'vrijdag', '14:45', '15:45', 'K1/1', 2);
-INSERT INTO `tblLes` VALUES(18, 'Digital Publishing', 'dinsdag', '16:00', '18:00', 'K0/3', 2);
-INSERT INTO `tblLes` VALUES(19, 'Webtechnologie 2', 'vrijdag', '10:45', '11:45', 'Creativity Gym', 2);
-INSERT INTO `tblLes` VALUES(20, 'Project 2', 'woensdag', '10:45', '12:45', 'Creativity Gym', 2);
-INSERT INTO `tblLes` VALUES(21, 'Project 2', 'woensdag', '13:45', '15:45', 'Creativity Gym', 2);
-INSERT INTO `tblLes` VALUES(22, 'Project 2', 'woensdag', '16:00', '18:00', 'Creativity Gym', 2);
+INSERT INTO `tblLes` VALUES(24, 'Webtechnologie 2', 'vrijdag', '10:45', '11:45', 'Creativity Gym', 2);
+INSERT INTO `tblLes` VALUES(23, 'Digital Publishing', 'dinsdag', '16:00', '18:00', 'K0/3', 3);
 
 -- --------------------------------------------------------
 
@@ -127,16 +124,18 @@ INSERT INTO `tblLes` VALUES(22, 'Project 2', 'woensdag', '16:00', '18:00', 'Crea
 
 CREATE TABLE `tblMelding` (
   `meldingID` int(255) NOT NULL AUTO_INCREMENT,
-  `meldingOmschrijving` varchar(255) NOT NULL,
-  `meldingWeek` varchar(255) NOT NULL,
-  `meldingDag` varchar(255) NOT NULL,
+  `melding` text NOT NULL,
   PRIMARY KEY (`meldingID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `tblMelding`
 --
 
+INSERT INTO `tblMelding` VALUES(1, '6/05/2014 (Dinsdag) - Digital Publishing (Rutten K.) : blabla.');
+INSERT INTO `tblMelding` VALUES(2, '9/05/2014 (Vrijdag) - Hens J. (Webtechnologie 2) zal niet aanwezig zijn');
+INSERT INTO `tblMelding` VALUES(3, '9/05/2014 (Vrijdag) - Geussens P. (Ethiek 1 - Begeleiding) zal niet aanwezig zijn');
+INSERT INTO `tblMelding` VALUES(4, '16/05/2014 (Vrijdag) - Methoden van onderzoek en rapportering - practicum (Lenaerts M.) zal uitzonderlijk doorgaan in lokaal gym.');
 
 -- --------------------------------------------------------
 
@@ -174,52 +173,52 @@ CREATE TABLE `tblStudentLes` (
   `studentID` int(11) NOT NULL,
   `lesID` int(11) NOT NULL,
   PRIMARY KEY (`studentlesID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=68 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=111 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `tblStudentLes`
 --
 
-INSERT INTO `tblStudentLes` VALUES(1, 1, 4);
-INSERT INTO `tblStudentLes` VALUES(2, 1, 6);
-INSERT INTO `tblStudentLes` VALUES(3, 1, 12);
-INSERT INTO `tblStudentLes` VALUES(4, 1, 13);
-INSERT INTO `tblStudentLes` VALUES(5, 2, 1);
-INSERT INTO `tblStudentLes` VALUES(6, 2, 2);
-INSERT INTO `tblStudentLes` VALUES(7, 2, 4);
-INSERT INTO `tblStudentLes` VALUES(8, 2, 5);
-INSERT INTO `tblStudentLes` VALUES(9, 2, 6);
-INSERT INTO `tblStudentLes` VALUES(10, 2, 8);
-INSERT INTO `tblStudentLes` VALUES(11, 2, 9);
-INSERT INTO `tblStudentLes` VALUES(12, 2, 11);
-INSERT INTO `tblStudentLes` VALUES(13, 2, 13);
-INSERT INTO `tblStudentLes` VALUES(14, 2, 15);
-INSERT INTO `tblStudentLes` VALUES(15, 2, 17);
-INSERT INTO `tblStudentLes` VALUES(16, 3, 1);
-INSERT INTO `tblStudentLes` VALUES(17, 3, 2);
-INSERT INTO `tblStudentLes` VALUES(18, 3, 4);
-INSERT INTO `tblStudentLes` VALUES(19, 3, 5);
-INSERT INTO `tblStudentLes` VALUES(20, 3, 6);
-INSERT INTO `tblStudentLes` VALUES(21, 3, 9);
-INSERT INTO `tblStudentLes` VALUES(22, 3, 11);
-INSERT INTO `tblStudentLes` VALUES(23, 3, 13);
-INSERT INTO `tblStudentLes` VALUES(24, 3, 15);
-INSERT INTO `tblStudentLes` VALUES(25, 4, 2);
-INSERT INTO `tblStudentLes` VALUES(26, 4, 3);
-INSERT INTO `tblStudentLes` VALUES(27, 4, 4);
-INSERT INTO `tblStudentLes` VALUES(28, 4, 5);
-INSERT INTO `tblStudentLes` VALUES(29, 4, 8);
-INSERT INTO `tblStudentLes` VALUES(30, 4, 12);
-INSERT INTO `tblStudentLes` VALUES(31, 4, 13);
-INSERT INTO `tblStudentLes` VALUES(32, 4, 15);
-INSERT INTO `tblStudentLes` VALUES(67, 3, 22);
-INSERT INTO `tblStudentLes` VALUES(66, 3, 21);
-INSERT INTO `tblStudentLes` VALUES(65, 3, 20);
-INSERT INTO `tblStudentLes` VALUES(64, 3, 18);
-INSERT INTO `tblStudentLes` VALUES(63, 4, 19);
-INSERT INTO `tblStudentLes` VALUES(62, 1, 19);
-INSERT INTO `tblStudentLes` VALUES(61, 1, 18);
-INSERT INTO `tblStudentLes` VALUES(60, 2, 22);
-INSERT INTO `tblStudentLes` VALUES(59, 2, 21);
-INSERT INTO `tblStudentLes` VALUES(58, 2, 20);
-INSERT INTO `tblStudentLes` VALUES(57, 2, 18);
+INSERT INTO `tblStudentLes` VALUES(110, 4, 19);
+INSERT INTO `tblStudentLes` VALUES(109, 4, 15);
+INSERT INTO `tblStudentLes` VALUES(108, 4, 13);
+INSERT INTO `tblStudentLes` VALUES(107, 4, 12);
+INSERT INTO `tblStudentLes` VALUES(106, 4, 8);
+INSERT INTO `tblStudentLes` VALUES(105, 4, 5);
+INSERT INTO `tblStudentLes` VALUES(104, 4, 4);
+INSERT INTO `tblStudentLes` VALUES(103, 4, 3);
+INSERT INTO `tblStudentLes` VALUES(102, 4, 2);
+INSERT INTO `tblStudentLes` VALUES(101, 3, 18);
+INSERT INTO `tblStudentLes` VALUES(100, 3, 20);
+INSERT INTO `tblStudentLes` VALUES(99, 3, 21);
+INSERT INTO `tblStudentLes` VALUES(98, 3, 22);
+INSERT INTO `tblStudentLes` VALUES(97, 3, 15);
+INSERT INTO `tblStudentLes` VALUES(96, 3, 13);
+INSERT INTO `tblStudentLes` VALUES(95, 3, 11);
+INSERT INTO `tblStudentLes` VALUES(94, 3, 9);
+INSERT INTO `tblStudentLes` VALUES(93, 3, 6);
+INSERT INTO `tblStudentLes` VALUES(92, 3, 5);
+INSERT INTO `tblStudentLes` VALUES(91, 3, 4);
+INSERT INTO `tblStudentLes` VALUES(90, 3, 2);
+INSERT INTO `tblStudentLes` VALUES(89, 3, 1);
+INSERT INTO `tblStudentLes` VALUES(88, 2, 18);
+INSERT INTO `tblStudentLes` VALUES(87, 2, 20);
+INSERT INTO `tblStudentLes` VALUES(86, 2, 21);
+INSERT INTO `tblStudentLes` VALUES(85, 2, 22);
+INSERT INTO `tblStudentLes` VALUES(84, 2, 17);
+INSERT INTO `tblStudentLes` VALUES(83, 2, 15);
+INSERT INTO `tblStudentLes` VALUES(82, 2, 13);
+INSERT INTO `tblStudentLes` VALUES(81, 2, 11);
+INSERT INTO `tblStudentLes` VALUES(80, 2, 9);
+INSERT INTO `tblStudentLes` VALUES(79, 2, 8);
+INSERT INTO `tblStudentLes` VALUES(78, 2, 6);
+INSERT INTO `tblStudentLes` VALUES(77, 2, 5);
+INSERT INTO `tblStudentLes` VALUES(76, 2, 4);
+INSERT INTO `tblStudentLes` VALUES(75, 2, 2);
+INSERT INTO `tblStudentLes` VALUES(74, 2, 1);
+INSERT INTO `tblStudentLes` VALUES(73, 1, 19);
+INSERT INTO `tblStudentLes` VALUES(72, 1, 18);
+INSERT INTO `tblStudentLes` VALUES(71, 1, 13);
+INSERT INTO `tblStudentLes` VALUES(70, 1, 12);
+INSERT INTO `tblStudentLes` VALUES(69, 1, 6);
+INSERT INTO `tblStudentLes` VALUES(68, 1, 4);
