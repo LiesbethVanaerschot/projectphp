@@ -70,8 +70,10 @@
 			if(mysqli_num_rows($check) == 1)
 			{
 				//sessie starten en sessie loggedin op true zetten
-				session_start();
+				//session_start();
+				
 				$_SESSION['loggedin'] = true;
+				
 			}
 			else
 			{
@@ -81,12 +83,13 @@
 			}
 		}
 
-		public function userName()
+		public function userName($nummer)
 		{
 			$db = new Db();
-			$sql = "select studentID, studentVoornaam from tblstudent where studentRnummer ='" . $_POST['studentRnummer'] . "';";
+			$sql = "select studentID, studentVoornaam from tblstudent where studentRnummer ='" .$nummer. "';";
 			$check = $db->conn->query($sql);
 			return $check;
+			var_dump($check);
 		}
 
 		/*public function getID()
@@ -115,7 +118,7 @@
 			return $rooster;
 		}*/
 
-		public function getSchedule()
+		public function getSchedule($dag, $rNummer)
 		{
 			$db = new Db();
 			$sql = "SELECT *
@@ -127,11 +130,11 @@
 					WHERE studentID IN
 									(SELECT studentID 
 									 FROM tblstudent 
-									 WHERE studentVoornaam = '".$this->m_sStudent."')
+									 WHERE studentRnummer = '".$rNummer."')
 									 AND lesDag IN
 											    (SELECT lesDag 
 											     FROM tblles
-											   	 WHERE lesDag = '" . $this->m_sDag . "');";
+											   	 WHERE lesDag = '" . $dag . "');";
 			
 			$schedule = $db->conn->query($sql);
 			return $schedule;
