@@ -188,6 +188,8 @@ form {
 #dagnav
 {
 	margin-bottom: 40px;
+	margin-right: auto;
+	margin-left:  auto;
 }
 
 #dagnav #next,
@@ -229,6 +231,7 @@ form {
 
 .lessenrooster{
 	width: 100%;
+	background-color: rgba(255,255,255,0.5)
 }
 
 .lessenrooster tbody tr:nth-of-type(odd){
@@ -239,6 +242,8 @@ form {
 	text-align: left;
 	background-color: #f24f11;
 	color: white;
+	font-size: 1.4rem;
+	text-transform: uppercase;
 }
 
 .lessenrooster th, p.meldingentitel{
@@ -249,6 +254,7 @@ form {
 .lessenrooster td{
 	padding: 10px;
 	word-wrap: break-word;
+	color: #002124;
 }
 
 .lessenrooster td.pauze{
@@ -287,6 +293,7 @@ form {
 .tabbladen a{
 	text-decoration: none;
 	color: white;
+	font-size: 1.4rem;
 	padding: 10px 10px 0 10px;
 }
 
@@ -321,8 +328,12 @@ form {
 }
 
 .melding-row{
+	padding: 15px;
+}
 
-	padding: 10px;
+#meldingen-lijst {
+	background-color: rgba(255,255,255,0.5);
+	color: #002124;
 }
 
 #meldingen-lijst li.melding-row:nth-of-type(odd){
@@ -594,6 +605,11 @@ h2.meldingS {
 @media (min-width: 420px) {
 	.redirectAdmin{
 		width: 250px;
+	}
+
+	h3#student-meldingen, #dagnav
+	{
+		text-align: center
 	}
 
 }
