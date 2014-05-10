@@ -20,15 +20,17 @@ $(document).ready(function(){
   var getschedule = function(){
     var dag = $("#dag").html();
     // console.log(dag);
-        
-    var student = $(".user").html();
 
+    var student = $(".user").html();
     console.log(student);
+
     var nummer = window.location.href.slice(window.location.href.indexOf('?') + 1);
     //console.log(nummer);
-    arrayRnummer = nummer.split('=');
-    rNummer = arrayRnummer[1];
-    //console.log(rNummer);
+    arrayRnummer = nummer.split('='); //splitsen op =
+    hashtagRnummer = arrayRnummer[1].split('#'); //splitsen op #
+
+    rNummer = hashtagRnummer[0]; //eigenlijke nummer
+    console.log(rNummer);
 
     var request = $.ajax({
           url: "./ajax/sendingvar.php",
@@ -40,7 +42,7 @@ $(document).ready(function(){
 
           var json = jQuery.parseJSON(msg);
           // console.log(json);
-          // iets met als json === "" alle text in tabel weg 
+          // iets met als json === "" alle text in tabel weg
           // als json !== "" $.each en dan met switch case tabel invullen.
             if(json.length){
               $.each(json, function(index, value){
@@ -126,7 +128,7 @@ $(document).ready(function(){
     $("#next").on("click",function(e){
     	i = (i + 1) % dagArray.length;
     	$("#dag").text(dagArray[i]);
-      
+
       resetschedule();
 
    		getschedule();
@@ -135,7 +137,7 @@ $(document).ready(function(){
       });
 
 //PREVIOUS KLIKKEN
-    
+
     $("#prev").on("click",function(e){
     	if(i>0)
     	{
@@ -150,7 +152,7 @@ $(document).ready(function(){
       resetschedule();
       getschedule();
 
-      
+
       e.preventDefault();
     });
 
@@ -177,5 +179,5 @@ $(document).ready(function(){
       $("#div-meldingen").css("display", "block");
       $(".active-tab-rooster").css("background-color", "#007d8a");
       $(".active-tab-meldingen").css("background-color", "#f24f11");
-      }    
+      }
 });
